@@ -8,6 +8,22 @@
   --md-code-hl-variable-color: #1f1f1f;
 }
 
+.md-content__inner h1 {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: titleIn 600ms ease-out forwards, titleFloat 6s ease-in-out 800ms infinite;
+}
+
+@keyframes titleIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+
 
 /* Light mode palette overrides */
 [data-md-color-scheme="default"] {
