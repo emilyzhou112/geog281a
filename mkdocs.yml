@@ -138,7 +138,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-- WELCOME: index.md  
+- Welcome: index.md  
+- Course Information: course-info.md
 - Introduction: intro.md  
 - Understanding GIScience:
   - tool-science debate: module1/debate.md
@@ -151,5 +152,7 @@ nav:
 # - Ethics:
 # - ACTIVITIES:
 # - STUDIO:
+- Activity:
+  - Week 1:  activities/wk1.md
 
     
