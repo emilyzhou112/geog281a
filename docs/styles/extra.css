@@ -1,0 +1,80 @@
+/* Syntax highlighting */
+:root > * {
+  --md-code-hl-string-color: #7B9669;
+  --md-code-hl-comment-color: #6C8480;
+  --md-code-hl-number-color: #404E3B;
+  --md-code-hl-function-color: #6C8480;
+  --md-code-hl-keyword-color: #404E3B;
+  --md-code-hl-variable-color: #1f1f1f;
+}
+
+/* Light mode palette overrides */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #404E3B;
+  --md-accent-fg-color: #a85f1a;
+  --md-default-bg-color: #e2e0e0;
+  --md-default-fg-color: #141414;
+  --md-typeset-a-color: #6C8480;
+
+  --md-code-bg-color: rgba(64, 78, 59, 0.08);
+}
+
+/* Dark mode palette overrides */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #a5b0a1;
+  --md-accent-fg-color: #ecb271;
+  --md-default-bg-color: #2f2d2d;
+  --md-default-fg-color: #E6E6E6;
+  --md-typeset-a-color: #c6d1bf;
+}
+
+
+footer.md-footer .md-footer__inner {
+  padding: 0.25rem 0 !important;
+}
+footer.md-footer .md-footer__link {
+  padding: 0.3rem 0.5rem !important;
+  max-height: 2rem !important;   /* this controls the bar height */
+}
+footer.md-footer .md-footer__direction {
+  margin: 0 0 0.1rem 0 !important;
+  font-size: 0.7rem !important;
+  line-height: 1.1 !important;
+}
+footer.md-footer .md-footer__title {
+  margin: 0 !important;
+  font-size: 0.9rem !important;
+  line-height: 1.1 !important;
+}
+.md-footer-meta { 
+  background: #000000 !important; 
+} 
+
+
+/* Light mode footer colors */
+[data-md-color-scheme="default"] footer.md-footer {
+  background: #30382c !important;       
+}
+[data-md-color-scheme="default"] .md-footer__inner {
+  background: #30382c !important;        
+}
+
+/* Dark mode footer colors */
+[data-md-color-scheme="slate"] footer.md-footer {
+  background: #41443f !important;
+}
+[data-md-color-scheme="slate"] .md-footer__inner {
+  background: #41443f !important;
+}
+
+
+
+
+a:hover,
+.md-typeset a:hover {
+  font-weight: bold;
+}
+.bold-on-hover:hover {
+  font-weight: bold;
+}
+
