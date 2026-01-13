@@ -1,26 +1,41 @@
 # __Course Information__  
 
-Introduction to GIScience as an academic research field, conducted through review, discussion, and presentation of seminal works from leading journals. Labs reinforce and develop students' existing techniques on problems of research-level difficulty in spatial analysis, cognition and mobile GIS.
+In this course, we will study GIScience as the science of geographic information—focusing not only on how spatial analyses are performed, but on the conceptual decisions that make them possible. We examine how geographic phenomena are conceptualized, translated into representations, analyzed through inference, conveyed through communication, and assessed through validation.Through readings, discussions, in-class activities,and a final research proposal, we will engage with foundational questions of ontology, representation, inference, uncertainty, reproducibility, ethics, and beyond that shape how spatial knowledge is produced and evaluated.
+
+```mermaid
+flowchart LR
+    C["Conceptualization"]
+    R["Representation"]
+    I["Inference"]
+    V["Validation"]
+
+    C --> R --> I --> V
+    V -.-> C
+
+  classDef component fill:#99a395ff,stroke-width:0px,color:#ffffff;
+  class C,R,I,V component;
+
+```
 
 ---
 
-## Contact and Availability
+## __Contact and Availability__
 
 - Instructor: Peter Kedron
-- Email: [peterkedron@ucsb.edu](peterkedron@ucsb.edu)
-- Office:
+- Email: [peterkedron@ucsb.edu](mailto:peterkedron@ucsb.edu)
+- Office: 5818 Ellison Hall
 - Availability:
-- Lecture Time and Location:
+- Class Time and Location:
 
-## Learning Goals
+## __Learning Goals__
 
-## Student Work and Evaluation
+## __Student Work and Evaluation__
 
-## Course Schedule
+## __Course Schedule__
 
 | Module | Week | Topic | Readings |
 | --- | --- | --- | --- |
-| __Framing GIScience as a Field__ | Week 1 | What is GIScience? <br> The Tool–Science Debate | [Mark (2000)](readings/mark2000.pdf)<br> [Wright (1997)](readings/wright1997)<br> Pickles (1997)<br>Fisher (1998)<br>Ricker (2020) |
+| __Framing GIScience as a Field__ | Week 1 | What is GIScience? <br> The Tool–Science Debate | [Mark (2000)](readings/mark2000.pdf)<br> [Wright et al.(1997)](readings/wright1997.pdf)<br> Pickles (1997)<br>Fisher (1998)<br>Ricker (2020) |
 |  | Week 2 | GIScience and Geography Relationship  <br>  Principles and Laws | TBD |
 | __Spatial Knowledge Construction and Representation__ | Week 3 | Spatial Ontology <br> The Nature of Spatial Data | TBD |
 |  | Week 4 | Spatial Dependence and Heterogeneity <br>  Scale and Aggregation <br> Interpolation and Generalization| TBD |
