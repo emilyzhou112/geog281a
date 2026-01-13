@@ -102,7 +102,7 @@ flowchart LR
 flowchart LR
   subgraph GSys["GI Science"]
   direction LR
-    C1["New concepts become established as part of Spatial Science"]
+    C1["New concepts become established as part of spatial science"]
     CR["Critical evaluation through critique in the literature"]
     C2["Experimental and conceptual studies<br/>develop new concepts"]
 
@@ -140,10 +140,10 @@ According to Waters (2016), scientific inquiry operates within an investigative 
 
 Reference:
 
-*Wright, D. J., Goodchild, M. F., & Proctor, J. D. (1997). GIS: tool or science? Demystifying the persistent ambiguity of GIS as" Tool" versus" Science". Annals of the Association of American Geographers, 346-362.
+*Wright, D. J., Goodchild, M. F., & Proctor, J. D. (1997). GIS: tool or science? Demystifying the persistent ambiguity of GIS as" Tool" versus" Science". Annals of the Association of American Geographers, 346-362.*
 
-Pickles, J. (1997). Tool or science? GIS, technoscience, and the theoretical turn.
+*Pickles, J. (1997). Tool or science? GIS, technoscience, and the theoretical turn.*
 
-Ricker, B. A., Rickles, P. R., Fagg, G. A., & Haklay, M. E. (2020). Tool, toolmaker, and scientist: case study experiences using GIS in interdisciplinary research. Cartography and Geographic Information Science, 47(4), 350-366.
+*Ricker, B. A., Rickles, P. R., Fagg, G. A., & Haklay, M. E. (2020). Tool, toolmaker, and scientist: case study experiences using GIS in interdisciplinary research. Cartography and Geographic Information Science, 47(4), 350-366.*
 
-Waters CK. Presidential Address, PSA 2016: An Epistemology of Scientific Practice. Philosophy of Science. 2019;86(4):585-611.*
+*Waters CK. Presidential Address, PSA 2016: An Epistemology of Scientific Practice. Philosophy of Science. 2019;86(4):585-611.*
