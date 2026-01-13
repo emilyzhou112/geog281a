@@ -124,13 +124,12 @@ a:hover,
   align-items: center;
 }
 
-/* wrapper for the two arrows */
 .floating-arrows {
   position: relative;
-  width: 100%;          /* match diagram width so positions line up */
-  height: 90px;        /* this IS the gap between the two charts (tweak) */
-  margin: -10px 0 -10px 0; /* pulls arrows closer into the boxes (tweak) */
-  pointer-events: none; /* arrows shouldn't interfere with selection */
+  width: 100%;          
+  height: 90px;        
+  margin: -10px 0 -10px 0; 
+  pointer-events: none; 
 }
 
 /* base arrow */
@@ -140,21 +139,18 @@ a:hover,
   background-color: #6C8480;
 }
 
-/* LEFT arrow: points UP (Science → Systems) */
 .arrow-left {
   left: 18%;            
   bottom: 0;           
   height: 140px;        
 }
 
-/* RIGHT arrow: points DOWN (Systems → Science) */
 .arrow-right {
   right: 18%;          
   top: 0;               
   height: 140px;
 }
 
-/* DOWN arrowhead (attach to bottom of the shaft) */
 .arrow-down::after {
   content: "";
   position: absolute;
@@ -166,7 +162,6 @@ a:hover,
   border-top: 14px solid #6C8480;
 }
 
-/* UP arrowhead (attach to top of the shaft) */
 .arrow-up::before {
   content: "";
   position: absolute;

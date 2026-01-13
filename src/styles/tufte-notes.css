@@ -1,0 +1,22 @@
+
+.tufte-pairs .pair {
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 2rem;
+  align-items: start;
+  margin: 0.8rem 0;
+}
+
+.tufte-pairs .pair .note {
+  font-size: 0.9em;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* mobile: stack */
+@media (max-width: 900px) {
+  .tufte-pairs .pair {
+    grid-template-columns: 1fr;
+  }
+}
+
