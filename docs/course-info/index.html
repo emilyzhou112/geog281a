@@ -57,6 +57,8 @@
     
       <link rel="stylesheet" href="../styles/extra.css">
     
+      <link rel="stylesheet" href="../styles/tufte-notes.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -747,19 +749,31 @@
 
 
 <h1 id="course-information"><strong>Course Information</strong></h1>
-<p>Introduction to GIScience as an academic research field, conducted through review, discussion, and presentation of seminal works from leading journals. Labs reinforce and develop students&rsquo; existing techniques on problems of research-level difficulty in spatial analysis, cognition and mobile GIS.</p>
+<p>In this course, we will study GIScience as the science of geographic information—focusing not only on how spatial analyses are performed, but on the conceptual decisions that make them possible. We examine how geographic phenomena are conceptualized, translated into representations, analyzed through inference, conveyed through communication, and assessed through validation.Through readings, discussions, in-class activities,and a final research proposal, we will engage with foundational questions of ontology, representation, inference, uncertainty, reproducibility, ethics, and beyond that shape how spatial knowledge is produced and evaluated.</p>
+<pre class="mermaid"><code>flowchart LR
+    C["Conceptualization"]
+    R["Representation"]
+    I["Inference"]
+    V["Validation"]
+
+    C --&gt; R --&gt; I --&gt; V
+    V -.-&gt; C
+
+  classDef component fill:#99a395ff,stroke-width:0px,color:#ffffff;
+  class C,R,I,V component;
+</code></pre>
 <hr />
-<h2 id="contact-and-availability">Contact and Availability</h2>
+<h2 id="contact-and-availability"><strong>Contact and Availability</strong></h2>
 <ul>
 <li>Instructor: Peter Kedron</li>
-<li>Email: <a href="peterkedron@ucsb.edu">peterkedron@ucsb.edu</a></li>
-<li>Office:</li>
+<li>Email: <a href="mailto:peterkedron@ucsb.edu">peterkedron@ucsb.edu</a></li>
+<li>Office: 5818 Ellison Hall</li>
 <li>Availability:</li>
-<li>Lecture Time and Location:</li>
+<li>Class Time and Location:</li>
 </ul>
-<h2 id="learning-goals">Learning Goals</h2>
-<h2 id="student-work-and-evaluation">Student Work and Evaluation</h2>
-<h2 id="course-schedule">Course Schedule</h2>
+<h2 id="learning-goals"><strong>Learning Goals</strong></h2>
+<h2 id="student-work-and-evaluation"><strong>Student Work and Evaluation</strong></h2>
+<h2 id="course-schedule"><strong>Course Schedule</strong></h2>
 <table>
 <thead>
 <tr>
@@ -774,7 +788,7 @@
 <td><strong>Framing GIScience as a Field</strong></td>
 <td>Week 1</td>
 <td>What is GIScience? <br> The Tool–Science Debate</td>
-<td><a href="../readings/mark2000.pdf">Mark (2000)</a><br> <a href="readings/wright1997">Wright (1997)</a><br> Pickles (1997)<br>Fisher (1998)<br>Ricker (2020)</td>
+<td><a href="../readings/mark2000.pdf">Mark (2000)</a><br> <a href="../readings/wright1997.pdf">Wright et al.(1997)</a><br> Pickles (1997)<br>Fisher (1998)<br>Ricker (2020)</td>
 </tr>
 <tr>
 <td></td>
@@ -947,6 +961,8 @@
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
