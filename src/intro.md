@@ -10,14 +10,14 @@ A full definition of GIScience was also provided in a report on a workshop held 
 > Geographic Information Science (GIScience) is the basic research field that seeks to redefine geographic concepts and their use in the context of geographic information systems. GIScience also examines the impacts of GIS on individuals and society, and the influences of society on GIS. GIScience re-examines some of the most fundamental themes in traditional spatially oriented fields such as geography, cartography, and geodesy, while incorpo-
 rating more recent developments in cognitive and information science.
 
-David Mark (2000) addresses these questions directly by arguing that GIScience is a legitimate scientific field with a coherent intellectual core, distinct from both GIS as a tool and from geography as a disciplinary tradition. The central point is that: 
+David Mark (2000) addresses these questions directly by arguing that GIScience is a legitimate scientific field with a coherent intellectual core, distinct from both GIS as a tool and from geography as a disciplinary tradition. The central point is that:
 
 - __Using GIS in research does not automatically constitute GIScience__
 - GIScience focuses on the foundations of geographic information, not on applications alone
 
 ---
 
-## History of GIScience
+## __History of GIScience__
 
 Mark distinguishes between the history of GIS systems and the history of GIScience as a research field, and identified the following key moments:
 
@@ -28,7 +28,7 @@ Mark distinguishes between the history of GIS systems and the history of GIScien
 
 ---
 
-## Components of GIScience
+## __Components of GIScience__
 
 The nature of the field of Geographic Information Science can be characterized by listing its components. These components describe what GIScientsts study, rather than how they apply GIS.
 
@@ -94,7 +94,7 @@ __Ontology__ is a branch of philosophy that deals with the most fundamental aspe
 
 __Computation__ concerns the algorithmic and formal foundations that make geographic information analyzable in digital systems. It covers how spatial relations, objects, and processes are represented, calculated, and searched within finite-precision computing environments. This includes qualitative spatial reasoning frameworks, computational geometry, spatial indexing and retrieval methods, spatial statistics, and other geocomputational approaches such as map algebra and cellular automata.
 
-__Cognition__ focuses on how humans perceive, conceptualize, reason about, and interact with geographic space and geographic information. It draws on psychology, cognitive science, and linguistics to study human understanding of spatial concepts such as distance, direction, regions, and relationships, often emphasizing qualitative and context-dependent reasoning rather than precise metrics. This component also includes research on human–computer interaction and GIS usability, 
+__Cognition__ focuses on how humans perceive, conceptualize, reason about, and interact with geographic space and geographic information. It draws on psychology, cognitive science, and linguistics to study human understanding of spatial concepts such as distance, direction, regions, and relationships, often emphasizing qualitative and context-dependent reasoning rather than precise metrics. This component aßlso includes research on human–computer interaction and GIS usability, 
 
 __Applications & Institutions__ examines how geographic information is acquired, evaluated, and used within social, institutional, and political contexts. It includes research on data acquisition technologies, data quality, error, and uncertainty, as well as spatial analysis methods and their limitations. Beyond technical concerns, it addresses the societal impacts of GIS, including issues of governance, equity, power, commercialization, and public participation. 
 

@@ -128,8 +128,22 @@ Along those line, Pickles (1997) also challenges the framing of the tool–scien
 
 More recently, Ricker et al. (2020) argue that continuing to debate whether GIS is a tool or a science is often counterproductive, especially in interdisciplinary research contexts. They propose a role-based framework: GIS can function as a tool (basic use of existing software), toolmaking (custom development and system design), or science (advancing spatial theory, methods, and critical understanding). The key is not deciding which GIS “really is,” but explicitly identifying __which role GIS plays in a given project and what expertise is required__. If we translate philosophical debate into practical guidance, then GIScience no longer needs to prove it is a science; instead, it must clarify responsibilities, expertise, and ethical implications.
 
-## __Presidential Address__
+## __Towards Scientific Practice__
+
+The broad practice-centered view of scientific knowledge articulated in the presidential address reframes the earlier tool–science debate by shifting attention from what counts as “theory” or “tool” to how knowledge is produced through practice.
+
+![sp](../assets/scientificpractice.jpg)
+
+According to Waters (2016), scientific inquiry operates within an investigative matrix that links data, material techniques, models, and explanations through iterative manipulation of phenomena in the world. Core theory informs these investigations, but it does not dictate them; instead, explanations emerge from the interaction between theoretical commitments and practical engagements with phenomena. This view resonates strongly with Fisher’s critique of the tool–science metaphor in GIScience. Just as GIS applications are not mere implementations of pre-existing theory, scientific knowledge more broadly is generated through cycles of experimentation, critique, and refinement rather than linear application of theory to the world.
 
 ---
 
 Reference:
+
+*Wright, D. J., Goodchild, M. F., & Proctor, J. D. (1997). GIS: tool or science? Demystifying the persistent ambiguity of GIS as" Tool" versus" Science". Annals of the Association of American Geographers, 346-362.
+
+Pickles, J. (1997). Tool or science? GIS, technoscience, and the theoretical turn.
+
+Ricker, B. A., Rickles, P. R., Fagg, G. A., & Haklay, M. E. (2020). Tool, toolmaker, and scientist: case study experiences using GIS in interdisciplinary research. Cartography and Geographic Information Science, 47(4), 350-366.
+
+Waters CK. Presidential Address, PSA 2016: An Epistemology of Scientific Practice. Philosophy of Science. 2019;86(4):585-611.*
