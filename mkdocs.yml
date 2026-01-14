@@ -141,24 +141,28 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  
+
 # Page tree
 nav:
-- Welcome: index.md  
-- Course Information: course-info.md
+- WELCOME: index.md  
+- COURSE INFO: course-info.md
 - Introduction: intro.md  
 - Understanding GIScience:
   - tool-science debate: module1/debate.md
   - giscience and geography: module1/giscience-geography.md
   - principles and laws: module1/principles-laws.md
-# - Knowledge Construction: 
-# - Knowledge Inference:
-# - Limits:
-# - Knowledge Evaluation:
-# - Ethics:
-# - ACTIVITIES:
-# - STUDIO:
-- Activity:
+- Knowledge Representation: 
+  - spatial ontologies: module2/ontologies.md
+- Knowledge Inference:
+  - maps: module3/maps.md
+- Uncertainty and Limits:
+  - uncertainty: module4/uncertainty.md
+- Validation:
+  - open giscience: module5/osgis.md
+- Ethics: ethics.md
+- Research Frontiers: conclusions.md
+- ACTIVITIES:
   - Week 1:  activities/wk1.md
+- STUDIO: studio.md
 
     
