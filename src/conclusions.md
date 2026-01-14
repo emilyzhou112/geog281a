@@ -1,1 +1,1 @@
-# _Research Frontiers in GIScience__
+# __Research Frontiers in GIScience__
