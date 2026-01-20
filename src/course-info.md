@@ -35,13 +35,13 @@ flowchart LR
 
 | Module | Week | Topic | Readings |
 | --- | --- | --- | --- |
-| __Framing GIScience as a Field__ | Week 1 | What is GIScience? <br> The Tool–Science Debate | [Mark (2000)](readings/mark2000.pdf)<br> [Wright et al.(1997)](readings/wright1997.pdf)<br> Pickles (1997)<br>Fisher (1998)<br>Ricker (2020) |
-|  | Week 2 | GIScience and Geography Relationship  <br>  Principles and Laws | TBD |
-| __Spatial Knowledge Construction and Representation__ | Week 3 | Spatial Ontology <br> The Nature of Spatial Data | TBD |
-|  | Week 4 | Spatial Dependence and Heterogeneity <br>  Scale and Aggregation <br> Interpolation and Generalization| TBD |
-| __From Representation to Inference and Decision Support__ | Week 5 | Descriptive and Exploratory Spatial Models <br> Spatial Causal Inference <br> Maps and Geovisualization | TBD |
-| __Limits, Uncertainty, and Critique__ | Week 6 | Data- and Method-Driven Uncertainty <br> Spatial Confounding Variables | TBD |
-|  | Week 7 | Sensitivity Analysis<br>  Robustness Check<br>  Critiques of GIScience | TBD |
-| __Evaluating and Validating Spatial Knowledge__ | Week 8 | Open GIScience Practices and Provenance <br>  Reproducibility and Replicability <br> Internal and External Validity| TBD |
-| __Ethics and Responsibility in GIScience__ | Week 9 | Ethical Considerations <br> Governance of Spatial Knowledge | TBD |
-| __Future Directions and Synthesis__ | Week 10 | Research Frontiers <br> Course Conclusion | TBD |
+| __Framing GIScience as a Field__ | 1 | What is GIScience? <br> The Tool–Science Debate | [Mark (2000)](readings/wk1/mark2000.pdf)<br> [Wright et al.(1997)](readings/wk1/wright1997.pdf)<br> [Pickles (1997)](readings/wk1/pickles1997.pdf)<br>[Fisher (1998)](readings/wk1/fisher1998.pdf)<br>[Waters (2019)](readings/wk1/waters2019.pdf)<br> [Ricker et al.(2020)](readings/wk1/ricker2020.pdf) |
+|  | 2 | GIScience and Geography Relationship  <br>  Principles and Laws | O'Sullivan (2024) Chapter 9<br>[Goodchild (2004)](readings/wk2/goodchild2004.pdf)<br>[Goodchild(2019)](readings/wk2/goodchild2019.pdf)<br>[Guan et al.(2019)](readings/wk2/guan2019.pdf) <br> [Scheider et al.(2020)](readings/wk2/scheider2020.pdf)  |
+| __Spatial Knowledge Construction and Representation__ | 3 | Spatial Ontology <br> The Nature of Spatial Data | TBD |
+|  | 4 | Spatial Dependence and Heterogeneity <br>  Scale and Aggregation <br> Interpolation and Generalization| TBD |
+| __From Representation to Inference and Decision Support__ | 5 | Descriptive and Exploratory Spatial Models <br> Spatial Causal Inference <br> Maps and Geovisualization | TBD |
+| __Limits, Uncertainty, and Critique__ | 6 | Data- and Method-Driven Uncertainty <br> Spatial Confounding Variables | TBD |
+|  | 7 | Sensitivity Analysis<br>  Robustness Check<br>  Critiques of GIScience | TBD |
+| __Evaluating and Validating Spatial Knowledge__ | 8 | Open GIScience Practices and Provenance <br>  Reproducibility and Replicability <br> Internal and External Validity| TBD |
+| __Ethics and Responsibility in GIScience__ | 9 | Ethical Considerations <br> Governance of Spatial Knowledge | TBD |
+| __Future Directions and Synthesis__ | 10 | Research Frontiers <br> Course Conclusion | TBD |
