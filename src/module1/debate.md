@@ -4,7 +4,19 @@ Continuing on this discussion raised before on *what essentially is GIScience*, 
 
 ## __The Tool-Science Continuum__
 
-Wright et al. (1997) argue that GIS should not be classified strictly as either a tool or a science, but instead understood along a continuum. The tool-science binary is limited in scope since GIS could not be understood by two distinct positions. We need the scientific knowledge to properly use the tool and the tool allows to better understand a scientific discipline. On one end of the continuum, GIS is a for applying spatial methods, on the other end, it is a science that studies geographic information itself, and in betwen those is the toolmaking that embeds scientific ideas into systems—these roles coexist rather than compete.
+Wright et al. (1997) argue that GIS should not be classified strictly as either a tool or a science, but instead understood along a continuum. The tool-science binary is limited in scope since GIS could not be understood by two distinct positions. We need the scientific knowledge to properly use the tool and the tool allows to better understand a scientific discipline. On one end of the continuum, GIS is a tool <a class="sidenote-ref" href="#sn-1">1</a>or technical instruments that support research, analysis, and decision-making in other disciplines. On the other end, it is a science <a class="sidenote-ref" href="#sn-2">2</a> that studies geographic information itself. In betwen the two ends of the continuum is the toolmaking <a class="sidenote-ref" href="#sn-3">3</a> that embeds scientific ideas into systems—these roles coexist rather than compete.
+
+<div class="sidenote" id="sn-1">
+<strong>1.</strong> In this view, GIS does not itself generate new scientific knowledge; rather, it provides methods for storing, visualizing, manipulating, and analyzing spatial data in service of externally defined research questions.
+</div>
+
+<div class="sidenote" id="sn-2">
+<strong>2.</strong>This includes how geographic phenomena are conceptualized, represented, modeled, analyzed, and understood, independent of any specific application domain. fundamental research questions
+</div>
+
+<div class="sidenote" id="sn-3">
+<strong>3.</strong> This involves the design, development, and refinement of GIS software, algorithms, data structures, and analytical techniques.
+</div>
 
 ```mermaid
 graph LR
@@ -20,26 +32,6 @@ graph LR
 
 ```
 
-<!-- markdownlint-disable MD033 -->
-
-<div class="tufte-pairs">
-<div class="pair">
-  <div class="main"><strong>GIS is a Tool</strong><sup>1</sup></div>
-  <div class="note">The use of geographic information systems as technical instruments that support research, analysis, and decision-making in other disciplines. In this view, GIS does not itself generate new scientific knowledge; rather, it provides methods for storing, visualizing, manipulating, and analyzing spatial data in service of externally defined research questions.</div>
-</div>
-
-<div class="pair">
-  <div class="main"><strong>GIS is a Science</strong><sup>2</sup></div>
-  <div class="note">A discpline that studies fundamental research questions about geographic information itself. This includes how geographic phenomena are conceptualized, represented, modeled, analyzed, and understood, independent of any specific application domain. fundamental research questions…</div>
-</div>
-
-<div class="pair">
-  <div class="main"><strong>GIS as Tool-Making</strong><sup>3</sup></div>
-  <div class="note">A distinct intellectual activity situated between tool use and science that involves the design, development, and refinement of GIS software, algorithms, data structures, and analytical techniques that embody scientific ideas about geographic information. </div>
-</div>
-</div>
-
-<!-- markdownlint-enable MD033 -->
 ## __Continuum is the Wrong Metaphor__
 
 Fisher (1998), however, argues that the construction is theoretically problematic for resulting in polarization of the subject material. Specifically, it implies that the users of a GISystem cannot be indulding in a valid scientific endevour unless it is in the scientific domain of their subject. Many individuals both employ extant commerical GIS do develop new and interesting spatial theory, which may employ development of source code because no GIS can be used as a vehicle for implementation of the novel concepts developed.
@@ -120,9 +112,11 @@ flowchart LR
 
 </center>
 
+Along those line, Pickles (1997)<a class="sidenote-ref" href="#sn-4">4</a> also challenges the framing of the tool–science debate itself, though from a different pespecitve. He argues that the binary tool-science debate abstracts GIS from its social, political, and institutional contexts. He is skeptical of attempts to legitimize GIS purely through claims of scientific neutrality or technical sophistication. In addition to asking __“What is GIS?”__, we need to think about __“What does GIS do, and for whom?”__ This is an early move toward what later becomes Critical GIS.
 
-
-Along those line, Pickles (1997) also challenges the framing of the tool–science debate itself, though from a different pespecitve. He argues that the binary tool-science debate abstracts GIS from its social, political, and institutional contexts. He is skeptical of attempts to legitimize GIS purely through claims of scientific neutrality or technical sophistication. In addition to asking __“What is GIS?”__, we need to think about __“What does GIS do, and for whom?”__ This is an early move toward what later becomes Critical GIS.
+<div class="sidenote" id="sn-4">
+<strong>4.</strong> While Fisher emphasizes epistemic cycles between systems and science, Pickles tries to foreground the social embedding of those cycles:who controls them, who benefits from them, and whose knowledge is excluded.
+</div>
 
 ## __Contemporary Reconcilation__
 
