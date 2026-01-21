@@ -30,8 +30,8 @@ Against this backdrop, the rise of data science raises a parallel question: what
 
 Scheider et al. (2020) argue that GDS is not yet a scientific discipline, but rather a community of practice. A scientific discipline, they contend, must have its own concepts and its own questions. GDS currently does not. It borrows concepts from Geography, methods from GIScience, Statistics, and Machine Learning, and infrastructure from Computer Science <sup><a class="sidenote-ref" href="#sn-1">1</a></sup>.
 
-<div class="sidenote" id="sn-2">
-<strong>2.</strong> Interestingly, this argument defends GIScience rather than replacing it. GIScience is framed as a meta-science, akin to Statistics or Information Science. Its role is not to answer geographic questions directly, but to study how geographic information is represented, measured, and reasoned with. This distinction becomes crucial in the discussions that follow.</div>
+<div class="sidenote" id="sn-1">
+<strong>1.</strong> Interestingly, this argument defends GIScience rather than replacing it. GIScience is framed as a meta-science, akin to Statistics or Information Science. Its role is not to answer geographic questions directly, but to study how geographic information is represented, measured, and reasoned with. This distinction becomes crucial in the discussions that follow.</div>
 
 ## __The Geographicness in GIS__
 
