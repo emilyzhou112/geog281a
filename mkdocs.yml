@@ -56,6 +56,7 @@ theme:
     - navigation.indexes 
     - navigation.footer 
     - content.code.copy
+    - toc.integrate
 
   palette:
     - scheme: default
@@ -148,17 +149,17 @@ nav:
 - COURSE INFO: course-info.md
 - Introduction: intro.md  
 - Understanding GIScience:
-  - tool-science debate: module1/debate.md
-  - giscience and geography: module1/giscience-geography.md
-  - principles and laws: module1/principles-laws.md
+  - Tool-Science Debate: module1/debate.md
+  - GIScience and Geography: module1/giscience-geography.md
+  - Principles and Laws: module1/principles-laws.md
 - Knowledge Representation: 
-  - spatial ontologies: module2/ontologies.md
+  - Spatial Ontologies: module2/ontologies.md
 - Knowledge Inference:
-  - maps: module3/maps.md
+  - Maps: module3/maps.md
 - Uncertainty and Limits:
-  - uncertainty: module4/uncertainty.md
+  - Uncertainty: module4/uncertainty.md
 - Validation:
-  - open giscience: module5/osgis.md
+  - Open GIScience: module5/osgis.md
 - Ethics: ethics.md
 - Research Frontiers: conclusions.md
 - ACTIVITIES:

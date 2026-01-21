@@ -1,6 +1,6 @@
 # __The Tool Science Debate in GIScience__
 
-Continuing on this discussion raised before on *what essentially is GIScience*, there exist this debate on whether as a tool or science. Over time, scholars have taken on different perspectives and approaches towards answering this question as well as towards justifying the role of GIScience.
+Continuing on this discussion raised before on *what essentially is GIScience*, there exist this debate on whether it should be recognized as a tool or science. Over time, scholars have taken on different perspectives and approaches towards answering this question as well as towards justifying the role of GIScience.
 
 ## __The Tool-Science Continuum__
 
@@ -134,7 +134,7 @@ According to Waters (2016), scientific inquiry operates within an investigative 
 
 Reference:
 
-*Wright, D. J., Goodchild, M. F., & Proctor, J. D. (1997). GIS: tool or science? Demystifying the persistent ambiguity of GIS as" Tool" versus" Science". Annals of the Association of American Geographers, 346-362.*
+*Wright, D. J., Goodchild, M. F., & Proctor, J. D. (1997). GIS: tool or science? Demystifying the persistent ambiguity of GIS as "Tool" versus "Science". Annals of the Association of American Geographers, 346-362.*
 
 *Pickles, J. (1997). Tool or science? GIS, technoscience, and the theoretical turn.*
 
