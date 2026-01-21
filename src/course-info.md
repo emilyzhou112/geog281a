@@ -36,7 +36,7 @@ flowchart LR
 | Module | Week | Topic | Readings |
 | --- | --- | --- | --- |
 | __Framing GIScience as a Field__ | 1 | What is GIScience? <br> The Tool–Science Debate | [Mark (2000)](readings/wk1/mark2000.pdf)<br> [Wright et al.(1997)](readings/wk1/wright1997.pdf)<br> [Pickles (1997)](readings/wk1/pickles1997.pdf)<br>[Fisher (1998)](readings/wk1/fisher1998.pdf)<br>[Waters (2019)](readings/wk1/waters2019.pdf)<br> [Ricker et al.(2020)](readings/wk1/ricker2020.pdf) |
-|  | 2 | GIScience and Geography Relationship  <br>  Principles and Laws | O'Sullivan (2024) Chapter 9<br>[Goodchild (2004)](readings/wk2/goodchild2004.pdf)<br>[Goodchild(2019)](readings/wk2/goodchild2019.pdf)<br>[Guan et al.(2019)](readings/wk2/guan2019.pdf) <br> [Scheider et al.(2020)](readings/wk2/scheider2020.pdf)  |
+|  | 2 | GIScience and Geography Relationship  <br>  Principles and Laws | O'Sullivan (2024) Chapter 9[](readings/wk2/CGChapter9.pdf)<br>[Goodchild (2004)](readings/wk2/goodchild2004.pdf)<br>[Goodchild(2019)](readings/wk2/goodchild2019.pdf)<br>[Guan et al.(2019)](readings/wk2/guan2019.pdf) <br> [Scheider et al.(2020)](readings/wk2/scheider2020.pdf)  |
 | __Spatial Knowledge Construction and Representation__ | 3 | Spatial Ontology <br> The Nature of Spatial Data | TBD |
 |  | 4 | Spatial Dependence and Heterogeneity <br>  Scale and Aggregation <br> Interpolation and Generalization| TBD |
 | __From Representation to Inference and Decision Support__ | 5 | Descriptive and Exploratory Spatial Models <br> Spatial Causal Inference <br> Maps and Geovisualization | TBD |
