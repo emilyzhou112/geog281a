@@ -51,7 +51,7 @@ theme:
 
   features:
     # - tabs
-    - navigation.instant
+    - navigation.instant:false
     - navigation.instant.progress  
     - navigation.indexes 
     - navigation.footer 
@@ -75,6 +75,8 @@ theme:
 extra_css:
   - styles/extra.css
   - styles/tufte-notes.css
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+
  
 # Plugins
 plugins:
@@ -104,7 +106,8 @@ markdown_extensions:
   - markdown.extensions.toc:
       permalink: false
       toc_depth: 4
-  - pymdownx.arithmatex
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
@@ -142,6 +145,10 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
+  - javascripts/lightbox-init.js
+  - javascripts/embed-refresh.js
+
 
 # Page tree
 nav:
@@ -153,7 +160,8 @@ nav:
   - GIScience and Geography: module1/giscience-geography.md
   - Principles and Laws: module1/principles-laws.md
 - Knowledge Representation: 
-  - Spatial Ontologies: module2/ontologies.md
+  - Spatial Ontologies - Space: module2/ontologies1.md
+  - Spatial Ontologies - Place: module2/ontologies2.md
 - Knowledge Inference:
   - Maps: module3/maps.md
 - Uncertainty and Limits:
