@@ -68,7 +68,7 @@ This reframing shifts attention away from maps as finished products and toward t
 
 O’Sullivan argues that we need to interrogate more closely what we mean by terms like related, near, and distant. Finding ways to recognize the fuzziness, ambiguity, porosity, and uncertainty of boundaries has the potential to open up new and different ways of seeing geographies. Doing so could set the stage for representing processes, events, and patterns explicitly, rather than treating familiar GIS entities as fixed and pre-given.
 
-Then,oOne way of “doing GIS” today is to develop a vision that is both technical and critical. This requires taking the geographical in GIScience more seriously, and for geography to take GIScience more seriously as well. This leads to O’Sullivan’s primary conclusion:
+Then,one way of “doing GIS” today is to develop a vision that is both technical and critical. This requires taking the geographical in GIScience more seriously, and for geography to take GIScience more seriously as well. This leads to O’Sullivan’s primary conclusion:
 
 > Geography and GIScience curricula at all levels should actively explore the common ground they share.
 
