@@ -1,1 +1,0 @@
-# __Spatial Ontologies__

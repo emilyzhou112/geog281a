@@ -126,7 +126,11 @@ More recently, Ricker et al. (2020) argue that continuing to debate whether GIS 
 
 The broad practice-centered view of scientific knowledge articulated in the presidential address reframes the earlier tool–science debate by shifting attention from what counts as “theory” or “tool” to how knowledge is produced through practice.
 
-![sp](../assets/scientificpractice.jpg)
+
+  <a href="../../assets/scientificpractice.jpg" class="zoomable" style="width:100%;">
+    <img src="../../assets/scientificpractice.jpg"
+         style="width:100%; object-fit:cover; object-position:center;">
+  </a>
 
 According to Waters (2016), scientific inquiry operates within an investigative matrix that links data, material techniques, models, and explanations through iterative manipulation of phenomena in the world. Core theory informs these investigations, but it does not dictate them; instead, explanations emerge from the interaction between theoretical commitments and practical engagements with phenomena. This view resonates strongly with Fisher’s critique of the tool–science metaphor in GIScience. Just as GIS applications are not mere implementations of pre-existing theory, scientific knowledge more broadly is generated through cycles of experimentation, critique, and refinement rather than linear application of theory to the world.
 
