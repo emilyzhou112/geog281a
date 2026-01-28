@@ -69,7 +69,7 @@ Quantitative geographers have long emphasized spatial patterns, although “patt
 Point pattern analysis, for example, explicitly asks what kinds of generative processes could produce the observed arrangement of events. In this sense, spatial statistics is already implicitly process-oriented, even if it sometimes appears focused only on snapshots. The central concern of point pattern analysis and many other branches of spatial analysis is precisely this question: what kinds of processes could yield this observed pattern? While spatial analysis is sometimes criticized for emphasizing instantaneous views of the world, it is actually much more concerned with the dynamic processes that may or may not give rise to the spatial configurations we observe.
 
 <div style="text-align:center;">
-  <img src="../../assets/sp.gif" style="width:100%; height:500px;">
+  <img src="../../assets/sp.gif" style="width:100%">
 </div>
 
 _Mobility hotspots at the Paris Olympics0; Source: CARTO_

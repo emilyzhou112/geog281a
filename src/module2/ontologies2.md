@@ -23,15 +23,13 @@ Importantly, place is not just emotional or personal; it is also social and poli
 
 To make this more concrete, consider the two images of the same vacant lot in the Frankford neighborhood of Philadelphia. In one, the lot appears abandoned, scattered with debris, and covered in unsanctioned graffiti. It may be read as neglect, disorder, or even danger. In the other, the very same space is reimagined as a community playground, with landscaping, seating, and murals integrated into a planned design. Here, similar visual elements (painted walls, open ground, informal activity) are interpreted entirely differently because the context has changed. One is labeled blight; the other, revitalization. What changed is not simply the geometry of the site, but the social meaning attached to it.
 
-<div style="display:flex; gap:0.6rem; align-items:stretch;">
-  <a href="../../assets/frankfordb4.jpg" class="zoomable" style="width:49%;">
-    <img src="../../assets/frankfordb4.jpg"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+<div class="image-row">
+  <a href="../../assets/frankfordb4.jpg" class="zoomable">
+    <img src="../../assets/frankfordb4.jpg">
   </a>
 
-  <a href="../../assets/frankfordafter.jpg" class="zoomable" style="width:49%;">
-    <img src="../../assets/frankfordafter.jpg"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+  <a href="../../assets/frankfordafter.jpg" class="zoomable">
+    <img src="../../assets/frankfordafter.jpg">
   </a>
 </div>
 
@@ -102,15 +100,6 @@ There are many compelling examples of this approach in both static and dynamic f
 _Credit: Atlas Guo (2024), Source: [cartoguophy](https://cartoguophy.com/maps/biking.html)_
 
 Dynamic story maps extend this idea even further. Interactive projects, such as the [Dark Skies map](https://jake-steinberg.github.io/2022_DarkSkies_js/), allow users to scroll, click, and explore place through sequence and discovery. The map becomes more like a guided experience here.
-
-<iframe
-  src="https://jake-steinberg.github.io/2022_DarkSkies_js/"
-  width="1000"
-  height="600"
-  style="border:0;">
-</iframe>
-
-_Credit: Jake Steinberg et. al (2022)_
 
 The __second__ step takes a different direction. Instead of translating place into narrative overlays, it attempts to directly implement explicit conceptual models of place computationally. In other words, rather than adding stories to maps, this approach asks whether the underlying data structures themselves can encode theories of how places are organized and experienced. O’Sullivan specifically  points to examples such as Lynch’s image-of-the-city framework (paths, edges, districts, nodes, and landmarks) as a set of perceptual elements that could be operationalized in GIS layers. Here, place is modeled not simply as geometry but as a structured configuration of meaningful features, whose combination produces a recognizable urban environment. 
 

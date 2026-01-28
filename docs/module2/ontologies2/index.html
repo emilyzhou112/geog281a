@@ -1213,15 +1213,13 @@
 <p>These labels are obviously subjective, humorous, and sometimes contradictory, yet they often feel more recognizable to everyday experience than census tracts or ZIP codes. The map captures not geometry, but perception. It demonstrates that what counts as a &ldquo;neighborhood&rdquo; is not simply a polygon in a database, but a socially shared understanding built through everyday life. Feel free to swtich to another city you are interested in and explore the labels. Make sure to check which neighborhood each area of interest falls in.</p>
 <p>Importantly, place is not just emotional or personal; it is also social and political. Places regulate behavior and encode expectations about who belongs and what is appropriate. Certain activities may feel &ldquo;in place&rdquo; in one setting and &ldquo;out of place&rdquo; in another. In this sense, place is inherently normative. As O’Sullivan illustrates through the example of graffiti, the same physical act can be interpreted very differently depending on where it occurs. Graffiti is a practice whose meaning is bound up with place and timing: what is considered vandalism in one location may be celebrated as public art in another. Graffiti is only &ldquo;graffiti&rdquo; when it is out of place.</p>
 <p>To make this more concrete, consider the two images of the same vacant lot in the Frankford neighborhood of Philadelphia. In one, the lot appears abandoned, scattered with debris, and covered in unsanctioned graffiti. It may be read as neglect, disorder, or even danger. In the other, the very same space is reimagined as a community playground, with landscaping, seating, and murals integrated into a planned design. Here, similar visual elements (painted walls, open ground, informal activity) are interpreted entirely differently because the context has changed. One is labeled blight; the other, revitalization. What changed is not simply the geometry of the site, but the social meaning attached to it.</p>
-<div style="display:flex; gap:0.6rem; align-items:stretch;">
-  <a href="../../assets/frankfordb4.jpg" class="zoomable" style="width:49%;">
-    <img src="../../assets/frankfordb4.jpg"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+<div class="image-row">
+  <a href="../../assets/frankfordb4.jpg" class="zoomable">
+    <img src="../../assets/frankfordb4.jpg">
   </a>
 
-  <a href="../../assets/frankfordafter.jpg" class="zoomable" style="width:49%;">
-    <img src="../../assets/frankfordafter.jpg"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+  <a href="../../assets/frankfordafter.jpg" class="zoomable">
+    <img src="../../assets/frankfordafter.jpg">
   </a>
 </div>
 
@@ -1268,14 +1266,6 @@
   </a></p>
 <p><em>Credit: Atlas Guo (2024), Source: <a href="https://cartoguophy.com/maps/biking.html">cartoguophy</a></em></p>
 <p>Dynamic story maps extend this idea even further. Interactive projects, such as the <a href="https://jake-steinberg.github.io/2022_DarkSkies_js/">Dark Skies map</a>, allow users to scroll, click, and explore place through sequence and discovery. The map becomes more like a guided experience here.</p>
-<p><iframe
-  src="https://jake-steinberg.github.io/2022_DarkSkies_js/"
-  width="1000"
-  height="600"
-  style="border:0;">
-</iframe>
-</p>
-<p><em>Credit: Jake Steinberg et. al (2022)</em></p>
 <p>The <strong>second</strong> step takes a different direction. Instead of translating place into narrative overlays, it attempts to directly implement explicit conceptual models of place computationally. In other words, rather than adding stories to maps, this approach asks whether the underlying data structures themselves can encode theories of how places are organized and experienced. O’Sullivan specifically  points to examples such as Lynch’s image-of-the-city framework (paths, edges, districts, nodes, and landmarks) as a set of perceptual elements that could be operationalized in GIS layers. Here, place is modeled not simply as geometry but as a structured configuration of meaningful features, whose combination produces a recognizable urban environment. </p>
 <div class="admonition summary">
 <p class="admonition-title">Should we think of place and space as completely opposed where place is local, concrete, and particular whereas space is global, abstract, and general? Perhaps the answer to this is not that place is not concrete, grounded, real, lived, etc. It is that space is too. The local and immediate feels more concrete, because it is often visible, right there in front of us. But more remote events are no less real, even if they seem that way. Place cannot be fully computed, only approximated. What GIS can do is not to perfectly capture place, but to provide thoughtful, partial representations that remain sensitive to experience and interpretation.</p>

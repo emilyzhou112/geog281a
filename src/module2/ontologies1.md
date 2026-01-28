@@ -42,17 +42,16 @@ To O’Sullivan’s point because GIS tools assume absolute space, they often st
 
 Cartograms illustrate this tension clearly. It is relatively straightforward to distort areas, as shown in the examples below, according to population, travel time, or some other metric, creating a map where size reflects something other than physical area. Yet once such a transformation is created, standard GIS tools often treat it as an awkward exception. Projections may be unrecognized, layers may not align, and routine operations become difficult. Effectively, the software assumes that only conventional coordinate systems are legitimate spaces.
 
-<div style="display:flex; gap:0.6rem; align-items:stretch;">
-  <a href="../../assets/cartogram1.jpg" class="zoomable" style="width:49%;">
-    <img src="../../assets/cartogram1.jpg"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+<div class="image-row">
+  <a href="../../assets/cartogram1.jpg" class="zoomable">
+    <img src="../../assets/cartogram1.jpg">
   </a>
 
-  <a href="../../assets/cartogram2.jpg" class="zoomable" style="width:49%;">
-    <img src="../../assets/cartogram2.jpg"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+  <a href="../../assets/cartogram2.jpg" class="zoomable">
+    <img src="../../assets/cartogram2.jpg">
   </a>
 </div>
+
 
 _Source: [Graphical Cartograms in ArcGIS Pro](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/graphical-cartograms-in-arcgis-pro)_
 
@@ -60,17 +59,16 @@ _Source: [Graphical Cartograms in ArcGIS Pro](https://www.esri.com/arcgis-blog/p
 
 Similarly, when working with historical basemaps, we are often required to georeference and warp older maps into modern projections, even when those historical representations better reflect the spatial understanding of their time. The logic of the tool prioritizes geometric accuracy over interpretive meaning, reinforcing the dominance of absolute space. As an example, the maps below shows a historical map in its original form and when overlayed with modern street labels when adjusted to modern projections. 
 
-<div style="display:flex; gap:0.6rem; align-items:stretch;">
-  <a href="../../assets/hist2.png" class="zoomable" style="width:49%;">
-    <img src="../../assets/hist2.png"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+<div class="image-row">
+  <a href="../../assets/hist2.png" class="zoomable">
+    <img src="../../assets/hist2.png">
   </a>
 
-  <a href="../../assets/hist1.png" class="zoomable" style="width:49%;">
-    <img src="../../assets/hist1.png"
-         style="width:100%; height:310px; object-fit:cover; object-position:center;">
+  <a href="../../assets/hist1.png" class="zoomable">
+    <img src="../../assets/hist1.png">
   </a>
 </div>
+
 
 _Source:[Philadelphia GeoHistory Website](https://www.philageohistory.org/tiles/viewer/)_
 
@@ -85,7 +83,7 @@ Several concrete examples help make this shift visible!
 Voronoi polygons provide a clear and intuitive example of how GIScience can move beyond absolute, coordinate-based space. Rather than defining regions using fixed administrative boundaries or arbitrary grid cells, it partitions space according to proximity relationships: every location is assigned to whichever feature it is closest to. In this formulation, space becomes something structured by distances between entities. What matters is not a point’s absolute coordinates, but its relation to neighboring points. This makes Voronoi models especially useful for problems like service areas, facility location, clustering, or neighborhood definition, where “closeness” is more meaningful than geometric position. Conceptually, Voronoi polygons demonstrate that many spatial questions are inherently relational—regions emerge from interactions among features rather than being pre-given.
 
 <div style="text-align:center;">
-  <img src="../../assets/voronoi.gif" style="width:100%; height:410px;">
+  <img src="../../assets/voronoi.gif" style="width:100%">
 </div>
 
 _Source: One of the many [algorithms](https://medium.com/data-science/the-fascinating-world-of-voronoi-diagrams-da8fc700fa1b) of constructing voronoi polygons to achieve rounder aspects and more evenly spaced points._ 
