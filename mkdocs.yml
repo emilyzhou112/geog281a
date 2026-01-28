@@ -162,6 +162,7 @@ nav:
 - Knowledge Representation: 
   - Spatial Ontologies - Space: module2/ontologies1.md
   - Spatial Ontologies - Place: module2/ontologies2.md
+  - Spatial Ontologies - Process: module2/ontologies3.md
 - Knowledge Inference:
   - Maps: module3/maps.md
 - Uncertainty and Limits:
