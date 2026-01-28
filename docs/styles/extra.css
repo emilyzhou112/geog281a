@@ -239,7 +239,7 @@ a:hover,
 
 .embed-wrapper {
   max-width: 900px;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   border: 1px solid rgba(64,78,59,.25);
   border-radius: 10px;
   overflow: hidden;
@@ -248,16 +248,16 @@ a:hover,
 
 .embed-toolbar {
   text-align: right;
-  padding: 0.4rem 0.6rem;
+  padding: 0.3rem 0.3rem;
   background: #9db3a0;
 }
 
 .embed-toolbar button {
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   background: none;
   border: 1px solid #404E3B;
   border-radius: 6px;
-  padding: 0.25rem 0.6rem;
+  padding: 0.25rem 0.4rem;
   cursor: pointer;
 }
 
@@ -267,3 +267,28 @@ a:hover,
   border: 0;
 }
 
+
+.embed-wrapper.embed-small {
+  max-width: 520px;
+}
+
+.embed-wrapper.embed-small iframe {
+  height: 520px;
+}
+
+.embed-with-text {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem 0.8rem, 1rem 1rem;
+}
+
+.embed-with-text .embed-wrapper {
+  flex: 0 0 520px;   
+}
+
+.embed-text {
+  flex: 1;
+  max-width: 60ch;  
+  margin-top: 1.5rem; 
+}
