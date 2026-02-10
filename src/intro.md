@@ -2,15 +2,13 @@
 
 Geographic Information Science (GIScience) emerged in the 1990s alongside the rapid growth of Geographic Information Systems (GIS), but from the beginning its identity was uncertain. Is GIScience simply the use of GIS software? Is it the development of new tools? Or is it a scientific field with its own objects of study, theories, and research questions?
 
-The definition provided by UCGIS at the onset of its foundation provided the following definition:
-> The University Consortium for Geographic Information Science is dedicated to the development and use of theories, methods, technology, and data for understanding geographic processes, relationships, and patterns. The
-transformation of geographic data into useful information is central to geographic information science.”
+When it was founded in 1995, The University Consortium for Geographic Information Science (UCGIS) identified its core mission with GIScience:
+> The University Consortium for Geographic Information Science is dedicated to the development and use of theories, methods, technology, and data for understanding geographic processes, relationships, and patterns. The transformation of geographic data into useful information is central to geographic information science.”
 
-A full definition of GIScience was also provided in a report on a workshop held in January 1999 at the National Science Foundation: 
-> Geographic Information Science (GIScience) is the basic research field that seeks to redefine geographic concepts and their use in the context of geographic information systems. GIScience also examines the impacts of GIS on individuals and society, and the influences of society on GIS. GIScience re-examines some of the most fundamental themes in traditional spatially oriented fields such as geography, cartography, and geodesy, while incorpo-
-rating more recent developments in cognitive and information science.
+Another definition of GIScience was also provided in a workshop held by the United States National Science Foundation in January 1999. 
+> Geographic Information Science (GIScience) is the basic research field that seeks to redefine geographic concepts and their use in the context of geographic information systems. GIScience also examines the impacts of GIS on individuals and society, and the influences of society on GIS. GIScience re-examines some of the most fundamental themes in traditional spatially oriented fields such as geography, cartography, and geodesy, while incorporating more recent developments in cognitive and information science.
 
-David Mark (2000) addresses these questions directly by arguing that GIScience is a legitimate scientific field with a coherent intellectual core, distinct from both GIS as a tool and from geography as a disciplinary tradition. The central point is that:
+A year later, Mark (2000) synthesized these statements and argued that GIScience is a legitimate scientific field with a coherent intellectual core, distinct from both GIS as a tool and from geography as a disciplinary tradition. Stated simply:
 
 - __Using GIS in research does not automatically constitute GIScience__
 - GIScience focuses on the foundations of geographic information, not on applications alone
@@ -30,7 +28,7 @@ Mark distinguishes between the history of GIS systems and the history of GIScien
 
 ## __Components of GIScience__
 
-The nature of the field of Geographic Information Science can be characterized by listing its components. These components describe what GIScientsts study, rather than how they apply GIS.
+One way to attempt to capture the nature of the field of GIScience is to list its many components. These components describe what GIScientsts study, rather than how they apply GIS.
 
 ```mermaid
 %%{init: {

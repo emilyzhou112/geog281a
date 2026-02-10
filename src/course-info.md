@@ -1,19 +1,20 @@
 # __Course Information__  
 
-In this course, we will study GIScience as the science of geographic information—focusing not only on how spatial analyses are performed, but on the conceptual decisions that make them possible. We examine how geographic phenomena are conceptualized, translated into representations, analyzed through inference, conveyed through communication, and assessed through validation.Through readings, discussions, in-class activities,and a final research proposal, we will engage with foundational questions of ontology, representation, inference, uncertainty, reproducibility, ethics, and beyond that shape how spatial knowledge is produced and evaluated.
+GEOG 281A helps students design stronger, more rigorous geographic research by connecting the development and use of core spatial methods to their theoretical foundations in GIScience. Students explore fundamental topics including ontology and spatial representation, uncertainty and error propagation, spatial modeling and inference, and validation through open science practices (Fig. 1). This course teaches students to think critically about the nature of spatial data and engage deeply with geographic scholarship rather than simply apply GIS tools in specific domains.
 
 ```mermaid
 flowchart LR
+    W["Real World"]
     C["Conceptualization"]
     R["Representation"]
-    I["Inference"]
+    A["Analysis"]
     V["Validation"]
 
-    C --> R --> I --> V
+    W --> C --> R --> A --> V
     V -.-> C
 
   classDef component fill:#99a395ff,stroke-width:0px,color:#ffffff;
-  class C,R,I,V component;
+  class W,C,R,A,V component;
 
 ```
 
