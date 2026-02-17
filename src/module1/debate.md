@@ -46,7 +46,7 @@ In addition to asking __“What is GIS?”__, we need to think about __“What d
 </div>
 
 <div class="sidenote" id="sn-5">
-<strong>5.</strong> Pickles argument is an early development what later becomes Critical GIS. His edited book *Ground Truth* is a seminal work in this sub-field of GIScience and one of the first synthetic surveys of these arguments.
+<strong>5.</strong> Pickles argument is an early development what later becomes Critical GIS. His edited book <em>Ground Truth</em> is a seminal work in this sub-field of GIScience and one of the first synthetic surveys of these arguments.
 </div>
 
 ## __A Contemporary Focus on Roles and Practice__ 

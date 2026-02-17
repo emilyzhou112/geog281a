@@ -1,11 +1,19 @@
 /* Syntax highlighting */
 :root > * {
-  --md-code-hl-string-color: #7B9669;
-  --md-code-hl-comment-color: #6C8480;
-  --md-code-hl-number-color: #404E3B;
-  --md-code-hl-function-color: #6C8480;
-  --md-code-hl-keyword-color: #404E3B;
-  --md-code-hl-variable-color: #1f1f1f;
+  --md-code-hl-string-color: #2f6f3e;
+  --md-code-hl-comment-color: #6f7f6c;
+  --md-code-hl-number-color: #7a4d1a;
+  --md-code-hl-function-color: #355f7c;
+  --md-code-hl-keyword-color: #3f4f6a;
+  --md-code-hl-variable-color: #111111;
+}
+[data-md-color-scheme="slate"] {
+  --md-code-hl-string-color: #9ad38f;
+  --md-code-hl-comment-color: #7f8c84;
+  --md-code-hl-number-color: #f0b87a;
+  --md-code-hl-function-color: #9ec3e6;
+  --md-code-hl-keyword-color: #b7c6ff;
+  --md-code-hl-variable-color: #f2f2f2;
 }
 
 .md-content__inner h1 {
