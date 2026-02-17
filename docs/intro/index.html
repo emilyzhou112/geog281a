@@ -424,8 +424,6 @@
       
         
       
-        
-      
     
     
     
@@ -522,34 +520,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../module1/principles-laws/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Principles and Laws
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -565,6 +535,12 @@
   
     
     
+      
+        
+      
+        
+      
+        
       
         
       
@@ -683,6 +659,90 @@
     
   
     Spatial Ontologies - Process
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module2/data-models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Nature of Spatial Data
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module2/database-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spatial Database Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module2/principles-laws/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Laws in Geography
   
 
     
@@ -1147,17 +1207,15 @@
 
 <h1 id="what-is-geographic-information-science"><strong>What is Geographic Information Science?</strong></h1>
 <p>Geographic Information Science (GIScience) emerged in the 1990s alongside the rapid growth of Geographic Information Systems (GIS), but from the beginning its identity was uncertain. Is GIScience simply the use of GIS software? Is it the development of new tools? Or is it a scientific field with its own objects of study, theories, and research questions?</p>
-<p>The definition provided by UCGIS at the onset of its foundation provided the following definition:</p>
+<p>When it was founded in 1995, The University Consortium for Geographic Information Science (UCGIS) identified its core mission with GIScience:</p>
 <blockquote>
-<p>The University Consortium for Geographic Information Science is dedicated to the development and use of theories, methods, technology, and data for understanding geographic processes, relationships, and patterns. The
-transformation of geographic data into useful information is central to geographic information science.”</p>
+<p>The University Consortium for Geographic Information Science is dedicated to the development and use of theories, methods, technology, and data for understanding geographic processes, relationships, and patterns. The transformation of geographic data into useful information is central to geographic information science.”</p>
 </blockquote>
-<p>A full definition of GIScience was also provided in a report on a workshop held in January 1999 at the National Science Foundation: </p>
+<p>Another definition of GIScience was also provided in a workshop held by the United States National Science Foundation in January 1999. </p>
 <blockquote>
-<p>Geographic Information Science (GIScience) is the basic research field that seeks to redefine geographic concepts and their use in the context of geographic information systems. GIScience also examines the impacts of GIS on individuals and society, and the influences of society on GIS. GIScience re-examines some of the most fundamental themes in traditional spatially oriented fields such as geography, cartography, and geodesy, while incorpo-
-rating more recent developments in cognitive and information science.</p>
+<p>Geographic Information Science (GIScience) is the basic research field that seeks to redefine geographic concepts and their use in the context of geographic information systems. GIScience also examines the impacts of GIS on individuals and society, and the influences of society on GIS. GIScience re-examines some of the most fundamental themes in traditional spatially oriented fields such as geography, cartography, and geodesy, while incorporating more recent developments in cognitive and information science.</p>
 </blockquote>
-<p>David Mark (2000) addresses these questions directly by arguing that GIScience is a legitimate scientific field with a coherent intellectual core, distinct from both GIS as a tool and from geography as a disciplinary tradition. The central point is that:</p>
+<p>A year later, Mark (2000) synthesized these statements and argued that GIScience is a legitimate scientific field with a coherent intellectual core, distinct from both GIS as a tool and from geography as a disciplinary tradition. Stated simply:</p>
 <ul>
 <li><strong>Using GIS in research does not automatically constitute GIScience</strong></li>
 <li>GIScience focuses on the foundations of geographic information, not on applications alone</li>
@@ -1173,62 +1231,8 @@ rating more recent developments in cognitive and information science.</p>
 </ul>
 <hr />
 <h2 id="components-of-giscience"><strong>Components of GIScience</strong></h2>
-<p>The nature of the field of Geographic Information Science can be characterized by listing its components. These components describe what GIScientsts study, rather than how they apply GIS.</p>
-<pre class="mermaid"><code>%%{init: {
-  "flowchart": {
-    "nodeSpacing": 1,
-    "rankSpacing": 1
-  }
-}}%%
-graph LR
-  A["&lt;b&gt;GIScience&lt;/b&gt;"]
-
-  %% Main components
-  B["&lt;b&gt;Ontology &amp; Representation&lt;/b&gt;"]
-  C["&lt;b&gt;Computation&lt;/b&gt;"]
-  D["&lt;b&gt;Cognition&lt;/b&gt;"]
-  E["&lt;b&gt;Institutions &amp; Society&lt;/b&gt;"]
-  F["&lt;b&gt;Cross-cutting Themes&lt;/b&gt;"]
-
-  A --&gt; B
-  A --&gt; C
-  A --&gt; D
-  A --&gt; E
-  A --&gt; F
-
-  %% Ontology &amp; Representation
-  B --&gt; B1["Geographic concepts"]
-  B --&gt; B2["Data models &amp; semantics"]
-  B --&gt; B3["Objects / fields / processes"]
-
-  %% Computation
-  C --&gt; C1["Spatial data structures"]
-  C --&gt; C2["Spatial analysis &amp; algorithms"]
-  C --&gt; C3["Geocomputation"]
-
-  %% Cognition
-  D --&gt; D1["Naive geography"]
-  D --&gt; D2["Spatial reasoning"]
-  D --&gt; D3["HCI &amp; usability"]
-
-  %% Institutions &amp; Society
-  E --&gt; E1["Data quality &amp; uncertainty"]
-  E --&gt; E2["Institutional practice"]
-  E --&gt; E3["Social impacts &amp; equity"]
-
-  %% Cross-cutting themes
-  F --&gt; F1["Scale"]
-  F --&gt; F2["Time"]
-
-  %% Styling
- classDef component fill:#99a395ff,stroke-width:0px,color:#ffffff;
- classDef root fill:#6C8480,stroke-width:0px,color::#000000;
- classDef leaf fill:transparent,stroke-width:0px,color::#000000;
-
-  class A root;
-  class B,C,D,E,F component;
-  class B1,B2,B3,C1,C2,C3,D1,D2,D3,E1,E2,E3,F1,F2 leaf;
-</code></pre>
+<p>One way to attempt to capture the nature of the field of GIScience is to list its many components. These components describe what GIScientsts study, rather than how they apply GIS (Figure 1).</p>
+<p><img alt="components" src="../assets/components.svg" /></p>
 <p><strong>Ontology</strong> is a branch of philosophy that deals with the most fundamental aspects of scientific inquiry at a very high level of abstraction. This part of GIScience examines the georgaphic information and geographic concepts that are used by environmental and social scientists in their research. It has also been used in information science and knowledge representation to refer to the specifications of the conceptualizations employed by different groups of users. </p>
 <p><strong>Computation</strong> concerns the algorithmic and formal foundations that make geographic information analyzable in digital systems. It covers how spatial relations, objects, and processes are represented, calculated, and searched within finite-precision computing environments. This includes qualitative spatial reasoning frameworks, computational geometry, spatial indexing and retrieval methods, spatial statistics, and other geocomputational approaches such as map algebra and cellular automata.</p>
 <p><strong>Cognition</strong> focuses on how humans perceive, conceptualize, reason about, and interact with geographic space and geographic information. It draws on psychology, cognitive science, and linguistics to study human understanding of spatial concepts such as distance, direction, regions, and relationships, often emphasizing qualitative and context-dependent reasoning rather than precise metrics. This component aßlso includes research on human–computer interaction and GIS usability, </p>
