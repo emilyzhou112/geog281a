@@ -66,21 +66,21 @@ Guan, Wilson, and Knowles do not claim that GIS can fully capture all geographic
 Together, these readings raise a final question: 
 > How should researchers study, teach, and practice GIScience in relation to geography?
 
-O’Sullivan (2020) argues that GIScience and geography share a common conceptual ground made up of many fundamental ideas—space, scale, place, regions, networks, time, process, and patterns<sup><a class="sidenote-ref" href="#sn-2">2</a></sup>. 
+O’Sullivan (2020) argues that GIScience and geography share a common conceptual ground made up of many fundamental ideas—space, scale, place, regions, networks, time, process, and patterns<sup><a class="sidenote-ref" href="#sn-4">4</a></sup>. 
 However, GISystems often flatten these ideas into inflexible representations of points, lines, and polygons. 
 That flattening unintentionally, how geographic thinking can be expressed, explored, and extended.
 While some argue that GIS primarily needs better qualitative tools, O’Sullivan suggests that this would not make much difference. 
 The deeper issue is that representational geometry itself is rigid. 
 We do not need a whole new platform to “do GIS.” 
-Rather, it is essential to rethink the geographic representation model inside GIS and allow alternative spatial logics<sup><a class="sidenote-ref" href="#sn-3">3</a></sup> to be implemented.
+Rather, it is essential to rethink the geographic representation model inside GIS and allow alternative spatial logics<sup><a class="sidenote-ref" href="#sn-5">5</a></sup> to be implemented.
 
 > I am convinced that the task of reimagining and reconstructing GIS as a flexible tool for creating diverse human geographies … will depend on GISers taking geographical thought much more seriously than they have hitherto.
 
-<div class="sidenote" id="sn-2">
-<strong>2.</strong> Perhaps not suprisingly these concepts are often identified as primiatives of spatial thinking and reasoning. </div>
+<div class="sidenote" id="sn-4">
+<strong>4.</strong> Perhaps not suprisingly these concepts are often identified as primiatives of spatial thinking and reasoning. </div>
 
-<div class="sidenote" id="sn-3">
-<strong>3.</strong> non-Euclidean space, relational space, etc.</div>
+<div class="sidenote" id="sn-5">
+<strong>5.</strong> non-Euclidean space, relational space, etc.</div>
 
 Speaking more broadly about representation, a major stumbling block for many critics of GIScience is its failure to take seriously the problematic nature of __representation__. Representation should be understood as process and practice, not as static objects. For example,
 
@@ -89,7 +89,7 @@ Speaking more broadly about representation, a major stumbling block for many cri
 This reframing shifts attention away from maps as finished products and toward the practices, assumptions, and decisions through which representations are produced.
 
 O’Sullivan argues that we need to interrogate more closely what we mean by terms like related, near, and distant. 
-Finding ways to recognize the fuzziness, ambiguity, porosity, and uncertainty of boundaries has the potential to open up new and different ways of seeing geographies. 
+Finding ways to recognize the fuzziness, ambiguity, porosity, and uncertainty of boundaries has the potential to open up new and different ways of seeing geographies.
 Doing so could set the stage for representing processes, events, and patterns explicitly, rather than treating familiar GIS entities as fixed and pre-given.
 Building on this vision, one way of “doing GIS” today is to develop a practice that is both technical and critical. 
 A practice that takes the geographical in GIScience more seriously, and for geography to take GIScience more seriously as well. 

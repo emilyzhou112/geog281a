@@ -40,7 +40,7 @@ To O’Sullivan’s point because GIS tools assume absolute space, they often st
 
 ### __Cartogram__
 
-Cartograms illustrate this tension clearly. It is relatively straightforward to distort areas, as shown in the examples below, according to population, travel time, or some other metric, creating a map where size reflects something other than physical area. Yet once such a transformation is created, standard GIS tools often treat it as an awkward exception. Projections may be unrecognized, layers may not align, and routine operations become difficult. Effectively, the software assumes that only conventional coordinate systems are legitimate spaces.
+Cartograms illustrate this tension clearly (Figure 1). It is relatively straightforward to distort areas, as shown in the examples below, according to population, travel time, or some other metric, creating a map where size reflects something other than physical area. Yet once such a transformation is created, standard GIS tools often treat it as an awkward exception. Projections may be unrecognized, layers may not align, and routine operations become difficult. Effectively, the software assumes that only conventional coordinate systems are legitimate spaces.
 
 <div class="image-row">
   <a href="../../assets/cartogram1.jpg" class="zoomable">
@@ -52,12 +52,11 @@ Cartograms illustrate this tension clearly. It is relatively straightforward to 
   </a>
 </div>
 
-
-_Source: [Graphical Cartograms in ArcGIS Pro](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/graphical-cartograms-in-arcgis-pro)_
+Figure 1: [Graphical Cartograms in ArcGIS Pro](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/graphical-cartograms-in-arcgis-pro)
 
 ### __Historical Basemap__
 
-Similarly, when working with historical basemaps, we are often required to georeference and warp older maps into modern projections, even when those historical representations better reflect the spatial understanding of their time. The logic of the tool prioritizes geometric accuracy over interpretive meaning, reinforcing the dominance of absolute space. As an example, the maps below shows a historical map in its original form and when overlayed with modern street labels when adjusted to modern projections. 
+Similarly, when working with historical basemaps, we are often required to georeference and warp older maps into modern projections, even when those historical representations better reflect the spatial understanding of their time (Figure 2). The logic of the tool prioritizes geometric accuracy over interpretive meaning, reinforcing the dominance of absolute space. As an example, the maps below shows a historical map in its original form and when overlayed with modern street labels when adjusted to modern projections. 
 
 <div class="image-row">
   <a href="../../assets/hist2.png" class="zoomable">
@@ -69,8 +68,7 @@ Similarly, when working with historical basemaps, we are often required to geore
   </a>
 </div>
 
-
-_Source:[Philadelphia GeoHistory Website](https://www.philageohistory.org/tiles/viewer/)_
+Figure 2: [Historical Basemap from Philadelphia in the 1960s](https://www.philageohistory.org/tiles/viewer/)
 
 ## __Towards Relative and Relational Space__
 
@@ -80,13 +78,13 @@ Several concrete examples help make this shift visible!
 
 ### __Voronoi Polygons__
 
-Voronoi polygons provide a clear and intuitive example of how GIScience can move beyond absolute, coordinate-based space. Rather than defining regions using fixed administrative boundaries or arbitrary grid cells, it partitions space according to proximity relationships: every location is assigned to whichever feature it is closest to. In this formulation, space becomes something structured by distances between entities. What matters is not a point’s absolute coordinates, but its relation to neighboring points. This makes Voronoi models especially useful for problems like service areas, facility location, clustering, or neighborhood definition, where “closeness” is more meaningful than geometric position. Conceptually, Voronoi polygons demonstrate that many spatial questions are inherently relational—regions emerge from interactions among features rather than being pre-given.
+Voronoi polygons provide a clear and intuitive example of how GIScience can move beyond absolute, coordinate-based space (Figure 3). Rather than defining regions using fixed administrative boundaries or arbitrary grid cells, it partitions space according to proximity relationships: every location is assigned to whichever feature it is closest to. In this formulation, space becomes something structured by distances between entities. What matters is not a point’s absolute coordinates, but its relation to neighboring points. This makes Voronoi models especially useful for problems like service areas, facility location, clustering, or neighborhood definition, where “closeness” is more meaningful than geometric position. Conceptually, Voronoi polygons demonstrate that many spatial questions are inherently relational—regions emerge from interactions among features rather than being pre-given.
 
 <div style="text-align:center;">
   <img src="../../assets/voronoi.gif" style="width:100%">
 </div>
 
-_Source: One of the many [algorithms](https://medium.com/data-science/the-fascinating-world-of-voronoi-diagrams-da8fc700fa1b) of constructing voronoi polygons to achieve rounder aspects and more evenly spaced points._ 
+Figure 3: One of the many [algorithms](https://medium.com/data-science/the-fascinating-world-of-voronoi-diagrams-da8fc700fa1b) of constructing voronoi polygons to achieve rounder aspects and more evenly spaced points.
 
 ### __Relational Database__
 
@@ -97,7 +95,9 @@ At the level of data infrastructure, tools such as PostGIS illustrate a compleme
          style="width:100%; object-fit:cover; object-position:center;">
   </a>
 
-For example, in the above analysis, we are not simply mapping census block groups or bus stops as independent features. Instead, we are drawing on multiple datasets within a database, then use a spatial join `ST_Within` to ask which block groups fall within 800 meters of each stop, from which we then aggregate population counts to estimate how many people each stop serves. In other words, the analysis is defined not by where features are in absolute coordinates, but by how they relate to one another through proximity and accessibility.
+Figure 4: A spatial join in PostGIS
+
+For example, in the above analysis, we are not simply mapping census block groups or bus stops as independent features. Instead, we are drawing on multiple datasets within a database, then use a spatial join `ST_Within` to ask which block groups fall within 800 meters of each stop, from which we then aggregate population counts to estimate how many people each stop serves (Figure 4). In other words, the analysis is defined not by where features are in absolute coordinates, but by how they relate to one another through proximity and accessibility.
 
 ### __Network Analysis__
 

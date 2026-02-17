@@ -66,13 +66,13 @@ It is also worth touching on the relationship between process and patterns. If p
 
 Quantitative geographers have long emphasized spatial patterns, although “pattern” itself is an ill-defined and sometimes slippery concept. What we call a pattern is often just a regularity we recognize visually or statistically. Whitehead offers a helpful way to think about this: we recognize things because we can say, “there it is again.” Repetition produces pattern. Endurance is simply the repetition of similar events over time. A city block persists because similar activities recur there day after day. A river persists because water continually flows along roughly the same channel. What we see as a stable object is really the trace of repeated processes.
 
-Point pattern analysis, for example, explicitly asks what kinds of generative processes could produce the observed arrangement of events. In this sense, spatial statistics is already implicitly process-oriented, even if it sometimes appears focused only on snapshots. The central concern of point pattern analysis and many other branches of spatial analysis is precisely this question: what kinds of processes could yield this observed pattern? While spatial analysis is sometimes criticized for emphasizing instantaneous views of the world, it is actually much more concerned with the dynamic processes that may or may not give rise to the spatial configurations we observe.
+Point pattern analysis, for example, explicitly asks what kinds of generative processes could produce the observed arrangement of events (Figure 1). In this sense, spatial statistics is already implicitly process-oriented, even if it sometimes appears focused only on snapshots. The central concern of point pattern analysis and many other branches of spatial analysis is precisely this question: what kinds of processes could yield this observed pattern? While spatial analysis is sometimes criticized for emphasizing instantaneous views of the world, it is actually much more concerned with the dynamic processes that may or may not give rise to the spatial configurations we observe.
 
 <div style="text-align:center;">
   <img src="../../assets/sp.gif" style="width:100%">
 </div>
 
-_Mobility hotspots at the Paris Olympics0; Source: CARTO_
+Figure 1: Mobility hotspots at the Paris Olympics; Source: CARTO
 
 As an example, many practical applications of this process–pattern relationship can be seen in these time-series and flow maps. See a full collection of example [here](https://carto.com/blog/2024-best-maps-dataviz).
 

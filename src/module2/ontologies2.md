@@ -21,7 +21,7 @@ These labels are obviously subjective, humorous, and sometimes contradictory, ye
 
 Importantly, place is not just emotional or personal; it is also social and political. Places regulate behavior and encode expectations about who belongs and what is appropriate. Certain activities may feel "in place" in one setting and "out of place" in another. In this sense, place is inherently normative. As O’Sullivan illustrates through the example of graffiti, the same physical act can be interpreted very differently depending on where it occurs. Graffiti is a practice whose meaning is bound up with place and timing: what is considered vandalism in one location may be celebrated as public art in another. Graffiti is only "graffiti" when it is out of place.
 
-To make this more concrete, consider the two images of the same vacant lot in the Frankford neighborhood of Philadelphia. In one, the lot appears abandoned, scattered with debris, and covered in unsanctioned graffiti. It may be read as neglect, disorder, or even danger. In the other, the very same space is reimagined as a community playground, with landscaping, seating, and murals integrated into a planned design. Here, similar visual elements (painted walls, open ground, informal activity) are interpreted entirely differently because the context has changed. One is labeled blight; the other, revitalization. What changed is not simply the geometry of the site, but the social meaning attached to it.
+To make this more concrete, consider the two images of the same vacant lot in the Frankford neighborhood of Philadelphia (Figure 1). In one, the lot appears abandoned, scattered with debris, and covered in unsanctioned graffiti. It may be read as neglect, disorder, or even danger. In the other, the very same space is reimagined as a community playground, with landscaping, seating, and murals integrated into a planned design. Here, similar visual elements (painted walls, open ground, informal activity) are interpreted entirely differently because the context has changed. One is labeled blight; the other, revitalization. What changed is not simply the geometry of the site, but the social meaning attached to it.
 
 <div class="image-row">
   <a href="../../assets/frankfordb4.jpg" class="zoomable">
@@ -32,6 +32,7 @@ To make this more concrete, consider the two images of the same vacant lot in th
     <img src="../../assets/frankfordafter.jpg">
   </a>
 </div>
+Figure 1: The same vacant lot in Philadelphia, before and after a community-led transformation. 
 
 More broadly, neighborhoods can be welcoming to some groups and exclusionary to others. Decisions about zoning, policing, or development shape who has access to particular places and who does not. In this way, place is bound up with power. It is not simply a backdrop for social life, but an active participant in structuring it.
 
@@ -55,7 +56,7 @@ Rather than tackling head-on the challenge of formalizing the subtleties of plac
 
 ### __Place as Locations__
 
-One of the most common ways GIScience handles place is by quietly reducing it back to __location__. This approach treats place names as labels that must ultimately be converted into coordinates or polygons through geocoding and gazetteers. Technically, this is framed as a translation problem: how do we map human ways of referring to places onto machine-readable geometry? Digital gazetteers and search engines attempt to solve this by returning a point or administrative boundary for any given name. From a computational standpoint, this is efficient and necessary. But conceptually, it is reductive. 
+One of the most common ways GIScience handles place is by quietly reducing it back to __location__. This approach treats place names as labels that must ultimately be converted into coordinates or polygons through geocoding and gazetteers. Technically, this is framed as a translation problem: how do we map human ways of referring to places onto machine-readable geometry? Digital gazetteers and search engines attempt to solve this by returning a point or administrative boundary for any given name. From a computational standpoint, this is efficient and necessary. But conceptually, it is reductive.
 
 The problem is that place names are rarely precise. Many names are repeated across space. For example, there are dozens of “Springfields”, and their intended meaning depends heavily on context. Even when a single referent exists, equating a place with its coordinates misses the point entirely. As the text bluntly notes, London is not the same thing as its latitude and longitude.  A coordinate can identify where something is, but it cannot capture what it means, how it feels, or how it is socially understood. In this sense, “place as location” solves a technical indexing problem while sidestepping the richer cultural and experiential dimensions of place. It makes places legible to computers, but thinner to humans.
 
@@ -90,14 +91,14 @@ Up to this point, we have seen two dominant strategies(reducing place to locatio
 
 The __first__ step toward making place computational is to move beyond purely geometric representations and deliberately incorporate narrative structure into maps. Rather than treating maps as neutral stacks of layers, this approach recognizes that place is experienced sequentially and interpretively. Traditional GIS layering synthesizes information analytically: each theme is added as another independent layer, and meaning is expected to emerge from visual overlap. But this logic often fragments place into components rather than presenting it as a lived whole. In contrast, narrative cartography and story mapping reorganize representation around sequence, annotation, and storytelling. 
 
-There are many compelling examples of this approach in both static and dynamic forms. As an exampke, see the biking journey map shown here. Instead of simply plotting GPS tracks, it organizes the author’s travel history into a story of movement across cities and landscapes. Insets, distances, and annotations guide the reader through experiences accumulated over time. The map does not just show routes; it communicates a personal relationship with those places
+There are many compelling examples of this approach in both static and dynamic forms. As an exampke, see the biking journey map shown here (Figure 2). Instead of simply plotting GPS tracks, it organizes the author’s travel history into a story of movement across cities and landscapes. Insets, distances, and annotations guide the reader through experiences accumulated over time. The map does not just show routes; it communicates a personal relationship with those places
 
   <a href="../../assets/biking_screen.png" class="zoomable" style="width:100%;">
     <img src="../../assets/biking_screen.png"
          style="width:100%; object-fit:cover; object-position:center;">
   </a>
 
-_Credit: Atlas Guo (2024), Source: [cartoguophy](https://cartoguophy.com/maps/biking.html)_
+Figure 2: A narrative map of a biking journey across the US. Source: [cartoguophy](https://cartoguophy.com/maps/biking.html)_
 
 Dynamic story maps extend this idea even further. Interactive projects, such as the [Dark Skies map](https://jake-steinberg.github.io/2022_DarkSkies_js/), allow users to scroll, click, and explore place through sequence and discovery. The map becomes more like a guided experience here.
 

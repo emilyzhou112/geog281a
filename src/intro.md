@@ -28,65 +28,9 @@ Mark distinguishes between the history of GIS systems and the history of GIScien
 
 ## __Components of GIScience__
 
-One way to attempt to capture the nature of the field of GIScience is to list its many components. These components describe what GIScientsts study, rather than how they apply GIS.
+One way to attempt to capture the nature of the field of GIScience is to list its many components. These components describe what GIScientsts study, rather than how they apply GIS (Figure 1).
 
-```mermaid
-%%{init: {
-  "flowchart": {
-    "nodeSpacing": 1,
-    "rankSpacing": 1
-  }
-}}%%
-graph LR
-  A["<b>GIScience</b>"]
-
-  %% Main components
-  B["<b>Ontology & Representation</b>"]
-  C["<b>Computation</b>"]
-  D["<b>Cognition</b>"]
-  E["<b>Institutions & Society</b>"]
-  F["<b>Cross-cutting Themes</b>"]
-
-  A --> B
-  A --> C
-  A --> D
-  A --> E
-  A --> F
-
-  %% Ontology & Representation
-  B --> B1["Geographic concepts"]
-  B --> B2["Data models & semantics"]
-  B --> B3["Objects / fields / processes"]
-
-  %% Computation
-  C --> C1["Spatial data structures"]
-  C --> C2["Spatial analysis & algorithms"]
-  C --> C3["Geocomputation"]
-
-  %% Cognition
-  D --> D1["Naive geography"]
-  D --> D2["Spatial reasoning"]
-  D --> D3["HCI & usability"]
-
-  %% Institutions & Society
-  E --> E1["Data quality & uncertainty"]
-  E --> E2["Institutional practice"]
-  E --> E3["Social impacts & equity"]
-
-  %% Cross-cutting themes
-  F --> F1["Scale"]
-  F --> F2["Time"]
-
-  %% Styling
- classDef component fill:#99a395ff,stroke-width:0px,color:#ffffff;
- classDef root fill:#6C8480,stroke-width:0px,color::#000000;
- classDef leaf fill:transparent,stroke-width:0px,color::#000000;
-
-  class A root;
-  class B,C,D,E,F component;
-  class B1,B2,B3,C1,C2,C3,D1,D2,D3,E1,E2,E3,F1,F2 leaf;
-
-```
+![components](assets/components.svg)
 
 __Ontology__ is a branch of philosophy that deals with the most fundamental aspects of scientific inquiry at a very high level of abstraction. This part of GIScience examines the georgaphic information and geographic concepts that are used by environmental and social scientists in their research. It has also been used in information science and knowledge representation to refer to the specifications of the conceptualizations employed by different groups of users. 
 
