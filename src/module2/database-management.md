@@ -2,7 +2,7 @@
 
 In the previous lesson, we examined how geographic phenomena are represented through data models. But representing spatial data is only part of the story. Once spatial data are created, they must be stored, organized, queried, validated, and maintained (often at massive scale). When datasets become large, multi-layered, and interconnected, file-based storage (such as individual shapefiles or rasters) becomes insufficient. This is where spatial databases enter the picture. If data models define how spatial information is structured, spatial databases define how spatial information is managed.
 
-In our previous discussions about relational space, we briefly mentioned relational spatial databases as a technical manifestation of relational thinking. Now we examine that more closely to see how they bring together our data models within a system designed for more efficient analysis.
+We have briefly mentioned relational spatial databases as a technical manifestation of relational thinking. Now we examine that more closely to see how they bring together our data models within a system designed for more efficient analysis.
 
 ## __From Database to Spatial Database__
 
@@ -39,13 +39,74 @@ A mobile geodatabase is intended for use by a single user or application at a ti
 
 Geodatabases extend traditional database functionality by incorporating spatial querying capabilities. Like non-spatial databases, they allow attribute-based queries using SQL. However, their distinguishing feature is the ability to perform queries based on spatial relationships and location information. Because geodatabases typically rely on the vector data model, they can evaluate topological relationships between features. Examples of spatial relationships include “within,” “contains,” “intersects,” “touches,” and “disjoint.”
 
-In systems such as PostGIS, spatial queries are written using SQL combined with spatial functions (e.g., ST_Within). These queries return Boolean results, selecting records that meet both attribute and spatial conditions. Spatial joins further extend analytical capabilities by combining datasets based on geographic relationships rather than shared attribute keys. Geodatabases also differentiate between geometry types operating in planar coordinate systems and geography types operating on a spheroidal Earth model. While geography-based calculations are more accurate at global scales, they are computationally more demanding than planar geometry calculations. Together, spatial selection, topological operations, and spatial joins make geodatabases powerful tools for geospatial analysis.
+In systems such as PostGIS, spatial queries are written using SQL combined with spatial functions (e.g.ST_Within). These queries return Boolean results, selecting records that meet both attribute and spatial conditions. Spatial joins further extend analytical capabilities by combining datasets based on geographic relationships rather than shared attribute keys. Geodatabases also differentiate between geometry types operating in planar coordinate systems and geography types operating on a spheroidal Earth model. All of these features make geodatabases powerful tools for geospatial analysis.
+
+Let's work through an example of a spatial query. Suppose we have a geodatabase containing two tables: blockgroups_2020, population_2020 and bus_stops (with stop locations) in a city (for example, Philadelphia). We want to estimate the population within 800 meters of each bus stop. This requires a spatial join between the two tables based on proximity.
+
+If we were to conduct this analysis in a GIS software, we would use a spatial join tool that identifies all block groups within 800 meters of each bus stop and sums their populations. However, if working within a spatial database, we can write a SQL query that performs this operation directly (Figure 1).
+
+```sql
+/*
+bg_w_pop creates a “block group with population” table by:
+    - taking population counts from census.population_2020
+    - joining them to block group geometries in census.blockgroups_2020
+    - filtering to Philly-only block groups (geoid starts with 42101)
+*/
+WITH
+bg_w_pop AS (
+    SELECT
+        pop.total,
+        bg.geog,
+        SUBSTRING(pop.geoid, 10) AS geoid
+    FROM census.population_2020 AS pop
+    INNER JOIN census.blockgroups_2020 AS bg ON SUBSTRING(pop.geoid, 10) = bg.geoid
+    WHERE SUBSTRING(pop.geoid, 10) LIKE '42101%'
+),
+/* 
+stop_pop spatially joins bus stops to block groups using ST_DWithin:
+    - For each stop, find all Philly block groups within 800m
+    - Sum their populations to get an estimated catchment population
+*/
+stop_pop AS (
+
+    SELECT
+        stops.stop_id,
+        SUM(bg.total) AS estimated_pop_800m
+    FROM septa.bus_stops AS stops
+    INNER JOIN bg_w_pop AS bg ON ST_DWITHIN(stops.geog, bg.geog, 800)
+    GROUP BY stops.stop_id
+)
+/*
+as a finle step, we can join the estimated population back to bus stop attributes 
+and filter to stops with more than 500 people within 800m
+*/
+SELECT
+    stops.stop_name,
+    pop.estimated_pop_800m,
+    stops.geog
+FROM stop_pop AS pop
+INNER JOIN septa.bus_stops AS stops USING (stop_id)
+WHERE pop.estimated_pop_800m > 500
+ORDER BY pop.estimated_pop_800m ASC, stops.geog ASC
+LIMIT 8
+```
+
+<a href="../../assets/sql-demo.png" class="zoomable">
+    <img src="../../assets/sql-demo.png">
+</a>
+Figure 1: SQL query to estimate population within 800m of bus stops in Philadelphia. 
 
 ## __Problems of Spatial Database__
 
 However, there are also several problems associated with managing and working with large spatial databases. These challenges are closely tied to broader issues in big data and the management of big data.
 
-Geospatial big data pose both computational and conceptual challenges. Architecturally, they require high-performance computing environments, distributed systems, and specialized processing frameworks to store and process massive volumes of data efficiently. Conceptually, however, they inherit fundamental geographic problems such as vague feature boundaries, positional uncertainty, scale effects, and spatial heterogeneity. Many large spatial datasets also lack rigorous sampling methods and clear pathways to replicability, which complicates scientific interpretation and methodological transparency.
+Geospatial big data pose both computational and conceptual challenges. In modern practice, spatial database management rarely happens on a single desktop machine. Instead, data are stored in distributed environments, transformed through automated pipelines, and ingested into cloud databases. Architecturally, they require high-performance computing environments, distributed systems, and specialized processing frameworks to store and process massive volumes of data efficiently. 
+
+![gcloud](../../assets/gcloud.png)
+Figure 2: Google Cloud Platform’s BigQuery spatial database pipeline. Source: 
+
+
+Conceptually, however, they inherit fundamental geographic problems such as vague feature boundaries, positional uncertainty, scale effects, and spatial heterogeneity. Many large spatial datasets also lack rigorous sampling methods and clear pathways to replicability, which complicates scientific interpretation and methodological transparency.
 
 Quality assessment is especially problematic. Traditional spatial datasets often follow established standards such as ISO 19157 for geographic data quality or lidar accuracy specifications. In contrast, many newer big data sources lack standardized quality controls. Spatial accuracy may be inferred from contextual clues rather than precise measurements, and sampling bias is common. As a result, increasing data volume does not necessarily guarantee increasing data reliability.
 
