@@ -1,28 +1,57 @@
 # __The Nature of Spatial Data__
 
-Before beginning this lesson, let’s return to a foundational idea from last week’s discussion of spatial ontologies: the __GeoAtom__. The GeoAtom treats every geographic fact as the combination of where something is and what it is, which reminds us that geography is always both locational and thematic. But throughout the entire week, we mainly focused on conceptual side of representation. But conceptual representation alone is not enough. If spatial ontologies define how we understand the world, we now need to ask: __how are these abstract concepts translated into computational form?__ In other words, __how does a GeoAtom become data?__
+Let’s return to a foundational idea in the last section on spatial ontologies: the __GeoAtom__.
+The GeoAtom records phenomena as a combination of where something is space, when it is in time, and what its attributes are<sup><a class="sidenote-ref" href="#sn-1">1</a></sup>.
+The GeoAtom reminds us that geography is always both locational and thematic.
+However, during our discussion of spatial ontologies, we mainly focused on the conceptual side of representation.
+Of course, simply concieving of processes of objects is not enough when our goal is to introduce those conceptualizations into a computer and perform analyses.
+If spatial ontologies help structure and organize phenomena, we now need to ask: __how are these abstract concepts translated into computational form?__ In other words, __how does a GeoAtom become spatial data?__
 
-This week, we will examine how geographic entities are encoded in computers through spatial data models. These models are not neutral containers but operationalize particular assumptions about space, objects, and fields. Grounding technical implementation in fundamental spatial concepts strengthens research design and methodological clarity in a variety of ways because when choosing a data model, we are not simply choosing a file format, but how space is conceptualized, how relationship is preserved, and determining what kind of analyses become possible as well as what kinds of distortions or simplifications are introduced.
+<div class="sidenote" id="sn-1">
+<strong>1.</strong> Not conincidentally, the GeoAtom also looks a lot like the mathematical presentation of spatial data in spatial statistics. There a variable (attribute) is indexed in space and time. In geostatistical notation, that variable value is also written as a function of it's position in space and time, which makes explicit a key feature of spatial phenomena - their dependence and heterogeneity across space. </div>
 
-We will begin with conventional vector and raster models, and then examine transformations between them. We will also explore spatial interpolation and spatial generalization as examples of transformations both within and across models. Finally, we will briefly consider emerging paradigms such as knowledge graphs that expand how spatial relationships can be encoded.
+This week, we will examine how geographic entities are encoded in computers through spatial data models<sup><a class="sidenote-ref" href="#sn-2">2</a></sup>.
+As you miay suspect, data models are not neutral.
+Instead spatial data models operationalize particular assumptions about space, time, objects, and attributes.
+There are many reasons it is worth looking carefully at spatial data models.
+Pragmatically, grounding technical implementation in fundamental spatial concepts strengthens research design and methodological clarity in a variety of ways.
+When choosing a spatial data model, we are not simply choosing a file format.
+We are committing to particular conceptualizations of space and representations of relationships that shape what kind of analyses become possible and what kinds of distortions or simplifications are introduced into our work.
 
-_A small but important note: when we refer to “models” here, we are speaking about data models (formal structures for representing spatial information) which differ from statistical or predictive models you may encounter elsewhere._
+<div class="sidenote" id="sn-2">
+<strong>2.</strong> When we refer to “models” here, we mean about data models - formal structures for representing spatial phenomena. This usage differs from the the common practice of using models to statistical or predictive models. </div>
+
+We will begin by examining the conventional vector and raster models, and then examine transformations between them.
+We will also explore spatial interpolation and spatial generalization as examples of transformations both within and across models.
+Finally, we will briefly consider emerging paradigms such as knowledge graphs that expand how spatial relationships can be encoded.
+
+
 
 ## __Vector Model Basics__
 
-Spatial data can be represented in vector or raster form, each with distinct advantages, limitations, and tradeoffs in how data can be stored, analyzed, manipulated, and visualized. Much of this distinction parallels our previous discussion of spatial ontologies. If space can be conceptualized as composed of discrete objects (place-based entities with boundaries) or as continuous processes unfolding across surfaces, then vector and raster data models operationalize these different worldviews.
+Spatial phenomena can be represented as spatial data in vector or raster form, each with distinct advantages, limitations, and tradeoffs in how data can be stored, analyzed, manipulated, and visualized.
 
-Vector data aligns most naturally with an object-based ontology of space that treats geographic phenomena as discrete entities. It is composed of spatial features that are assigned a geographic location, encoded as either:  
+The vector data model aligns naturally with an object-based ontology of space that treats geographic phenomena as discrete entities.
+It is composed of spatial features that are assigned a geographic location, encoded as either:  
 
 - __Points__: a single coordinate pair representing a specific location (e.g., a monitoring station, a crime event).
 - __Lines__: an ordered list of coordinate pairs representing linear features (e.g., roads, rivers, migration paths).
 - __Polygons__: an ordered list of coordinate pairs where the first and last points coincide, forming a closed boundary (e.g., parcels, census tracts, ecological zones).
 
-Each feature carries associated attribute data describing what it is. Attributes may be quantitative (population, traffic volume) or qualitative (zoning type, land cover category). In GeoAtom terms, vector data explicitly encodes the “where” through geometry and the “what” through attributes. This makes vector particularly suitable for representing places, which are bounded entities that we conceptualize as objects. It also supports representations of processes well when those processes are event-based (e.g., disease cases as points, movement trajectories as lines).
+Each feature carries associated attribute data describing what it is.
+Attributes may be quantitative (population, traffic volume) or qualitative (zoning type, land cover category).
+In GeoAtom terms, vector data explicitly encodes the “where” through geometry and the “what” through attributes.
+The vector data model is particularly suitable for representing locations or regions as bounded entities that we conceptualize as objects. 
+It also supports representations of the outcomes of processes when those processes are event-based (e.g., disease cases as points, movement trajectories as lines).
 
-Common format of vector data include shapefile, KML/KMZ, CSV, GPX, GeoJSON/TopoJSON, Geodatabase, PostGIS, though each of which has their best use. To make this distinction more concrete, let’s look at a small example that many of you have likely encountered in web mapping or data workflows: the differences between JSON, GeoJSON, and JSON-L files. Although these formats may appear similar at first glance, they reflect different assumptions about how data are structured, stored, and used.
+Common format of vector data include shapefile, KML/KMZ, CSV, GPX, GeoJSON/TopoJSON, Geodatabase, PostGIS, though each of which has their best use.
+To make this distinction more concrete, let’s look at a small example from web mapping or data workflows: the differences between JSON, GeoJSON, and JSON-L files.
+Although these formats may appear similar at first glance, they reflect different approaches to how data are structured, stored, and used.
 
-__JSON__ (JavaScript Object Notation) is a lightweight, text-based data format designed for structured data exchange. It represents information as objects (key–value pairs) and arrays. Because of its simplicity and language-agnostic structure, JSON is widely used for APIs, configuration files, and data transfer between systems. It is general-purpose and not inherently spatial.
+__JSON__ (JavaScript Object Notation) is a lightweight, text-based data format designed for structured data exchange.
+JSONs represent information as objects (key–value pairs) and arrays.
+Because of its simplicity and language-agnostic structure, JSON is widely used for APIs, configuration files, and data transfer between systems.
+It is general-purpose and not inherently spatial.
 
 ```json
 {
@@ -32,7 +61,10 @@ __JSON__ (JavaScript Object Notation) is a lightweight, text-based data format d
 }
 ```
 
-__GeoJSON__ is a specialized convention built on top of JSON for representing geographic features. It follows a strict structure that includes required fields such as "type", "geometry", "coordinates", and optionally "properties". In other words, GeoJSON is still JSON, but it encodes spatial information explicitly according to a defined schema. It is commonly used in web mapping libraries such as Leaflet and Mapbox.
+__GeoJSON__ is a specialized convention built on top of JSON for representing geographic features.
+GeoJSONs follows a strict structure that includes required fields such as "type", "geometry", "coordinates", and optionally "properties".
+In other words, GeoJSON is still JSON, but it encodes spatial information explicitly according to a defined schema.
+GeoJSON files are commonly used in web mapping libraries such as Leaflet and Mapbox.
 
 ```json
 {
@@ -47,14 +79,20 @@ __GeoJSON__ is a specialized convention built on top of JSON for representing ge
 }
 ```
 
-__JSON Lines__ is a streaming-friendly variation of JSON in which each line of a file is a separate JSON object. Instead of storing all objects inside a single large array, JSONL writes them sequentially, one per line. This structure is particularly useful for large datasets, logging systems, and data pipelines because it allows incremental reading and processing without loading the entire dataset into memory. JSONL is therefore not conceptually different from JSON, but it reflects a different assumption about scale and workflow
+__JSON Lines__ is a streaming-friendly variation of JSON in which each line of a file is a separate JSON object.
+Instead of storing all objects inside a single large array, JSONL writes them sequentially, one per line.
+This structure is particularly useful for large datasets, logging systems, and data pipelines because it allows incremental reading and processing without loading the entire dataset into memory.
+JSONL is therefore not conceptually different from JSON, but it reflects a different assumption about scale and workflow
 
 ```json
 {"id":1,"name":"Santa Barbara","lon":-119.6982,"lat":34.4208}
 {"id":2,"name":"Goleta","lon":-119.8276,"lat":34.4358}
 ```
 
-Researchers typically transform data between these formats based on specific use cases. For example, when doing cloud computing, GeoJSON may be converted to JSONL for efficient storage and processing. When building a web map, JSONL may be converted to GeoJSON for compatibility with mapping libraries. Below is an example snippet of how this transformation look in Python using the `json` library where we download a data set from the cloud, transform it into JSONL format, and then upload it back to the cloud for further analysis:
+Researchers typically transform data between these formats based on specific use cases.
+For example, when doing cloud computing, GeoJSON may be converted to JSONL for efficient storage and processing.
+When building a web map, JSONL may be converted to GeoJSON for compatibility with mapping libraries.
+Below is an example snippet of how this transformation happens in Python using the `json` library where we download a data set from the cloud, transform it into JSONL format, and then upload it back to the cloud for further analysis:
 
 ```python
 # Load the data from the GeoJSON file
@@ -77,27 +115,46 @@ A few more technical characteristics that influence how vector data performs inc
 
 __Indexing__, which enables efficient retrieval of spatial features and becomes essential when querying large datasets or performing computationally intensive spatial analysis.
 
-__Topology__, which encodes spatial relationships such as adjacency or shared boundaries. This is crucial when spatial relationships themselves are meaningful
+__Topology__, which encodes spatial relationships such as adjacency or shared boundaries.
+Topology is crucial when spatial relationships themselves are meaningful
 
 __Projections__, which determine how locations in abstract geographic space are translated into planar coordinate systems.
 
-__Geometric accuracy__, which reflects how faithfully boundaries and vertices are preserved. Some representations (e.g., vector tiles) deliberately simplify geometry for performance.
+__Geometric accuracy__, which reflects how faithfully boundaries and vertices are preserved.
+Some representations (e.g., vector tiles) deliberately simplify geometry for performance.
 
-In short, vector representations are especially powerful when modeling discrete, well-defined phenomena. They preserve boundaries, support multiple attributes per feature, and enable complex spatial operations such as buffering, overlay, and network analysis. Because they maintain explicit geometric detail, they often produce visually refined cartographic outputs. At the same time, vector data implicitly assumes that space can be partitioned into discrete objects, which is conceptually aligned with certain ontologies of place, but not all geographic phenomena conform neatly to that framing.
+In short, vector representations are especially powerful when modeling discrete, well-defined phenomena.
+They preserve boundaries, support multiple attributes per feature, and enable complex spatial operations such as buffering, overlay, and network analysis.
+Because they maintain explicit geometric detail, they often produce visually refined cartographic outputs.
+At the same time, vector data implicitly assumes that space can be partitioned into discrete objects, which is conceptually aligned with certain spatial ontologies, but not all geographic phenomena conform neatly to that framing.
 
 ## __Raster Model Basics__
 
-In contrast to vector formats, which represent space using geometric primitives that are generally resolution-independent, raster formats represent space as a grid of cells at a defined resolution. At its core, a raster is a matrix composed of regularly spaced rows and columns, where each cell (or pixel) stores a single value. Spatial location is defined implicitly by a cell’s position within the grid rather than through explicit coordinate pairs.
+In contrast to vector formats, which represent space using geometric primitives that are generally resolution-independent, the raster data model represents space as a grid of cells at a defined resolution.
+At its core, a raster is a matrix composed of regularly spaced rows and columns, where each cell (or pixel) stores a single value.
+Spatial location is defined implicitly by a cell’s position within the grid rather than through explicit coordinate pairs.
 
-Each pixel in a raster has an associated bit depth, which determines how much information it can store. Standard digital imagery commonly uses 8 bits per color channel (Red, Green, Blue), while scientific datasets such as Digital Elevation Models (DEMs) often rely on 16-bit or 32-bit formats to preserve numerical precision. The choice of bit depth affects the range and accuracy of values that can be represented. Raster data are stored in formats such as PNG, JPG, TIFF, and GIF, though spatial analysis workflows frequently rely on georeferenced formats such as GeoTIFF, which embed coordinate system and projection information. Decisions about resolution, bit depth, and file format are therefore not merely technical but central to analytical design and cartographic workflow.
+Each pixel in a raster has an associated bit depth, which determines how much information it can store.
+Standard digital imagery commonly uses 8 bits per color channel (Red, Green, Blue), while scientific datasets such as Digital Elevation Models (DEMs) often rely on 16-bit or 32-bit formats to preserve numerical precision.
+The choice of bit depth affects the range and accuracy of values that can be represented.
+Raster data are stored in formats such as PNG, JPG, TIFF, and GIF, though spatial analysis workflows frequently rely on georeferenced formats such as GeoTIFF, which embed coordinate system and projection information.
+Decisions about resolution, bit depth, and file format are therefore not merely technical but central to analytical design and cartographic workflow.
 
-Here is another pivot on file formats that illustrates how different raster formats reflect different assumptions about data structure, use case, and analytical goals. The three typical file formats that we encounter in GIS are JPG, PNG, and TIFF. 
+The three typical file formats that we typically encounter when using the raster data model in a GISystem are JPG, PNG, and TIFF.
 
-__JPG__ stores raster data using lossy compression. Although it still represents the image as a grid of pixels, the pixel values are transformed mathematically and some information is permanently discarded in order to reduce file size. This makes JPG well suited for photographs and web display, where visual appearance matters more than numeric precision. However, because pixel values are altered during compression, JPG is generally inappropriate for analytical raster data. 
+__JPG__ stores raster data using lossy compression.
+Although it still represents the image as a grid of pixels, the pixel values are transformed mathematically and some information is permanently discarded in order to reduce file size.
+This makes JPG well suited for photographs and web display, where visual appearance matters more than numeric precision.
+However, because pixel values are altered during compression, JPG is generally inappropriate for analytical raster data.
 
-__PNG__ also stores raster data as a grid of pixels, but it uses lossless compression. This means pixel values are preserved exactly, and no information is discarded during storage. PNG reduces file size by identifying repeated patterns in the data rather than modifying pixel values. However, PNG typically supports limited bit depth compared to scientific raster formats and does not natively embed geospatial reference information unless accompanied by additional metadata.
+__PNG__ also stores raster data as a grid of pixels, but it uses lossless compression.
+The use of lossless compression means pixel values are preserved exactly, and no information is discarded during storage.
+PNG reduces file size by identifying repeated patterns in the data rather than modifying pixel values.
+However, PNG typically supports limited bit depth compared to scientific raster formats and does not natively embed geospatial reference information unless accompanied by additional metadata.
 
-For example, below is a neighborhood map represented in two different raster formats: JPG and PNG (Figure 1). Both formats encode the same spatial information and are exported with the same resolution, color scheme, and visual styling, but if you click to zoom into both images, you will see the line works are handled differently.
+For example, below is a neighborhood map represented in two different raster formats: JPG and PNG (__Figure 1__).
+Both formats encode the same spatial information and are exported with the same resolution, color scheme, and visual styling. 
+However, if you click to zoom into both images, you will see the line works are handled differently.
 
 <div class="image-row">
   <a href="../../assets/raster1.jpg" class="zoomable">
@@ -109,15 +166,28 @@ For example, below is a neighborhood map represented in two different raster for
   </a>
 </div>
 
-Figure 1: A neighborhood map represented in two different raster formats: JPG (left) and PNG (right). The JPG file is 267kb, while the PNG file is 195Kb.
+__Figure 1:__ A neighborhood map represented in two different raster formats: JPG (left) and PNG (right). The JPG file is 267kb, while the PNG file is 195Kb.
 
-__TIFF__, and particularly GeoTIFF, functions as a more flexible container format. It can store raster data either uncompressed or using lossless compression, preserving pixel values exactly. Unlike JPG and PNG, TIFF supports higher bit depths, which is essential for scientific measurements like digital elevation models or remote sensing data. It is the standard format for analytical GIS workflows where precision and spatial metadata are critical. Exporting the same neighborhood map as a GeoTIFF with 16-bit color depth results in a file size of 5.1Mb.
+__TIFF__, and particularly GeoTIFF, functions as a more flexible container format. 
+These formats can store raster data either uncompressed or using lossless compression, preserving pixel values exactly.
+Unlike JPG and PNG, TIFF supports higher bit depths, which is essential for scientific measurements like digital elevation models or remote sensing data.
+It is the standard format for analytical GIS workflows where precision and spatial metadata are critical.
+Exporting the same neighborhood map as a GeoTIFF with 16-bit color depth results in a file size of 5.1Mb.
 
-Rasters are most naturally suited to representing continuous phenomena such as elevation, temperature, precipitation, or reflected electromagnetic radiation. These phenomena align with a field-based ontology of space, in which every location has a value and spatial variation is gradual rather than bounded. Because rasters treat space as a continuous surface sampled at regular intervals, they provide an intuitive structure for modeling surfaces and gradients.
+Rasters are most naturally suited to representing continuous phenomena such as elevation, temperature, precipitation, or reflected electromagnetic radiation. 
+These phenomena align with a field-based ontology of space, in which every location has a value and spatial variation is gradual rather than bounded. 
+Because rasters treat space as a continuous surface sampled at regular intervals, they provide an intuitive structure for modeling surfaces and gradients.
 
-One major advantage of raster storage is computational efficiency. Because spatial coordinates are stored implicitly through grid position rather than explicitly as vertex lists, rasters can require less storage than high-density vector representations of continuous surfaces. As a result, terrain analysis (such as slope, aspect, and hillshade), surface modeling, spatial interpolation, suitability analysis, and many classification workflows are computationally efficient within a raster framework.
+One major advantage of raster storage is computational efficiency.
+Because spatial coordinates are stored implicitly through grid position rather than explicitly as vertex lists, rasters can require less storage than high-density vector representations of continuous surfaces.
+As a result, terrain analysis (such as slope, aspect, and hillshade), surface modeling, spatial interpolation, suitability analysis, and many classification workflows are computationally efficient within a raster framework.
 
-Despite these strengths, raster models have important limitations. Unlike vector models, rasters do not explicitly preserve topological relationships, and they do not naturally support multiple attributes per spatial unit without additional data structures. Most raster datasets operate at a single spatial resolution, though multi-resolution pyramids may be constructed to improve visualization performance. Reprojection or resampling typically introduces some degree of data degradation, particularly if transformations are performed repeatedly. For this reason, analytical transformations should ideally be conducted from the original source data rather than through serial processing of intermediate outputs. When raster resolution is coarse relative to the spatial phenomena being represented, a blocky or pixelated appearance can happen. 
+Despite these strengths, raster models have important limitations.
+Unlike vector models, rasters do not explicitly preserve topological relationships, and they do not naturally support multiple attributes per spatial unit without additional data structures.
+Most raster datasets operate at a single spatial resolution, though multi-resolution pyramids may be constructed to improve visualization performance.
+Reprojection or resampling typically introduces some degree of data degradation, particularly if transformations are performed repeatedly.
+For this reason, analytical transformations should ideally be conducted from the original source data rather than through serial processing of intermediate outputs.
+When raster resolution is coarse relative to the spatial phenomena being represented, a blocky or pixelated appearance can happen. 
 
 ## __Vector to Raster Transformation__ 
 
