@@ -187,48 +187,103 @@ Unlike vector models, rasters do not explicitly preserve topological relationshi
 Most raster datasets operate at a single spatial resolution, though multi-resolution pyramids may be constructed to improve visualization performance.
 Reprojection or resampling typically introduces some degree of data degradation, particularly if transformations are performed repeatedly.
 For this reason, analytical transformations should ideally be conducted from the original source data rather than through serial processing of intermediate outputs.
-When raster resolution is coarse relative to the spatial phenomena being represented, a blocky or pixelated appearance can happen. 
+When raster resolution is coarse relative to the spatial phenomena being represented, a blocky or pixelated appearance can happen.
 
 ## __Vector to Raster Transformation__ 
 
-Because vector and raster data models support different representations of spatial phenomena, and therefore different analytical workflows, GIS professionals frequently need to move between them. Analytical goals often dictate model choice, and conversion becomes a necessary step in computational pipelines.
+Because vector and raster data models support different representations of spatial phenomena, and therefore different analytical workflows, GIS professionals frequently need to move between them.
+Analytical goals often dictate model choice, and conversion becomes a necessary step in computational pipelines.
 
-Returning to last week’s framing: when we move between vector and raster, we are not simply changing file types. We are also transforming how space is conceptualized. When an object-based representation of place is being translated into a field-based surface, that translation requires rules, and we will illustrate some of those below.
+When researchers we move between the vector and raster data models, they are not simply changing file types.
+They are also transforming how space is conceptualized.
+When an object-based representation of space is being translated into a field-based representation, that translation requires rules.
 
-Vector-to-raster conversion, commonly called rasterization, is the process of converting vector points, lines, or polygons into a gridded surface composed of raster cells. The process includes the following key steps:
+__Rasterization__, is the process of converting vector points, lines, or polygons into a gridded surface composed of raster cells (__Figure 2__).
+The process includes the following key steps:
 
 ![Vector to Raster](../assets/transformation-07.svg)
 
-__Point to Raster__:  At its most fundamental level, a single vector point representing one geographic feature can be converted into a raster cell. The raster cell that contains the point is assigned a value based on the chosen attribute (e.g., tree height, age, event count). This process assumes that the cell inherits the value of any point located within it. Complications arise when multiple points fall within the same raster cell. In such cases, the cell value may be assigned using a rule such as most frequent attribute value, mean or sum of values, binary presence (0/1), or count of points
+__Point to Raster__:  At its most fundamental level, a single vector point representing one geographic feature can be converted into a raster cell.
+The raster cell that contains the point is assigned a value based on the chosen attribute (e.g., tree height, age, event count).
+This process typically assumes that the cell inherits the value of any point located within it.
+Complications arise when multiple points fall within the same raster cell.
+In such cases, the cell value may be assigned using a rule such as most frequent attribute value, mean or sum of values, binary presence (0/1), or count of points<sup><a class="sidenote-ref" href="#sn-3">3</a></sup>.
 
-Notice what is happening conceptually here is that a discrete event located at an exact coordinate is being aggregated into an area of finite extent. When a point-based representation of place is becoming an area-based summary, the choice of resolution would directly affect this transformation. This makes it not merely a technical step; it is a redefinition of spatial meaning.
+<div class="sidenote" id="sn-3">
+<strong>3.</strong> This process and the issues it raises is probably making the reader recall the Modifiable Areal Unit Problem, or as it may become to be known the Openshaw Effect. </div>
 
-__Lines to Raster__:  A vector line representing a linear feature can be converted into a series of adjacent raster cells that approximate its path across the grid. Raster cells are typically assigned the attribute value of the line intersecting each cell. Alternatively, a binary representation (0/1) may be used to indicate the presence or absence of a linear feature. Here, the transformation introduces discretization effects. A continuous geometric line must be approximated by square cells. Thus, thin features may become thicker, disconnected, or fragmented depending on resolution. From an ontological perspective, a bounded object defined by precise coordinates is now being translated into a grid-constrained representation. 
+Notice what is happening conceptually.
+During rasterization a discrete event located at an exact coordinate is being aggregated into an area of finite extent.
+When a point-based representation of place is becoming an area-based summary, the choice of resolution would directly affect this transformation.
+This makes it not merely a technical step; it is a redefinition of spatial meaning.
 
-__Polygons to Raster__: A vector polygon representing areal features can be converted into clusters of raster cells. Raster cells typically inherit the attribute value of the polygon containing the cell center. However, alternative assignment rules may be used, including majority area containment, partial area weighting, binary presence etc. The choice of assignment rule matters, especially along boundaries. Cells that intersect multiple polygons may be forced to adopt a single dominant value, introducing boundary simplification and mixed-pixel effects. Conceptually, this conversion transforms a clearly bounded place into a tessellated surface approximation. The polygon’s exact boundary becomes a stair-stepped edge constrained by grid resolution. Again, resolution governs quality: finer grids better approximate shape, but never perfectly reproduce it.
+__Lines to Raster__:  A vector line representing a linear feature can be converted into a series of adjacent raster cells that approximate its path across the grid.
+Raster cells are typically assigned the attribute value of the line intersecting each cell.
+Alternatively, a binary representation (0/1) may be used to indicate the presence or absence of a linear feature.
+Here, transformation introduces discretization effects.
+A continuous geometric line must be approximated by square cells.
+Thus, thin features may become thicker, disconnected, or fragmented depending on resolution.
+From an ontological perspective, a bounded object defined by precise coordinates is now being translated into a grid-constrained representation.
 
-As an additional note, because vector to raster is an aggregation process, it is not reversible. Once a vector feature is rasterized, the original geometry cannot be perfectly reconstructed from the raster. Also, there is not a single “correct” way to perform rasterization. See the example below (Figure 3) of how different algorithms for rasterization can produce different results. The default algorithm assigns a cell value if the cell center falls within the vector geometry, which can lead to underrepresentation of features that are thin or have complex boundaries. The “ALL_TOUCHED” option, on the other hand, assigns a cell value if any part of the cell intersects the vector geometry, which can lead to overrepresentation and more blocky results. The choice of algorithm therefore reflects different assumptions about how spatial phenomena should be represented when transitioning from discrete objects to continuous surfaces.
+__Polygons to Raster__: A vector polygon representing areal features can be converted into clusters of raster cells.
+Raster cells typically inherit the attribute value of the polygon containing the cell center.
+However, alternative assignment rules may be used, including majority area containment, partial area weighting, binary presence, and many others.
+The choice of assignment rule matters, especially along boundaries.
+Cells that intersect multiple polygons may be forced to adopt a single dominant value, introducing boundary simplification and mixed-pixel effects.
+Conceptually, this conversion transforms a clearly bounded region into a tessellated surface approximation.
+The polygon’s exact boundary becomes a stair-stepped edge constrained by grid resolution.
+Again, resolution governs quality: finer grids better approximate shape, but never perfectly reproduce it.
+
+As an additional note, because vector to raster is an aggregation process, it is not reversible.
+Once a vector feature is rasterized, the original geometry cannot be perfectly reconstructed from the raster.
+Also, there is not a single “correct” way to perform rasterization.
+See the example below (__Figure 3__) of how different algorithms for rasterization can produce different results.
+The default algorithm assigns a cell value if the cell center falls within the vector geometry, which can lead to underrepresentation of features that are thin or have complex boundaries.
+The “ALL_TOUCHED” option, on the other hand, assigns a cell value if any part of the cell intersects the vector geometry, which can lead to overrepresentation and more blocky results.
+The choice of algorithm therefore reflects different assumptions about how spatial phenomena should be represented when transitioning from discrete objects to continuous surfaces.
 
 ![rasterization](../assets/rasterization.png)
-Figure 3: Rasterizing points, lines and polygons to raster with `st_rasterize` in R, using the default algorithms (top) and `options="ALL_TOUCHED=TRUE"`(bottom). [Source](https://geobgu.xyz/r/combining-rasters-and-vector-layers.html)
+__Figure 3:__ Rasterizing points, lines and polygons to raster with `st_rasterize` in R, using the default algorithms (top) and `options="ALL_TOUCHED=TRUE"`(bottom). [Source](https://geobgu.xyz/r/combining-rasters-and-vector-layers.html)
 
 ## __Raster to Vector Transformation__
 
-Raster-to-vector conversion, also known as vectorization, is the process of converting gridded cell- or pixel-based data into vector points, lines, or polygons. Where rasterization imposed a grid structure onto discrete objects, vectorization extracts discrete features from a continuous surface (Figure 4). In doing so, it requires rules for boundary detection, cell grouping, and geometry construction. Generally, the process includes the following key steps:
+Raster-to-vector conversion, also known as __vectorization__, is the process of converting gridded cell- or pixel-based data into vector points, lines, or polygons.
+Where rasterization imposed a grid structure onto discrete objects, vectorization extracts discrete features from a continuous surface (__Figure 4__).
+In doing so, vectorization requires rules for boundary detection, cell grouping, and geometry construction.
+Generally, the process includes the following key steps:
 
 ![Raster to Vector](../assets/transformation-08.svg)
 
-__Raster to Points__: A raster surface such as a Digital Elevation Model (DEM) can be converted into a set of vector points. Each point represents the centroid of a raster cell containing a valid data value, and the associated attribute table stores both the geographic location and the raster value (e.g. elevation).
+__Raster to Points__: A raster surface such as a Digital Elevation Model (DEM) can be converted into a set of vector points.
+Each point represents the centroid of a raster cell containing a valid data value, and the associated attribute table stores both the geographic location and the raster value (e.g. elevation).
 
-Conceptually, this transformation converts an implicitly located grid value into an explicitly located object. What was previously part of a continuous field becomes a collection of discrete spatial observations. The underlying resolution of the raster determines the density of the resulting point dataset. In this sense, the “precision” of the vector points is constrained by the raster sampling interval from which they were derived.
+Conceptually, this transformation converts an implicitly located grid value into an explicitly located object.
+What was previously part of a continuous field becomes a collection of discrete spatial observations.
+The underlying resolution of the raster determines the density of the resulting point dataset.
+In this sense, the “precision” of the vector points is constrained by the raster sampling interval from which they were derived.
 
-__Raster to Lines__: Raster surfaces can also be converted into vector lines. Here, a process represented as a surface (flow intensity across cells) becomes a linear object (a stream channel). The geographic accuracy and smoothness of the resulting vector lines depend directly on the spatial resolution of the input raster. Coarse raster resolution may produce angular or stair-stepped line geometries, while finer resolution allows closer approximation of continuous features. Again, the ontology shifts here is that a field describing process intensity is being converted into a bounded object suitable for object-based analysis.
+__Raster to Lines__: Raster surfaces can also be converted into vector lines.
+Here, a process represented as a surface (flow intensity across cells) becomes a linear object (a stream channel).
+The geographic accuracy and smoothness of the resulting vector lines depend directly on the spatial resolution of the input raster.
+Coarse raster resolution may produce angular or stair-stepped line geometries, while finer resolution allows closer approximation of continuous features.
+Again, the ontology shifts here is that a field describing process intensity is being converted into a bounded object suitable for object-based analysis.
 
-__Raster to Polygons__:Raster surfaces can certainly be converted into polygons, particularly when representing categorical data. For example, a land cover classification raster can be vectorized into polygons representing different land type categories. This allows GIS professionals to calculate areal coverage, perform spatial joins, and integrate the results into workflows that rely on object-based analysis. During conversion, adjacent cells with identical values are grouped into contiguous regions and represented as polygons. However, because raster boundaries are constrained by the underlying grid, the resulting polygon edges may appear stair-stepped, especially if the raster resolution is low.
+__Raster to Polygons__: Raster surfaces can certainly be converted into polygons, particularly when representing categorical data.
+For example, a land cover classification raster can be vectorized into polygons representing different land type categories.
+This allows GIS professionals to calculate areal coverage, perform spatial joins, and integrate the results into workflows that rely on object-based analysis.
+During conversion, adjacent cells with identical values are grouped into contiguous regions and represented as polygons.
+However, because raster boundaries are constrained by the underlying grid, the resulting polygon edges may appear stair-stepped, especially if the raster resolution is low.
 
-This highlights an important point: vectorization does not restore the “true” boundary of a feature. It reconstructs an object from a discretized field. The geometry of the output polygons reflects the sampling structure of the raster. Resolution, therefore, shapes not only visual appearance but also the conceptual boundaries of place.
+This highlights an important point: vectorization does not restore the “true” boundary of a feature.
+It reconstructs an object from a discretized field.
+The geometry of the output polygons reflects the sampling structure of the raster.
+Resolution, therefore, shapes not only visual appearance but also the conceptual boundaries of place.
 
-To illustrate raster-to-vector transformation in a familiar context, consider the process of converting a raster photograph into vector artwork (Figure 5). Starting with the same raster image of a leaf, different tracing presets, such as High Fidelity Photo, Sketched Art, or Black and White Logo, producedifferent vector outputs. The High Fidelity option attempts to preserve subtle color gradients and fine details by generating a large number of vector paths, resulting in a dense and complex representation. In contrast, the Sketched Art or Black and White settings simplify tonal variation, reduce the number of paths, and abstract the image into broader regions or silhouettes. Although each output is derived from the same underlying raster grid, the resulting vector geometries differ in complexity, smoothness, and semantic interpretation.
+To illustrate raster-to-vector transformation in a familiar context, consider the process of converting a raster photograph into vector artwork (__Figure 5__).
+Starting with the same raster image of a leaf, different tracing presets, such as High Fidelity Photo, Sketched Art, or Black and White Logo, produce different vector outputs.
+The High Fidelity option attempts to preserve subtle color gradients and fine details by generating a large number of vector paths, resulting in a dense and complex representation.
+In contrast, the Sketched Art or Black and White settings simplify tonal variation, reduce the number of paths, and abstract the image into broader regions or silhouettes.
+Although each output is derived from the same underlying raster grid, the resulting vector geometries differ in complexity, smoothness, and semantic interpretation.
 
 <div class="image-row">
   <a href="../../assets/leaf.jpg" class="zoomable">
@@ -239,34 +294,48 @@ To illustrate raster-to-vector transformation in a familiar context, consider th
     <img src="../../assets/vectorization.jpg">
   </a>
 </div>
-Figure 5: Raster to vector transformation of a leaf image using different tracing presets in Adobe Illustrator.
+__Figure 5:__ Raster to vector transformation of a leaf image using different tracing presets in Adobe Illustrator.
 
 ## __Spatial Interpolations__
 
-When discussing transformation, it is also useful to move beyond format conversion and consider transformations at a higher representational level. Vectorization and rasterization change data structure, but spatial interpolation and spatial generalization change the meaning and structure of representation itself.
+When discussing transformation, it is also useful to move beyond format conversion and consider transformations at a higher representational level. 
+Vectorization and rasterization change data structure, but spatial interpolation and spatial generalization change the meaning and structure of representation itself.
 
-Spatial interpolation is a mathematical process used to estimate values at locations where no data have been collected. In doing so, it makes an ontological move by assuming that the phenomenon being measured varies across space in a structured way. As an example, advanced vector-to-raster conversions frequently rely on interpolation techniques to estimate raster cell values from vector point measurements.
+- __Spatial interpolation__ is a mathematical process used to estimate values at locations where no data have been collected.
+In doing so, it makes an ontological move by assuming that the phenomenon being measured varies across space in a structured way.
+As an example, advanced vector-to-raster conversions frequently rely on interpolation techniques to estimate raster cell values from vector point measurements.
 Interpolation methods can be classified as deterministic or geostatistical, and as global or local in scope.
 
-__Deterministic methods__ derive raster surfaces based on predefined assumptions about spatial context, such as distance decay or surface smoothness. These methods do not explicitly model uncertainty.
+- __Deterministic methods__ derive raster surfaces based on predefined assumptions about spatial context, such as distance decay or surface smoothness. These methods do not explicitly model uncertainty.
 
-__Geostatistical (or stochastic) methods__, in contrast, explicitly incorporate spatial dependence. They model spatial autocorrelation among measured values and provide estimates of prediction uncertainty. In other words, they treat spatial structure as something to be quantified rather than assumed.
+- __Geostatistical (or stochastic) methods__, in contrast, explicitly incorporate spatial dependence.
+They model spatial autocorrelation among measured values and provide estimates of prediction uncertainty.
+In other words, they treat spatial structure as something to be quantified rather than assumed.
 
-__Global interpolation methods__ use all available data points to estimate values across the entire study area. This typically results in smoother surfaces and emphasizes broad spatial trends.
+- __Global interpolation methods__ use all available data points to estimate values across the entire study area.
+This typically results in smoother surfaces and emphasizes broad spatial trends.
 
-__Local interpolation methods__ estimate values using subsets of nearby points. This neighborhood-based approach often better captures localized variation and spatial heterogeneity but may introduce discontinuities or boundary effects.
+- __Local interpolation methods__ estimate values using subsets of nearby points.
+This neighborhood-based approach often better captures localized variation and spatial heterogeneity but may introduce discontinuities or boundary effects.
 
 A few more examples that illustrate these above approaches include: 
 
-__Inverse distance weighting__, which estimates a raster cell value using a weighted average of nearby input data points. Points closer to the prediction location exert greater influence than those farther away. It is intuitive and easy to implement and works well when data are relatively homogeneously distributed. However, it can over-smooth surfaces and generate artifacts in areas with high spatial variability.
+- __Inverse distance weighting (IDW)__, which estimates a raster cell value using a weighted average of nearby input data points. Points closer to the prediction location exert greater influence than those farther away.
+IDW is intuitive and easy to implement and works well when data are relatively homogeneously distributed.
+However, IDW can over-smooth surfaces and generate artifacts in areas with high spatial variability.
 
-__Natural neighbor__, which identifies nearby input points using a Voronoi tessellation and assigns weights based on proportional areas. It is computationally efficient and capable of modeling complex spatial relationships, but may struggle when input data are sparse or poorly distributed.
+- __Natural neighbor (NN)__, which identifies nearby input points using a Voronoi tessellation and assigns weights based on proportional areas.
+It is computationally efficient and capable of modeling complex spatial relationships, but may struggle when input data are sparse or poorly distributed.
 
-__Spline interpolation__, which fits a mathematical function to the input data points that both minimizes overall surface curvature and passes directly through the measured values. It works well for highly variable or complex spatial patterns, but can introduce over- or under-fitting when data are sparse.
+- __Spline interpolation__, which fits a mathematical function to the input data points that both minimizes overall surface curvature and passes directly through the measured values.
+Splines work well for highly variable or complex spatial patterns, but can introduce over- or under-fitting when data are sparse.
 
-__Polynomial interpolation__, which fits a single mathematical function across the entire dataset (global) or multiple functions across defined neighborhoods (local). It is effective for identifying long-range spatial trends and processes but is sensitive to outliers and neighborhood specifications.
+__Polynomial interpolation__, which fits a single mathematical function across the entire dataset (global) or multiple functions across defined neighborhoods (local).
+This approach is effective for identifying long-range spatial trends and processes but is sensitive to outliers and neighborhood specifications.
 
-Note that there is no single “best” interpolation method. Each embodies different assumptions about spatial continuity, smoothness, and scale. Choosing a method therefore means choosing a representation of process (how change should unfold across space).
+Note that there is no single “best” interpolation method.
+Each embodies different assumptions about spatial continuity, smoothness, and scale.
+Choosing a method therefore means choosing a representation of process (how change should unfold across space).
 
 <iframe
   src="https://clausa.app.carto.com/map/793597a9-ebd5-4168-9295-a84598cbc0cc?lat=35.685502&lng=-112.142190&zoom=7"
@@ -321,20 +390,33 @@ In this sense, interpolation and generalization together demonstrate that spatia
 
 ## __Moving Towards New Data Models__
 
-To conclude this week, it is worth asking a broader question: Are vector and raster the only ways to represent geographic information?
+Are vector and raster the only ways to represent geographic information?
 
-For decades, these two models have dominated GIS because they efficiently encode geometry whether being points, lines, polygons, and grids. But as spatial data become increasingly interconnected, distributed, and multi-source, new representational needs have emerged. In particular, the challenge is no longer just how to store geometry, but how to encode relationships, meaning, and knowledge. This is where Geospatial Knowledge Graphs (GeoKGs) enter the conversation.
+For decades, these two models have dominated GIS because they efficiently encode geometry whether being points, lines, polygons, and grids.
+But as spatial data become increasingly interconnected, distributed, and multi-source, new representational needs have emerged.
+In particular, the challenge is no longer just how to store geometry, but how to encode relationships, meaning, and knowledge.
+This is where Geospatial Knowledge Graphs (GeoKGs) may enter the conversation.
 
-A knowledge graph organizes information as a network of entities and relationships. Instead of structuring data primarily around geometric primitives (as vector and raster do), knowledge graphs structure data around concepts and connections.
+A knowledge graph organizes information as a network of entities and relationships.
+Instead of structuring data primarily around geometric primitives (as vector and raster do), knowledge graphs structure data around concepts and connections.
 
 In a graph structure, nodes represent entities (places, events, organizations, people, features), edges represent relationships between entities, then ontologies define the types of entities (classes) and relationships (properties), allowing machines to interpret meaning rather than just store values.
 
-A Geospatial Knowledge Graph becomes geospatial when spatial references and spatial relationships are explicitly encoded within this graph structure. For example, a standard knowledge graph might store the fact that the Eiffel Tower is an iconic landmark. A GeoKG extends this by encoding:
+A Geospatial Knowledge Graph becomes geospatial when spatial references and spatial relationships are explicitly encoded within this graph structure.
+For example, a standard knowledge graph might store the fact that the Eiffel Tower is an iconic landmark.
+A GeoKG extends this by encoding:
 
 - That the Eiffel Tower has a geometry.
 - That it is located within Paris.
 - That Paris is located within France.
 
-Because these relationships are formally defined using ontologies such as GeoSPARQL, the system can perform logical reasoning. If it knows that “Paris is the capital of France” and “The Eiffel Tower is in Paris,” it can automatically infer that “The Eiffel Tower is in France” without explicit manual linkage.
+Because these relationships are formally defined using ontologies such as GeoSPARQL, a GISystem incorporating them could perform logical reasoning.
+If it knows that “Paris is the capital of France” and “The Eiffel Tower is in Paris,” it may be possible to infer that “The Eiffel Tower is in France” without explicit manual linkage.
 
-As we connect this to spatial ontologies, we may see that vector and raster models operationalize space geometrically through objects and fields. GeoKGs, in contrast, operationalize place and process through semantic relationships. Place becomes a node with attributes and hierarchical relationships. Process can be encoded as temporal or causal relationships between nodes. Space becomes one type of relationship among many. Therefore, rather than simply asking “Where is it?” and “What geometry does it have?”, GeoKGs also ask “How is it connected?” and “What does it belong to?”. In this sense, GeoKGs extend the GeoAtom idea. 
+As we connect this to spatial ontologies, we may see that vector and raster models operationalize space geometrically through objects and fields.
+GeoKGs, in contrast, operationalize place and process through semantic relationships.
+Place becomes a node with attributes and hierarchical relationships.
+Process can be encoded as temporal or causal relationships between nodes.
+Space becomes one type of relationship among many.
+Therefore, rather than simply asking “Where is it?” and “What geometry does it have?”, GeoKGs also ask “How is it connected?” and “What does it belong to?”.
+In this sense, GeoKGs extend the GeoAtom idea. 
