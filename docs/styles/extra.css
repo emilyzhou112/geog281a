@@ -110,13 +110,13 @@ a:hover,
 
 .md-typeset table th:nth-child(1),
 .md-typeset table td:nth-child(1) {
-  width: 25%;
+  width: 8%;
   white-space: normal;
 }
 
 .md-typeset table th:nth-child(2),
 .md-typeset table td:nth-child(2) {
-  width: 5%;
+  width: 22%;
 }
 
 .md-typeset table th:nth-child(3),
