@@ -166,7 +166,8 @@ nav:
   - Spatial Database Management: module2/database-management.md
   - Laws in Geography: module2/principles-laws.md
 - Knowledge Inference:
-  - Maps: module3/maps.md
+  - Modern Cartographic Research: module3/maps1.md
+  - Maps as Systems of Inference: module3/maps2.md
 - Uncertainty and Limits:
   - Uncertainty: module4/uncertainty.md
 - Validation:
