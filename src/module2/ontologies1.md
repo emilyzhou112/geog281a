@@ -106,7 +106,7 @@ Effectively, the software assumes that only conventional coordinate systems are 
   </a>
 </div>
 
-Figure 1: [Graphical Cartograms in ArcGIS Pro](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/graphical-cartograms-in-arcgis-pro)
+__Figure 1__: [Graphical Cartograms in ArcGIS Pro](https://www.esri.com/arcgis-blog/products/arcgis-pro/mapping/graphical-cartograms-in-arcgis-pro)
 
 ### __Historical Basemap__
 
@@ -124,7 +124,7 @@ As an example, the maps below shows a historical map in its original form and wh
   </a>
 </div>
 
-Figure 2: [Historical Basemap from Philadelphia in the 1960s](https://www.philageohistory.org/tiles/viewer/)
+__Figure 2__: [Historical Basemap from Philadelphia in the 1960s](https://www.philageohistory.org/tiles/viewer/)
 
 ## __Towards Relative and Relational Space__
 
@@ -151,7 +151,7 @@ Conceptually, Voronoi polygons demonstrate that many spatial questions are inher
   <img src="../../assets/voronoi.gif" style="width:100%">
 </div>
 
-Figure 3: One of the many [algorithms](https://medium.com/data-science/the-fascinating-world-of-voronoi-diagrams-da8fc700fa1b) of constructing voronoi polygons to achieve rounder aspects and more evenly spaced points.
+__Figure 3__: One of the many [algorithms](https://medium.com/data-science/the-fascinating-world-of-voronoi-diagrams-da8fc700fa1b) of constructing voronoi polygons to achieve rounder aspects and more evenly spaced points.
 
 ### __Relational Database__
 
@@ -165,7 +165,7 @@ Spatial joins, adjacency queries, and intersection operations allow space to be 
          style="width:100%; object-fit:cover; object-position:center;">
   </a>
 
-Figure 4: A spatial join in PostGIS
+__Figure 4__: A spatial join in PostGIS
 
 For example, in the above analysis, we are not simply mapping census block groups or bus stops as independent features. 
 Instead, we are drawing on multiple datasets within a database, then using a spatial join `ST_Within` to ask which block groups fall within 800 meters of each stop, from which we then aggregate population counts to estimate how many people each stop serves (__Figure 4__). 

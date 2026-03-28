@@ -34,10 +34,10 @@ Summarized succinctly, research in this tradition has centered on four key eleme
 
 ### __Color__
 
-Color plays a central role in map design. It is used to attract attention, group similar elements, convey meaning, and enhance aesthetics. In practice, cartographers typically begin the design process by developing a color palette. This is often an iterative process, where colors are tested and refined in relation to the data, layout, and overall design goals. Research in this area engages with a range of concepts from color theory, including: balance and visual hierarchy, chroma (color intensity), color combinations and harmony, color systems (e.g., color trees), complementary and contrasting colors.
+Color plays a central role in map design. It is used to attract attention, group similar elements, convey meaning, and enhance aesthetics. In practice, cartographers typically begin the design process by developing a color palette. This is often an iterative process, where colors are tested and refined in relation to the data, layout, and overall design goals. Research in this area engages with a range of concepts from color theory, including: balance and visual hierarchy, chroma (color intensity), color combinations and harmony, color systems (e.g., color trees), complementary and contrasting colors (__Figure 1__).
 
 ![color](../assets/goc.png)
-Figure 1: Three fundamental dimensions of color: hue, chroma, and lightness. Adapted from Cleland’s _A Grammar of Color_ [Page 13-26](../readings/wk4/Cleland18-26.pdf)<sup><a class="sidenote-ref" href="#sn-2">2</a></sup>.
+__Figure 1__: Three fundamental dimensions of color: hue, chroma, and lightness. Adapted from Cleland’s _A Grammar of Color_ [Page 13-26](../readings/wk4/Cleland18-26.pdf)<sup><a class="sidenote-ref" href="#sn-2">2</a></sup>.
 
 <div class="sidenote" id="sn-2">
 <strong>2.</strong> The full book is available<a href="https://drive.google.com/file/d/1LWodg6b6Sg8-vzUBlG4ky6PuzNXDD_1v/view">here</a></div>
@@ -46,7 +46,7 @@ A long-standing question in cartographic design is: how many colors should be us
 
 Adhering to established cartographic color conventions is important as certain colors are commonly associated with specific types of features. For example, many features related to navigation and transportation are often represented using similar shades of black and red. This consistency helps users quickly associate colors with certain types of features, such as: rail labels, highway shields, ferry routes, and road casings.
 
-Especially in many reference maps,color palettes are not arbitrary but follow established conventions. Over time, users have developed expectations that certain colors correspond to certain types of features. 
+Especially in many reference maps,color palettes are not arbitrary but follow established conventions. Over time, users have developed expectations that certain colors correspond to certain types of features (__Figure 2__). 
 
 <div class="image-row">
   <a href="../../assets/mapbox.png" class="zoomable">
@@ -58,7 +58,7 @@ Especially in many reference maps,color palettes are not arbitrary but follow es
   </a>
 </div>
 
-Figure 2: Examples of color conventions in cartography. Left: Mapbox's Streets style, which follows established conventions for green spaces and water features. Right: Google Maps, which also adheres to similar color conventions.
+__Figure 2__: Examples of color conventions in cartography. Left: Mapbox's Streets style, which follows established conventions for green spaces and water features. Right: Google Maps, which also adheres to similar color conventions.
 
 For example, in Google Map's color system, colors are organized not only by category but also by gradients within each category. Blue is consistently used for water, green for vegetation, yellow or beige for corridors and open land, gray for built environments, and red is reserved sparingly for high-salience features. Each category includes a range of tonal values (e.g., 50–800), allowing designers to adjust contrast and hierarchy while maintaining semantic consistency. Mapbox employs a refined palette in which land is shown in neutral beige tones, water in blue, greenspace in soft green, and transportation networks in distinct yet harmonized hues, with points of interest remaining muted but legible. Importantly, the effectiveness of these systems lies not in the specific colors themselves, but in the consistency of their mapping to meaning. Over time, users learn to intuitively associate blue with water, green with vegetation, and gray with urban or built environments.
 
@@ -66,8 +66,7 @@ An interesting pivot emerges here: is color always necessary?
 
 __The answer is no!__
 
-Cartographic research has also explored monochrome mapping, where maps are designed using a single color (or variations of a single hue). This approach challenges the assumption that more color leads to better communication. Monochrome map design rely on: value (lightness vs. darkness) to create contrast
-texture and pattern to differentiate features, line weight and hierarchy to guide attention, and careful composition to maintain clarity without relying on hue differences.
+Cartographic research has also explored monochrome mapping, where maps are designed using a single color (or variations of a single hue). This approach challenges the assumption that more color leads to better communication. Monochrome map design rely on: value (lightness vs. darkness) to create contrast, texture and pattern to differentiate features, line weight and hierarchy to guide attention, and careful composition to maintain clarity without relying on hue differences (__Figure 3__).
 
 Rather than reducing effectiveness, monochrome maps often enhance clarity by removing unnecessary visual complexity. They force the designer to think more carefully about: what information is most important
 how visual hierarchy is constructed, and how different elements are distinguished without relying on color. In this sense, color is only one tool among many. Effective map design depends not on the number of colors used, but on how well visual variables are coordinated for effective representation.
@@ -82,19 +81,19 @@ how visual hierarchy is constructed, and how different elements are distinguishe
   </a>
 </div>
 
-Figure 3: Example of monochrome map design, adapted from [MonoCarto 2019](https://somethingaboutmaps.wordpress.com/monocarto-2019-winners/#BD)
+__Figure 3__: Example of monochrome map design, adapted from [MonoCarto 2019](https://somethingaboutmaps.wordpress.com/monocarto-2019-winners/#BD)
 
 ### __Typography__
 
-Typography is also one of the most important design elements in a map and can make or break its readability. Labels, which account for most of the text on maps, are often only one to three words long and displayed at very small sizes. Given this constraint, fonts with taller x-heights, open counters, and minimal or no serifs tend to work best.
+Typography (__Figure 4__) is also one of the most important design elements in a map and can make or break its readability. Labels, which account for most of the text on maps, are often only one to three words long and displayed at very small sizes. Given this constraint, fonts with taller x-heights, open counters, and minimal or no serifs tend to work best.
 
 Effective typographic design requires balancing __quality and readability__. High-quality fonts offer a wide range of variations, including styles (italics, caps, caps italic, small caps), weights (from ultra light to ultra black), and widths (condensed, narrow, normal, mono, expanded). These variations allow designers to create hierarchy and differentiate between types of features.
 
-Readability is not just about the font itself, but also about how text is arranged. This includes the classification of labels, the use of different label colors, and careful control of spacing so that the reader’s eye can access the content easily and clearly. At the same time, the personality of a typeface reflects the tone and energy of the map. The most common styles—sans-serif, serif, and script—each carry different visual qualities, with sans-serif fonts generally performing best on web and mobile due to lower screen resolution (DPI).
+Readability is not just about the font itself, but also about how text is arranged. This includes the classification of labels, the use of different label colors, and careful control of spacing so that the reader’s eye can access the content easily and clearly. At the same time, the personality of a typeface reflects the tone and energy of the map. The most common styles, sans-serif, serif, and script, each carry different visual qualities, with sans-serif fonts generally performing best on web and mobile due to lower screen resolution (DPI).
 
 ![typography](../assets/labeling.gif) 
 
-Figure 4: The Serene Practice of Map Labeling by Daniel Huffman. See full video [here](http://youtube.com/watch?v=UWo12NFdxJ0)
+__Figure 4__: The Serene Practice of Map Labeling by Daniel Huffman. See full video [here](http://youtube.com/watch?v=UWo12NFdxJ0)
 
 Research has also focused on label placement, such as the classic work by [Imhof (1975)](../readings/wk4/Imhof-1975.pdf) on positioning names on maps, which remains foundational in understanding how labels can be placed clearly without ambiguity.
 
@@ -105,7 +104,7 @@ On a related note, __typography and lettering (or labeling)__ are closely relate
 
 ### __Iconography__
 
-Iconography refers to the use of symbols or icons on maps, typically to represent points of interest (POIs)—such as libraries, cafés, parks, museums, or transit stops. The icons used in a map should not only communicate information clearly, but also reinforce the map’s overall visual identity, contributing to both brand recognition and readability.Effective map icons share several key characteristics: they are widely recognizable across cultures, as simple as possible, and legible at very small sizes (often as small as 11px). This makes icon design both a visual and cognitive challenge of balancing clarity, abstraction, and meaning within very limited space.
+Iconography (__Figure 5__) refers to the use of symbols or icons on maps, typically to represent points of interest (POIs)—such as libraries, cafés, parks, museums, or transit stops. The icons used in a map should not only communicate information clearly, but also reinforce the map’s overall visual identity, contributing to both brand recognition and readability.Effective map icons share several key characteristics: they are widely recognizable across cultures, as simple as possible, and legible at very small sizes (often as small as 11px). This makes icon design both a visual and cognitive challenge of balancing clarity, abstraction, and meaning within very limited space.
 
 Research on iconography in cartography is closely connected to semiotics, the study of signs and how they produce meaning.A sign consists of two parts: the signifier (the form of the sign, such as a shape or symbol) and the signified (the concept or meaning that the sign represents).
 
@@ -125,13 +124,13 @@ Building on this idea, cartographic symbols can be understood in three broad typ
   </a>
 </div>
 
-Figure 5: Examples of cartographic icons. Left: Mapbox's [Maki](https://labs.mapbox.com/maki-icons/) icon set, which includes a wide range of icons for points of interest. Right: National Park Service's [iconography](https://www.nps.gov/npgallery/AssetDetail/cd253093-6813-471e-9d16-042c2a373a97), which uses simple and recognizable symbols to represent different types of parks and facilities.
+__Figure 5__: Examples of cartographic icons. Left: Mapbox's [Maki](https://labs.mapbox.com/maki-icons/) icon set, which includes a wide range of icons for points of interest. Right: National Park Service's [iconography](https://www.nps.gov/npgallery/AssetDetail/cd253093-6813-471e-9d16-042c2a373a97), which uses simple and recognizable symbols to represent different types of parks and facilities.
 
 The value of semiotics in cartography is not to rigidly classify every map element, but to encourage intentional design choices. It helps us think more carefully about how meaning is constructed—especially when representing information without relying on words or numbers.
 
 ### __Texture__
 
-Texture is often an additional design element in cartography, but it can play an important role in enhancing both visual differentiation and overall map aesthetics. It refers to the perceived surface quality of a design and is typically implemented through patterns.
+Texture (__Figure 6__) is often an additional design element in cartography, but it can play an important role in enhancing both visual differentiation and overall map aesthetics. It refers to the perceived surface quality of a design and is typically implemented through patterns.
 
 In maps, textures can be applied to features to either differentiate elements (e.g., distinguishing land use types) or visually group them. They can also function independently as background elements, creating subtle visual interest without overwhelming the map’s primary information.
 
@@ -145,13 +144,13 @@ In maps, textures can be applied to features to either differentiate elements (e
   </a>
 </div>
 
-Figure 6: Examples of texture in historical cartography. Left: Subtle paper grain and contour-like line textures used to evoke a hand-drawn feel of water features. Rights: Repeating stipple and woodgrain-inspired textures applied to building footprints and background surfaces
+__Figure 6__: Examples of texture in historical cartography. Left: Subtle paper grain and contour-like line textures used to evoke a hand-drawn feel of water features. Right: Repeating stipple and woodgrain-inspired textures applied to building footprints and background surfaces
 
 A key consideration in using texture is that patterns must be seamless. A seamless texture is designed so that it can repeat side-by-side without visible boundaries, ensuring continuity across the map. Because textures are repeated many times, they are typically kept small in size, often in dimensions such as 16×16, 32×32, or 64×64 pixels.
 
 ### __Reference and Thematic Map Taxonomy__
 
-All of the design elements discussed so far—color, typography, iconography, and texture—are rarely considered in isolation. In practice, they are brought together and evaluated through what is often presented as a map taxonomy chart, which summarizes the full set of design decisions in a map.
+All of the design elements discussed so far—color, typography, iconography, and texture—are rarely considered in isolation. In practice, they are brought together and evaluated through what is often presented as a map taxonomy chart, which summarizes the full set of design decisions in a map (__Figure 7__).
 
 <div class="image-row">
   <a href="../../assets/referenceTax.png" class="zoomable">
@@ -163,7 +162,7 @@ All of the design elements discussed so far—color, typography, iconography, an
   </a>
 </div>
 
-Figure 7: Examples of map taxonomy charts. Left: A reference map taxonomy chart used by Mapbox. Here, elements are broken down systematically into categories such as administrative boundaries, land use, and water labels, each with carefully controlled variations . Right: A thematic map taxonomy chart, which can vary widely based on the specific narrative and design choices. Instead of standardized categories, the taxonomy includes illustrative elements, decorative motifs (e.g., cherry blossoms, branches), stylized typography, and culturally specific icons. Even labels are treated as part of the design language, with multiple typefaces used to convey tone and narrative.
+__Figure 7__: Examples of map taxonomy charts. Left: A reference map taxonomy chart used by Mapbox. Here, elements are broken down systematically into categories such as administrative boundaries, land use, and water labels, each with carefully controlled variations . Right: A thematic map taxonomy chart, which can vary widely based on the specific narrative and design choices. Instead of standardized categories, the taxonomy includes illustrative elements, decorative motifs (e.g., cherry blossoms, branches), stylized typography, and culturally specific icons. Even labels are treated as part of the design language, with multiple typefaces used to convey tone and narrative.
 
 For reference maps, many of these elements tend to converge toward shared conventions. There are widely accepted expectations for how features should be represented—water in blue, roads with standardized linework, labels following consistent typographic rules. As a result, taxonomy charts for reference maps often appear more uniform and standardized.
 
@@ -194,12 +193,13 @@ Ultimately, these principles return us to the central theme of this module: __re
 
 So far, we have focused on maps as representations. Yet, this framing becomes insufficient in the context of contemporary, digitally mediated cartography. As mapping technologies have evolved, especially with the rise of interactive and web-based systems, maps are no longer just static products, but interfaces that users actively engage with. This requires us to expand our understanding of cartography beyond how maps are made, to also consider how they are __used, interacted with, and experienced__.
 
-Building on this shift, Robert Roth (2024) proposes organizing cartography along two conceptual axes: __mapmaking vs. map use__, and __representation vs. interaction__. The first reflects a distinction between the production of maps and their use, how maps function and what roles they play, while the second highlights a growing emphasis on interaction and user experience, moving beyond representation alone.
+Building on this shift, Robert Roth (2024) proposes organizing cartography along two conceptual axes: __mapmaking vs. map use__, and __representation vs. interaction__. The first reflects a distinction between the production of maps and their use, how maps function and what roles they play, while the second highlights a growing emphasis on interaction and user experience, moving beyond representation alone (__Figure 8__).
 
 <div align="center">
     <img src="../../assets/roth24.png" alt="roth" width="450" height="450">
 </div>
-Figure 8: Roth's framework for organizing cartographic research along two axes: mapmaking vs. map use, and representation vs. interaction. Adapted from [Roth (2024)](../readings/wk4/Roth2024.pdf)
+
+__Figure 8__: Roth's framework for organizing cartographic research along two axes: mapmaking vs. map use, and representation vs. interaction. Adapted from [Roth (2024)](../readings/wk4/Roth2024.pdf)
 
 Roth’s framework is helpful because it reminds us that studying maps today is not just about how information is encoded, but also about how users explore, manipulate, and engage with that information. This shift is particularly important for thinking about __inference__. It is at the intersection of map use and interaction when users explore patterns, test ideas, and interpret relationships that new knowledge is generated. Here, we will look more closely at how cartographic research operates on the interaction and map use side of this expanded conceptual space.
 
@@ -224,7 +224,7 @@ __Scrollable narratives__: guide users through stories (e.g., story maps)
 
 __Animations and transitions__: support temporal change or narrative flow
  
-Figure 9: A good example of the use of these two features is Jake Steinberg’s [Dark Sky Sanctuaries](https://jake-steinberg.github.io/2022_DarkSkies_js/) interactive map. As users scroll, the map unfolds as a linear narrative, gradually introducing the problem of light pollution, its causes, and its consequences. Rather than presenting all information at once, the content is chunked and sequenced, allowing users to build understanding step by step.
+__Figure 9__: A good example of the use of these two features is Jake Steinberg’s [Dark Sky Sanctuaries](https://jake-steinberg.github.io/2022_DarkSkies_js/) interactive map. As users scroll, the map unfolds as a linear narrative, gradually introducing the problem of light pollution, its causes, and its consequences. Rather than presenting all information at once, the content is chunked and sequenced, allowing users to build understanding step by step.
 
 ![darksky](../assets/dynamic1.png)
 
@@ -232,7 +232,7 @@ __Zoom__: move between global and local scales
 
 __Filters__: refine data by criteria such as time or location
 
-Figure 10: An example of these features can be seen in this [dashboard](https://weijingg.github.io/Practicum/) on racial and ethnic trends, where users can zoom from a broader overview to more localized details. At the same time, filters enable users to subset the data so that they can focus on specific aspects of the trends.
+__Figure 10__: An example of these features can be seen in this [dashboard](https://weijingg.github.io/Practicum/) on racial and ethnic trends, where users can zoom from a broader overview to more localized details. At the same time, filters enable users to subset the data so that they can focus on specific aspects of the trends.
 
 ![zoom](../assets/dynamic3.gif)
 
@@ -242,13 +242,13 @@ __Clickable layers__: toggle datasets on and off to compare views
 
 __Overlays__: add additional data layers (e.g., weather, demographics)
 
-Figure 11: An example of these features can be seen in the [United States of Rising Hazards Dashboard](https://cartoguophy.com/us_rising_hazard/) by Atlas Guo. In this project, users can toggle on and off different hazard layers and click on specific locations to access detailed information about the hazards affecting that area with the tooltips. 
+__Figure 11__: An example of these features can be seen in the [United States of Rising Hazards Dashboard](https://cartoguophy.com/us_rising_hazard/) by Atlas Guo. In this project, users can toggle on and off different hazard layers and click on specific locations to access detailed information about the hazards affecting that area with the tooltips. 
 
 ![hazards](../assets/dynamic2.png)
 
 __User input interfaces__: allow users to contribute data or interact with backend systems
 
-Figure 12: An example here is the [Montpelier Flood Dashboard](https://emilyzhou112.github.io/engagement-project/), where users can input their own observations of flooding events by entering an address, which is then geocoded to a point on the map. They could also select parcel, housing type, and flood severity from dropdown menus, which are then integrated into the map to provide real-time updates on flood conditions.
+__Figure 12__: An example here is the [Montpelier Flood Dashboard](https://emilyzhou112.github.io/engagement-project/), where users can input their own observations of flooding events by entering an address, which is then geocoded to a point on the map. They could also select parcel, housing type, and flood severity from dropdown menus, which are then integrated into the map to provide real-time updates on flood conditions.
 
 ![flood](../assets/dynamic4.png)
 
@@ -272,7 +272,7 @@ A lot of this work takes the form of empirical and user-centered research, inclu
   </a>
 </div>
 
-Figure 13: Examples of user-centered design in mobile-friendly interactive map applications. [Left](https://junyi2022.github.io/earthquaker/): Dashboard showing distribution of earthquakes, where users can filter by magnitude and time. [Middle](https://qianhengzhang.github.io/HongKongMusicAtlas/): A web application that visualizes over 160 Cantonese songs referencing locations across Hong Kong and beyond. [Right](https://https://weijingg.github.io/Practicum/): the same race and ethnicity trends dashboard shown in Figure 10, but redesigned for mobile with a more compact layout and simplified interactions.
+__Figure 13__: Examples of user-centered design in mobile-friendly interactive map applications. [Left](https://junyi2022.github.io/earthquaker/): Dashboard showing distribution of earthquakes, where users can filter by magnitude and time. [Middle](https://qianhengzhang.github.io/HongKongMusicAtlas/): A web application that visualizes over 160 Cantonese songs referencing locations across Hong Kong and beyond. [Right](https://https://weijingg.github.io/Practicum/): the same race and ethnicity trends dashboard shown in __Figure 10__, but redesigned for mobile with a more compact layout and simplified interactions.
 
 More recent research further complicates this picture by emphasizing the importance of user context. For example, Bartling et al. (2021) studied how factors such as user expertise, task type, environment, and time pressure shape user experience in mobile map applications. Their findings suggest that the effectiveness of interaction cannot be evaluated in isolation; instead, it depends on how well it aligns with specific use contexts. In this sense, interaction is not universally beneficial, but context-dependent.
 
@@ -289,4 +289,3 @@ In this context, interaction is no longer treated as a purely technical enhancem
 But this also reframes what it means for a map to be “finished.” A map is no longer complete when its representation is polished; it is complete when its interactions successfully support user reasoning. In other words, the question shifts from “does it look right?” to “does it help users understand, explore, and draw meaningful conclusions?”
 
 Taken together, this body of work reframes cartography as the study of interactive, user-centered, and context-dependent systems. Maps are no longer just representations of information, but tools through which users explore data, construct meaning, and generate knowledge. Interaction is therefore central to the process of inference, but it is also shaped—and constrained—by design choices, user characteristics, and real-world contexts of use.
-

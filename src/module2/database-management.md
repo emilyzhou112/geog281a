@@ -43,7 +43,7 @@ In systems such as PostGIS, spatial queries are written using SQL combined with 
 
 Let's work through an example of a spatial query. Suppose we have a geodatabase containing two tables: blockgroups_2020, population_2020 and bus_stops (with stop locations) in a city (for example, Philadelphia). We want to estimate the population within 800 meters of each bus stop. This requires a spatial join between the two tables based on proximity.
 
-If we were to conduct this analysis in a GIS software, we would use a spatial join tool that identifies all block groups within 800 meters of each bus stop and sums their populations. However, if working within a spatial database, we can write a SQL query that performs this operation directly (Figure 1).
+If we were to conduct this analysis in a GIS software, we would use a spatial join tool that identifies all block groups within 800 meters of each bus stop and sums their populations. However, if working within a spatial database, we can write a SQL query that performs this operation directly (__Figure 1__).
 
 ```sql
 /*
@@ -94,16 +94,17 @@ LIMIT 8
 <a href="../../assets/sql-demo.png" class="zoomable">
     <img src="../../assets/sql-demo.png">
 </a>
-Figure 1: SQL query to estimate population within 800m of bus stops in Philadelphia. 
+
+__Figure 1__: SQL query to estimate population within 800m of bus stops in Philadelphia. 
 
 ## __Problems of Spatial Database__
 
 However, there are also several problems associated with managing and working with large spatial databases. These challenges are closely tied to broader issues in big data and the management of big data.
 
-Geospatial big data pose both computational and conceptual challenges. In modern practice, spatial database management rarely happens on a single desktop machine. Instead, data are stored in distributed environments, transformed through automated pipelines, and ingested into cloud databases. Architecturally, they require high-performance computing environments, distributed systems, and specialized processing frameworks to store and process massive volumes of data efficiently. 
+Geospatial big data pose both computational and conceptual challenges. In modern practice, spatial database management rarely happens on a single desktop machine. Instead, data are stored in distributed environments, transformed through automated pipelines, and ingested into cloud databases. Architecturally, they require high-performance computing environments, distributed systems, and specialized processing frameworks to store and process massive volumes of data efficiently (__Figure 2__). 
 
 ![gcloud](../assets/gcloud.png)
-Figure 2: Google Cloud Platform’s BigQuery spatial database pipeline. Source: 
+__Figure 2__: Google Cloud Platform’s BigQuery spatial database pipeline. Source: https://cloud.google.com/bigquery/docs/spatial-data
 
 
 Conceptually, however, they inherit fundamental geographic problems such as vague feature boundaries, positional uncertainty, scale effects, and spatial heterogeneity. Many large spatial datasets also lack rigorous sampling methods and clear pathways to replicability, which complicates scientific interpretation and methodological transparency.

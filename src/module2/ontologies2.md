@@ -61,6 +61,7 @@ What changed is not simply the geometry of the site, but the social meaning atta
     <img src="../../assets/frankfordafter.jpg">
   </a>
 </div>
+
 __Figure 1:__ The same vacant lot in Philadelphia, before and after a community-led transformation. 
 
 More broadly, neighborhoods can be welcoming to some groups and exclusionary to others. 
@@ -191,7 +192,7 @@ The map does not just show routes; it communicates a personal relationship with 
          style="width:100%; object-fit:cover; object-position:center;">
   </a>
 
-Figure 2: A narrative map of a biking journey across the US. Source: [cartoguophy](https://cartoguophy.com/maps/biking.html)_
+__Figure 2__: A narrative map of a biking journey across the US. Source: [cartoguophy](https://cartoguophy.com/maps/biking.html)_
 
 Dynamic story maps extend this idea even further. 
 Interactive projects, such as the [Dark Skies map](https://jake-steinberg.github.io/2022_DarkSkies_js/), allow users to scroll, click, and explore place through sequence and discovery. 
