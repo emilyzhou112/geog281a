@@ -37,7 +37,7 @@ Summarized succinctly, research in this tradition has centered on four key eleme
 Color plays a central role in map design. It is used to attract attention, group similar elements, convey meaning, and enhance aesthetics. In practice, cartographers typically begin the design process by developing a color palette. This is often an iterative process, where colors are tested and refined in relation to the data, layout, and overall design goals. Research in this area engages with a range of concepts from color theory, including: balance and visual hierarchy, chroma (color intensity), color combinations and harmony, color systems (e.g., color trees), complementary and contrasting colors (__Figure 1__).
 
 ![color](../assets/goc.png)
-__Figure 1__: Three fundamental dimensions of color: hue, chroma, and lightness. Adapted from Cleland’s _A Grammar of Color_ [Page 13-26](../readings/wk4/Cleland18-26.pdf)<sup><a class="sidenote-ref" href="#sn-2">2</a></sup>.
+__Figure 1__: Three fundamental dimensions of color: hue, chroma, and lightness. Adapted from Cleland’s _A Grammar of Color_ [Page 13-26](../readings/wk5/Cleland18-26.pdf)<sup><a class="sidenote-ref" href="#sn-2">2</a></sup>.
 
 <div class="sidenote" id="sn-2">
 <strong>2.</strong> The full book is available<a href="https://drive.google.com/file/d/1LWodg6b6Sg8-vzUBlG4ky6PuzNXDD_1v/view">here</a></div>
@@ -95,7 +95,7 @@ Readability is not just about the font itself, but also about how text is arrang
 
 __Figure 4__: The Serene Practice of Map Labeling by Daniel Huffman. See full video [here](http://youtube.com/watch?v=UWo12NFdxJ0)
 
-Research has also focused on label placement, such as the classic work by [Imhof (1975)](../readings/wk4/Imhof-1975.pdf) on positioning names on maps, which remains foundational in understanding how labels can be placed clearly without ambiguity.
+Research has also focused on label placement, such as the classic work by [Imhof (1975)](../readings/wk5/Imhof-1975.pdf) on positioning names on maps, which remains foundational in understanding how labels can be placed clearly without ambiguity.
 
 On a related note, __typography and lettering (or labeling)__ are closely related but not identical, though they are often used interchangeably. Typography focuses on the selection and arrangement of typefaces, while lettering or labeling <sup><a class="sidenote-ref" href="#sn-3">3</a></sup> refers more broadly to the process of placing, styling, and positioning text to represent geographic features.
 
@@ -199,7 +199,7 @@ Building on this shift, Robert Roth (2024) proposes organizing cartography along
     <img src="../../assets/roth24.png" alt="roth" width="450" height="450">
 </div>
 
-__Figure 8__: Roth's framework for organizing cartographic research along two axes: mapmaking vs. map use, and representation vs. interaction. Adapted from [Roth (2024)](../readings/wk4/Roth2024.pdf)
+__Figure 8__: Roth's framework for organizing cartographic research along two axes: mapmaking vs. map use, and representation vs. interaction. Adapted from [Roth (2024)](../readings/wk5/Roth2024.pdf)
 
 Roth’s framework is helpful because it reminds us that studying maps today is not just about how information is encoded, but also about how users explore, manipulate, and engage with that information. This shift is particularly important for thinking about __inference__. It is at the intersection of map use and interaction when users explore patterns, test ideas, and interpret relationships that new knowledge is generated. Here, we will look more closely at how cartographic research operates on the interaction and map use side of this expanded conceptual space.
 

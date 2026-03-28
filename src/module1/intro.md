@@ -30,7 +30,7 @@ Mark distinguishes between the history of GIS systems and the history of GIScien
 
 One way to attempt to capture the nature of the field of GIScience is to list its many components. These components describe what GIScientsts study, rather than how they apply GIS (Figure 1).
 
-![components](assets/components.svg)
+![components](../assets/components.svg)
 
 __Ontology__ is a branch of philosophy that deals with the most fundamental aspects of scientific inquiry at a very high level of abstraction. This part of GIScience examines the georgaphic information and geographic concepts that are used by environmental and social scientists in their research. It has also been used in information science and knowledge representation to refer to the specifications of the conceptualizations employed by different groups of users. 
 
