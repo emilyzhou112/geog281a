@@ -59,6 +59,6 @@ This assignment is designed to mirror how scholars actually engage with literatu
 | 5 | Scale and Projection | Openshaw & Taylor (1979) <br> Montello (1993) <br>  O'Sullivan (2024 - C3) | Goodchild (2004) <br> Frazier (202X)|
 | 6 | Spatial Relationships | Egenhofer & Franzosa (1991) <br> [Topological Relationships](https://gistbok-topics.ucgis.org/DM-01-028) <br> Mark & Egenhoffer (1995) <br> O'Sullivan (2024) - C6 | Stell (2017) <br> Westveld & Knowles (2021) |
 | 7 | Spatial Analyses | Nomothetic v. Ideographic<br> [Laws in Geography](https://gistbok-topics.ucgis.org/FC-05-043) | TBD |
-| 8 | Cartography & Geovisualization| [Monmonier(1991) Chapter 2-3](readings/wk5/Monmonier2-3.pdf) <br> [Roth(2024)](readings/wk5/Roth2004.pdf) | [Imof(1975)](readings/wk5/imof-1975.pdf) <br> [Cleland (1921)](readings/wk5/cleland18-26.pdf) |
+| 8 | Cartography & Geovisualization| Monmonier (1991) Chapter 2-3 <br> Roth (2024) <br> Roth (2013) <br> Roth et al. (2017) | Imof (1975) <br> Cleland (1921) <br> Houtman (2026) <br> Robinson et al. (2017) <br> Bartling et al. (2021) |
  | 9 | The Forking Paths of Uncertainty | TBD | TBD |
 | 10 | GIScience & Society | TBD | TBD |
