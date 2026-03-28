@@ -11,7 +11,8 @@ This ambiguity raises a deeper concern:
 > If basic spatial concepts such as distance, boundary, or region are not fixed and absolute, then how a individual chooses to __represent__ spatial concepts and even space itself matters a great deal to interpretation and analysis.
 
 <div class="sidenote" id="sn-1">
-<strong>1.</strong> These types of fuzzy boundaries are usually [Fiat Boundaries](https://www.columbia.edu/~av72/papers/Ppr_2000.pdf), but even the seemingly cleared distinction of Bona Fide Boundaries can quickly collapse when study geographic phenomena or changing scale.</div>
+<strong>1.</strong> These types of fuzzy boundaries are usually <a href="https://www.columbia.edu/~av72/papers/Ppr_2000.pdf">Fiat Boundaries</a>, but even the seemingly clear distinction of Bona Fide Boundaries can quickly collapse when studying geographic phenomena or changing scale.
+</div>
 
 Nonetheless, GISystems often give users the impression that maps and spatial data are neutral mirrors of reality. 
 However, recall that Fisher (1998) argues, GIS does not simply record the world, but __re-presents__ it through particular technical and conceptual assumptions. 
@@ -27,7 +28,8 @@ In the context of GIScience, ontologists ask what we believe space actually is a
 With this in mind, it makes sense to begin with the most fundamental concept in both geography and GIScience: the notion of space itself.
 
 <div class="sidenote" id="sn-2">
-<strong>2.</strong> [Foundational Ontologies](https://gistbok-topics.ucgis.org/FC-03-001) introduce nierarchies of concepts and relationships between those concepts at a general level. Foundational ontologies are then used as the basis for domain specific ontologies, such as the geospatial. Geospatial ontologies can also be examined from a philosophical or computer science perspective.  </div>
+<strong>2.</strong> <a href="https://gistbok-topics.ucgis.org/FC-03-001">Foundational Ontologies</a> introduce hierarchies of concepts and relationships between those concepts at a general level. Foundational ontologies are then used as the basis for domain specific ontologies, such as the geospatial. Geospatial ontologies can also be examined from a philosophical or computer science perspective.
+</div>
 
 ## __Introducing Location and Space__
 
@@ -62,7 +64,7 @@ Space, in this sense, depends on how movement and interaction occur.
 Relative space therefore recognizes that multiple distance metrics coexist and that different observers experience space differently<sup><a class="sidenote-ref" href="#sn-3">3</a></sup>.
 
 <div class="sidenote" id="sn-3">
-<strong>2.</strong> It is worth noting that the boundary between absolute and relative perspectives is not sharp. Any absolute map already implies relationships, and many relative measures are computed using underlying coordinates. The two views are intertwined in practice. </div>
+<strong>3.</strong> It is worth noting that the boundary between absolute and relative perspectives is not sharp. Any absolute map already implies relationships, and many relative measures are computed using underlying coordinates. The two views are intertwined in practice. </div>
 
 __Relational Space__ takes this shift even further. 
 Rather than treating space as a container, relational thinking argues that space is produced through processes and interactions. 

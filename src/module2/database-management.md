@@ -102,7 +102,7 @@ However, there are also several problems associated with managing and working wi
 
 Geospatial big data pose both computational and conceptual challenges. In modern practice, spatial database management rarely happens on a single desktop machine. Instead, data are stored in distributed environments, transformed through automated pipelines, and ingested into cloud databases. Architecturally, they require high-performance computing environments, distributed systems, and specialized processing frameworks to store and process massive volumes of data efficiently. 
 
-![gcloud](../../assets/gcloud.png)
+![gcloud](../assets/gcloud.png)
 Figure 2: Google Cloud Platform’s BigQuery spatial database pipeline. Source: 
 
 

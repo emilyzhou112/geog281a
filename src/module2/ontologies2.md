@@ -96,7 +96,8 @@ Massey reiterates this point in her later work, arguing that we cannot seriously
 If we truly think of space relationally, then space is the sum of all these connections, and in that sense places are deeply grounded in everyday life—even when those connections stretch across the globe. 
 
 <div class="sidenote" id="sn-1">
-<strong>1.</strong> It is also useful to consider the related concept of __placelessness__. If sense of place refers to the distinctiveness and meaning that emerge from lived experience and relational histories, placelessness describes the opposite. PLaceless environments feel interchangeable, generic, or detached from local identity. Think of airport terminals, chain stores, shopping malls, or standardized developments that could exist almost anywhere. These spaces often lack the accumulated memories, social ties, and historical depth that give places their character. Placelessness reminds us that place is produced and sustained through practice. </div>
+<strong>1.</strong> It is also useful to consider the related concept of <strong>placelessness</strong>. If sense of place refers to the distinctiveness and meaning that emerge from lived experience and relational histories, placelessness describes the opposite. Placeless environments feel interchangeable, generic, or detached from local identity. Think of airport terminals, chain stores, shopping malls, or standardized developments that could exist almost anywhere. These spaces often lack the accumulated memories, social ties, and historical depth that give places their character. Placelessness reminds us that place is produced and sustained through practice.
+</div>
 
 ## __Situating Place in GIScience__
 
@@ -104,8 +105,8 @@ The concept of place has a long history in geography and related disciplines, bu
 As we have discussed ambiguity almost always poses a challenge for GISystems designed around the concept of absolute space using geometry and measurable relationships. 
 Therefore place, its representation, and measurement remain actice topics in GIScience as researchers work to capture something as subjective, contextual, and experiential as place?
 
-<div class="sidenote" id="sn-1">
-<strong>1.</strong> How is place defined and identified in research? Often you will find that a clear definition is not given, particularly if you look to the use of this concept in different disciplines (e.g., place-based policy).</div>
+<div class="sidenote" id="sn-2">
+<strong>2.</strong> How is place defined and identified in research? Often you will find that a clear definition is not given, particularly if you look to the use of this concept in different disciplines (e.g., place-based policy).</div>
 
 Rather than tackling head-on the challenge of formalizing the subtleties of place, GIScientists have often sidestepped the issue and focused instead on limited interpretations of place that are more amenable to formalization, and therefore computation. 
 Goodchild (2011) effectively summarizes these into two dominant approaches: 1) place as location and 2) place as context.
@@ -148,7 +149,7 @@ The same label can evoke entirely different meanings for different people.
   </iframe>
 </div>
 
-### ___Place as Geographical Context___
+### __Place as Geographical Context__
 
 A second, approach to place within GIScience shifts attention from naming to __context__. 
 Taking geographical context seriously immediately reveals the inadequacy of only relying on notions of coincidence in space as a way of understanding what it means for things to interact in place. 
@@ -203,6 +204,6 @@ O’Sullivan specifically points to examples such as Lynch’s image-of-the-city
 Here, place is modeled not simply as geometry but as a structured configuration of meaningful features, whose combination produces a recognizable urban environment. 
 
 <div class="sidenote" id="sn-3">
-<strong>1.</strong> Lynch (1960) _Image of the City_ describes a five-year study that reveals what elements in the built structure of a city are important in the popular perception of the city. These building blocks are used to create mental maps the shape how individuals live in, navigate, and drawn meaning from their urban environments. A [short summary](https://escholarship.org/content/qt9xh963vb/qt9xh963vb.pdf?v=lg) of this work was prepared by Ethan Sundilson as part of the CSISS Classics Series. </div>
-
+<strong>3.</strong> Lynch (1960) <em>Image of the City</em> describes a five-year study that reveals what elements in the built structure of a city are important in the popular perception of the city. These building blocks are used to create mental maps that shape how individuals live in, navigate, and draw meaning from their urban environments. A <a href="https://escholarship.org/content/qt9xh963vb/qt9xh963vb.pdf?v=lg">short summary</a> of this work was prepared by Ethan Sundilson as part of the CSISS Classics Series.
+</div>
 !!! summary "Should we think of place and space as completely opposed where place is local, concrete, and particular whereas space is global, abstract, and general? Perhaps the answer to this is not that place is not concrete, grounded, real, lived, etc. It is that space is too. The local and immediate feels more concrete, because it is often visible, right there in front of us. But more remote events are no less real, even if they seem that way. Place cannot be fully computed, only approximated. What GIS can do is not to perfectly capture place, but to provide thoughtful, partial representations that remain sensitive to experience and interpretation."
