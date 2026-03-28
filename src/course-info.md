@@ -17,9 +17,11 @@ This course teaches students to think critically about the nature of spatial pro
 - Class Time and Location: Wednesdays 9:30-11:50 AM, Ellison Hall 4824
 
 ## __Student Work and Evaluation__
+
 Evaluation will be based on participation (30%), weekly questions (15%), activities (15%), and a literature critique (40%). 
 
 ### Class Participation (30%)
+
 Students are expected to come to class prepared and participate in class discussions and activities. Because this course asks you to develop and refine your spatial thinking through dialogue, participation is essential to the learning process. Participation will be evaluated throughout the course using the following scale:
 
 - __30% — Fully Engaged Contributor__ Student comes to class prepared and contributes regularly without dominating. Contributions advance the conversation in substantive ways. For example, by connecting ideas across readings, raising productive complications, offering concrete examples from their own research domain, or helping the group work through a difficult concept. Shows genuine interest in and respect for others' perspectives. Actively participates in all group activities, including taking on different roles (e.g., facilitating, questioning, synthesizing) rather than defaulting to the same mode each time.
@@ -28,9 +30,10 @@ Students are expected to come to class prepared and participate in class discuss
 - __~5% — Underprepared__ Student comes to class only partially prepared and contributes rarely. When contributions are made, they suggest limited engagement with the readings or activities. Participation in group work is inconsistent.
 
 ### Questions (15%)
-Conducting research in any field is largely about asking questions. Students are required to submit three questions by **9am Tuesday of each week** about the readings for that week. These questions will be reviewed prior to class, and selected questions will be integrated into class activities for the week. Questions are the one activity where you are **NOT ALLOWED to use AI**. The point of the questions requirement is to have you engage with the materials and practice your critical and creative thinking skills. If you use AI to generate your questions, you will receive a zero for all your questions for the entire course.
 
-Questions will be graded using the following criteria. 
+Conducting research in any field is largely about asking questions. Students are required to submit three questions by __9am Tuesday of each week__ about the readings for that week. These questions will be reviewed prior to class, and selected questions will be integrated into class activities for the week. Questions are the one activity where you are __NOT ALLOWED to use AI__. The point of the questions requirement is to have you engage with the materials and practice your critical and creative thinking skills. If you use AI to generate your questions, you will receive a zero for all your questions for the entire course.
+
+Questions will be graded using the following criteria.
 
 - __5 - Exceptional__ The question identifies a tension, gap, or unstated assumption in the reading and connects it to a broader issue in GIScience or the student's own research. It could not be asked without having carefully read and reflected on the material. It opens a line of inquiry that would productively drive class discussion.
 - __4 - Strong__ The question demonstrates genuine engagement with the reading's argument or methods and goes beyond what the text explicitly states — for example, by questioning an author's framing, proposing a counterexample, or drawing a connection across readings. Minor refinement in specificity or depth would elevate it further.
@@ -39,9 +42,11 @@ Questions will be graded using the following criteria.
 - __1 - Insufficient__ The question is generic enough to apply to almost any reading (e.g., "Why is this important?"), is factual in a way that a quick search would resolve, or reflects a fundamental misreading that suggests the material was not read.
 
 ### Activities (15%)
+
 Students will be asked to participate in activities throughout the course. Activities are intended to serve as practice and checks on student knowledge.You are welcome and encouraged to work with your classmates on these exercises. Most will be done entirely in class. However, you are responsible for submitting your own individual solution report for each activity when requested.
 
 ### Literature Critique (40%)
+
 Over the course of the quarter, you will develop a sustained critique of a body of published literature in GIScience or a related domain. Early in the quarter, you will identify a subset of the literature and progressively deepen your analysis of it as new course concepts are introduced during the course.
 
 Your critique should evaluate the literature through the lens of the frameworks we cover in class: How do the studies handle ontological commitments and spatial representation? Where does uncertainty enter? Are the spatial models and inferential claims well justified? There will be structured check-ins throughout the quarter where you will share your progress, receive feedback, and refine your analysis. The final critique is due at the end of the quarter.
@@ -60,6 +65,6 @@ This assignment is designed to mirror how scholars actually engage with literatu
 | 5 | Cartography & Geovisualization| Monmonier (1991) Chapter 2-3 <br> Roth (2024) <br> Roth (2013) <br> Roth et al. (2017) | Imof (1975) <br> Cleland (1921) <br> Houtman (2026) <br> Robinson et al. (2017) <br> Bartling et al. (2021) |
 | 6 | Scale and Projection | Openshaw & Taylor (1979) <br> Montello (1993) <br>  O'Sullivan (2024 - C3) | Goodchild (2004) <br> Frazier (202X)|
 | 7 | Spatial Relationships | Egenhofer & Franzosa (1991) <br> [Topological Relationships](https://gistbok-topics.ucgis.org/DM-01-028) <br> Mark & Egenhoffer (1995) <br> O'Sullivan (2024) - C6 | Stell (2017) <br> Westveld & Knowles (2021) |
-| 8 | Spatial Analyses | Anseling (1989) <br> [Laws in Geography](https://gistbok-topics.ucgis.org/FC-05-043) | TBD |
+| 8 | Spatial Analyses | Anselin (1989) <br> [Laws in Geography](https://gistbok-topics.ucgis.org/FC-05-043) | TBD |
 | 9 | The Forking Paths of Uncertainty | TBD | TBD |
 | 10 | GIScience & Society | TBD | TBD |
