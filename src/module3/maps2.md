@@ -174,6 +174,12 @@ If you’re interested in more detailed design rules and methods, there is a ric
 <a href="https://gistbok-topics.ucgis.org/CV-03-006">Map Projections</a>.
 </div> 
 
+At this point, it is important to recognize a fundamental principle of cartography: maps do not simply represent reality. As Mark Monmonier (Chapter 3) argues, all maps tell “white lies,” not because they are deceptive, but because distortion is unavoidable when representing a complex world in limited space.
+
+The elements we have discussed, scale, projection, and symbolization, are the primary sources of these distortions. Each involves choices about what to include, what to omit, and how to structure information.
+
+Importantly, these distortions play critical roles on inference. A map designed for navigation prioritizes direction, while a statistical map prioritizes comparison; each supports different kinds of reasoning. Then the key question is beyond whether a map is accurate, but again, how its design choices shape what users are able to see and interpret. 
+
 ## __Geovisualization and the Process of Inference__
 
 It is useful to consider the perspective of geovisualization as a way of understanding how inference unfolds over time. Foundational frameworks such as DiBiase’s “Swoopy” model and MacEachren’s Cartography conceptualize maps as part of a broader process of visual thinking and knowledge construction. These frameworks describe a continuum of map use—from exploration, to analysis, to synthesis, and ultimately to presentation or communication. Rather than discrete steps, these stages are interconnected, with users iteratively engaging with data and refining their understanding.
