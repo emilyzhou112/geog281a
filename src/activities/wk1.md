@@ -38,6 +38,10 @@ __Table 1:__ List of Spatial Concepts From Lobben and Lawrence (2015)
 | | | | social area |
 | | | | subjective space |
 
+<br>
+<br>
+<br>
+
 ## __2. Draw a Map of Campus (10mins)__
 
 __Purpose:__ To illustrate how basic spatial concepts have been identified across domains and in the general public. The to link the Lynch framework back to that of Golledge. 
@@ -53,6 +57,11 @@ __Table 2:__ Elements of Mental Maps from Lynch (1960)
 | __Districts__ | Medium-to-large sections of the city that people mentally "enter" and recognize as having a common identifying character (a neighborhood, a business district). | 
 | __Nodes__ | Strategic focal points that people can enter, typically intersections or convergence points (a town square, a major junction, a transit hub). |
 | __Landmarks__ | External reference points used for orientation but not typically entered; identified by their singularity or contrast with surroundings (a church steeple, a distinctive building, a monument). |
+
+<br>
+<br>
+<br>
+
 
 ## __3. Audit Your Research Question with Spatial Thinking__
 
