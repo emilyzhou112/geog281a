@@ -16,9 +16,24 @@ This course teaches students to think critically about the nature of spatial pro
 - Availability: By appointment
 - Class Time and Location: Wednesdays 9:30-11:50 AM, Ellison Hall 4824
 
+## __Course Schedule__
+
+ | Week | Topic | Primary | Additional |
+ | --- | --- | --- | --- |
+ | __1__ | Spatial Thinking | [Golledge (2008)](readings/wk1/Golledge2008.pdf) <br> [National Research Council (2006)](readings/wk1/NRC_2006.pdf) <br> [Jo & Bednarz (2009)](readings/wk1/Jo_2009.pdf)| Lynch (1960) <br> [Marsh et al. (2007)](readings/wk1/Marsh_2007.pdf) <br> [Lobben & Lawrence (2015)](readings/wk1/Lobben_2015.pdf) |
+ | __2__ | Defining and Re-defining GIScience and Geography | [Wright et al.(1997)](readings/wk2/wright1997.pdf) <br> [Fisher (1998)](readings/wk2/fisher1998.pdf)<br> [Mark (2000)](readings/wk2/mark2000.pdf) <br> [Goodchild (2004)](readings/wk2/goodchild2004.pdf) <br> [Guan et al.(2019)](readings/wk2/guan2019.pdf) <br> [Ricker et al.(2020)](readings/wk2/ricker2020.pdf) | [Pickles (1997)](readings/wk2/pickles1997.pdf) <br> [Waters (2019)](readings/wk2/waters2019.pdf) <br> [Goodchild(2019)](readings/wk2/goodchild2019.pdf) <br> [Scheider et al.(2020)](readings/wk2/scheider2020.pdf) <br> [O'Sullivan (2024) - C9](readings/wk2/CGChapter9.pdf) |
+| __3__ | The Nature of Space, Place, & Process | [Fisher et al.(1998)](readings/wk3/fisher1998.pdf) <br> [O'Sullivan (2024) - C2](readings/wk3/CGChapter2.pdf) <br> [O'Sullivan (2024) - C4](readings/wk3/CGChapter4.pdf) <br> [O'Sullivan (2024) - C8 - P211-226](readings/wk3/CGChapter8-1.pdf) | Grano (1929) <br> Mark & Egenhoffer (1995) |
+| __4__ | Representation of Processes & Objects as Spatial Data| [Vector Formats](https://gistbok-topics.ucgis.org/CV-02-003) <br> [Raster Formats](https://gistbok-topics.ucgis.org/CV-02-020) <br>  [Spatial Database](https://gistbok-topics.ucgis.org/DM-01-001) <br> [GeoDatabase](https://gistbok-topics.ucgis.org/DM-01-004) | [Data Model Conversions](https://gistbok-topics.ucgis.org/DM-06-086) <br> [Generalization](https://gistbok-topics.ucgis.org/DM-06-085) <br> [Large Database Problems](https://gistbok-topics.ucgis.org/DM-01-070) |
+| __5__ | Cartography & Geovisualization| [Monmonier (1991) Chapter 2-3](readings/wk5/Monmonier2-3.pdf) <br> [Roth (2024)](readings/wk5/Roth2024.pdf) <br> [Roth (2013)](readings/wk5/Roth2013.pdf) <br> [Roth et al. (2017)](readings/wk5/Roth2017.pdf) <br> [Cartography and Science](https://gistbok-topics.ucgis.org/CV-01-001) <br> [Geovisualizations](https://gistbok-topics.ucgis.org/CV-05-035)| [Imhof (1975)](readings/wk5/Imhof-1975.pdf) <br> [Cleland (1921)](readings/wk5/Cleland18-26.pdf) <br> [Houtman (2026)](readings/wk5/Houtman2026.pdf) <br> [Robinson et al. (2017)](readings/wk5/Robinson2017.pdf) <br> [Bartling et al. (2021)](readings/wk5/Bartling2021.pdf) |
+| __6__ | Scale and Projection | Openshaw & Taylor (1979) <br> Montello (1993) <br>  O'Sullivan (2024) - C3 | Goodchild (2004) <br> Frazier (202X)|
+| __7__ | Spatial Relationships | Egenhofer & Franzosa (1991) <br> [Topological Relationships](https://gistbok-topics.ucgis.org/DM-01-028) <br> Mark & Egenhoffer (1995) <br> O'Sullivan (2024) - C6 | Stell (2017) <br> Westveld & Knowles (2021) |
+| __8__ | Spatial Analyses | Anselin (1989) <br> [Laws in Geography](https://gistbok-topics.ucgis.org/FC-05-043) | TBD |
+| __9__ | The Forking Paths of Uncertainty | TBD | TBD |
+| __10__ | GIScience & Society | TBD | TBD |
+
 ## __Student Work and Evaluation__
 
-Evaluation will be based on participation (30%), weekly questions (15%), activities (15%), and a literature critique (40%). 
+Evaluation will be based on participation (30%), weekly questions (15%), activities (15%), and a literature critique (40%).
 
 ### Class Participation (30%)
 
@@ -45,26 +60,14 @@ Questions will be graded using the following criteria.
 
 Students will be asked to participate in activities throughout the course. Activities are intended to serve as practice and checks on student knowledge. You are welcome and encouraged to work with your classmates on these exercises. Most will be done entirely in class. However, you are responsible for submitting your own individual solution report for each activity when requested.
 
-### Literature Critique (40%)
+### GIScience Project (40%)
 
-Over the course of the quarter, you will develop a sustained critique of a body of published literature in GIScience or a related domain. Early in the quarter, you will identify a subset of the literature and progressively deepen your analysis of it as new course concepts are introduced during the course.
+This project is intended to deepen students engagement with the conceptual foundations of GIScience, while also encouraging them to critically evaluate how those concepts relate to applied topic. The final critique is due at the end of the quarter. Students have three options for their GIScience Research course project.
 
-Your critique should evaluate the literature through the lens of the frameworks we cover in class: How do the studies handle ontological commitments and spatial representation? Where does uncertainty enter? Are the spatial models and inferential claims well justified? There will be structured check-ins throughout the quarter where you will share your progress, receive feedback, and refine your analysis. The final critique is due at the end of the quarter.
+1. __Collective Literature Critique:__ This is a group project option. The work will be done in collaboration with a group of students in the class. Over the course of the quarter, the students in each group will develop a critique of a body of published literature in GIScience or a related domain. The critique should evaluate the literature using of the frameworks covered in class.
 
-This assignment is designed to mirror how scholars actually engage with literature. The goals is not to summarize individual papers, but developing an original evaluative argument about how a community of researchers is approaching a spatial problem and where that approach could be strengthened. 
+2. __Individual Research Critique:__ This is an individual project option. Students interested in exploring the connection between their own research topic and GIScience (e.g., in preparation for the comprehensive exam) may pursue the literature critique individually. In this instance, the student will examine their own research topic as it relates to the GIScience literature. The goal of the project is for the student to deepen their own work by enriching it through the use of GIScience and spatial concepts, and/or to identify how their research will contribute to GIScience as a field of study.
 
+3. __Technical Exploration of a GIScience Topic:__ This is a group or individual project option. Students interested in the computational implementation and execution of spatial concepts or techniques may develop a vignette exploring and explaining that concept and its implementation in a computational environment (I suggest Python or R). The goal would be to develop a vignette that could be used to teach this concept to an advanced undergraduate audience. Developing teaching materials is often one of the best ways to really understand a topic.
 
-## __Course Schedule__
-
- | Week | Topic | Primary | Additional |
- | --- | --- | --- | --- |
- | __1__ | Spatial Thinking | [Golledge (2008)](readings/wk1/Golledge2008.pdf) <br> [National Research Council (2006)](readings/wk1/NRC_2006.pdf) <br> [Jo & Bednarz (2009)](readings/wk1/Jo_2009.pdf)| Lynch (1960) <br> [Marsh et al. (2007)](readings/wk1/Marsh_2007.pdf) <br> [Lobben & Lawrence (2015)](readings/wk1/Lobben_2015.pdf) |
- | __2__ | Defining and Re-defining GIScience and Geography | [Wright et al.(1997)](readings/wk2/wright1997.pdf) <br> [Fisher (1998)](readings/wk2/fisher1998.pdf)<br> [Mark (2000)](readings/wk2/mark2000.pdf) <br> [Goodchild (2004)](readings/wk2/goodchild2004.pdf) <br> [Guan et al.(2019)](readings/wk2/guan2019.pdf) <br> [Ricker et al.(2020)](readings/wk2/ricker2020.pdf) | [Pickles (1997)](readings/wk2/pickles1997.pdf) <br> [Waters (2019)](readings/wk2/waters2019.pdf) <br> [Goodchild(2019)](readings/wk2/goodchild2019.pdf) <br> [Scheider et al.(2020)](readings/wk2/scheider2020.pdf) <br> [O'Sullivan (2024) - C9](readings/wk2/CGChapter9.pdf) |
-| __3__ | The Nature of Space, Place, & Process | [Fisher et al.(1998)](readings/wk3/fisher1998.pdf) <br> [O'Sullivan (2024) - C2](readings/wk3/CGChapter2.pdf) <br> [O'Sullivan (2024) - C4](readings/wk3/CGChapter4.pdf) <br> [O'Sullivan (2024) - C8 - P211-226](readings/wk3/CGChapter8-1.pdf) | Grano (1929) <br> Mark & Egenhoffer (1995) |
-| __4__ | Representation of Processes & Objects as Spatial Data| [Vector Formats](https://gistbok-topics.ucgis.org/CV-02-003) <br> [Raster Formats](https://gistbok-topics.ucgis.org/CV-02-020) <br>  [Spatial Database](https://gistbok-topics.ucgis.org/DM-01-001) <br> [GeoDatabase](https://gistbok-topics.ucgis.org/DM-01-004) | [Data Model Conversions](https://gistbok-topics.ucgis.org/DM-06-086) <br> [Generalization](https://gistbok-topics.ucgis.org/DM-06-085) <br> [Large Database Problems](https://gistbok-topics.ucgis.org/DM-01-070) |
-| __5__ | Cartography & Geovisualization| [Monmonier (1991) Chapter 2-3](readings/wk5/Monmonier2-3.pdf) <br> [Roth (2024)](readings/wk5/Roth2024.pdf) <br> [Roth (2013)](readings/wk5/Roth2013.pdf) <br> [Roth et al. (2017)](readings/wk5/Roth2017.pdf) <br> [Cartography and Science](https://gistbok-topics.ucgis.org/CV-01-001) <br> [Geovisualizations](https://gistbok-topics.ucgis.org/CV-05-035)| [Imhof (1975)](readings/wk5/Imhof-1975.pdf) <br> [Cleland (1921)](readings/wk5/Cleland18-26.pdf) <br> [Houtman (2026)](readings/wk5/Houtman2026.pdf) <br> [Robinson et al. (2017)](readings/wk5/Robinson2017.pdf) <br> [Bartling et al. (2021)](readings/wk5/Bartling2021.pdf) |
-| __6__ | Scale and Projection | Openshaw & Taylor (1979) <br> Montello (1993) <br>  O'Sullivan (2024) - C3 | Goodchild (2004) <br> Frazier (202X)|
-| __7__ | Spatial Relationships | Egenhofer & Franzosa (1991) <br> [Topological Relationships](https://gistbok-topics.ucgis.org/DM-01-028) <br> Mark & Egenhoffer (1995) <br> O'Sullivan (2024) - C6 | Stell (2017) <br> Westveld & Knowles (2021) |
-| __8__ | Spatial Analyses | Anselin (1989) <br> [Laws in Geography](https://gistbok-topics.ucgis.org/FC-05-043) | TBD |
-| __9__ | The Forking Paths of Uncertainty | TBD | TBD |
-| __10__ | GIScience & Society | TBD | TBD |
+Complete details about each option and the assessment criteria that will be used to evaluate student work is available [GIScience Project Description](assets/gisciproject.pdf)
