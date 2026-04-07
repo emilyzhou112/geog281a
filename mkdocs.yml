@@ -76,6 +76,7 @@ extra_css:
   - styles/extra.css
   - styles/tufte-notes.css
   - https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css
+  - styles/map.css # added for week 6
 
  
 # Plugins
@@ -148,6 +149,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js
   - javascripts/lightbox-init.js
   - javascripts/embed-refresh.js
+  - javascripts/zoom.js # added for week 6
 
 
 # Page tree
