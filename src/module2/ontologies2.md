@@ -208,3 +208,10 @@ Here, place is modeled not simply as geometry but as a structured configuration 
 <strong>3.</strong> Lynch (1960) <em>Image of the City</em> describes a five-year study that reveals what elements in the built structure of a city are important in the popular perception of the city. These building blocks are used to create mental maps that shape how individuals live in, navigate, and draw meaning from their urban environments. A <a href="https://escholarship.org/content/qt9xh963vb/qt9xh963vb.pdf?v=lg">short summary</a> of this work was prepared by Ethan Sundilson as part of the CSISS Classics Series.
 </div>
 !!! summary "Should we think of place and space as completely opposed where place is local, concrete, and particular whereas space is global, abstract, and general? Perhaps the answer to this is not that place is not concrete, grounded, real, lived, etc. It is that space is too. The local and immediate feels more concrete, because it is often visible, right there in front of us. But more remote events are no less real, even if they seem that way. Place cannot be fully computed, only approximated. What GIS can do is not to perfectly capture place, but to provide thoughtful, partial representations that remain sensitive to experience and interpretation."
+
+--- 
+
+Reference:
+
+*O’Sullivan, D. (2024). Place and meaning in space. In Computing geographically: Bridging GIScience and geography (pp. 75–109). Guilford Publications.*
+

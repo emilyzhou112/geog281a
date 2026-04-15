@@ -202,3 +202,13 @@ The “geography” of the system is therefore produced by interactions among ne
 The full example is [here](https://csci467-s23.github.io/sketchbook-emilyzhou112/sketches/GameOfLife/)
 
 !!! summary "Taken together, all these examples suggest that GIScience should not commit to a single "true" conception of space. Different questions demand different spatial logics. Rather than treating space as fixed and universal, it is more productive to see it as context-dependent and constructed through practice. We should always choose representations that better match the phenomena we seek to understand. Recognizing that fact is the first step toward building more thoughtful, critical, and creative forms of GIScience."
+
+---
+
+Reference:
+
+*Fisher, P., & Unwin, D. J. (2005). Re-presenting geographical information systems. In P. Fisher & D. J. Unwin (Eds.), Re-presenting GIS (pp. 1–14). John Wiley & Sons.*
+
+*O’Sullivan, D. (2024). Location and space. In Computing geographically: Bridging GIScience and geography (pp. 17–44). Guilford Publications.*
+
+

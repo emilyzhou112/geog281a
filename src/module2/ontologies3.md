@@ -90,7 +90,7 @@ For GIScience, this orientation encourages us to look beyond static snapshots an
 
 If everything is process, then what happens to space and place?
 
-Blaut (XXXX) _Space and Process_ addresses this question directly. 
+Blaut (1961) _Space and Process_ addresses this question directly. 
 Blaut argues that there can be no such thing as space devoid of process: every empirical concept of space must ultimately be reducible, through a chain of definitions, to some underlying concept of process. 
 In other words, space is not something that exists first and then hosts events. 
 Rather, space is something that emerges from events themselves.
@@ -159,3 +159,9 @@ Nevertheless, they remain useful tools for revealing the multiple scalar and tem
     </p>
   </div>
 </div>
+
+---
+
+Reference:
+
+*O’Sullivan, D. (2024). Process and pattern. In Computing geographically: Bridging GIScience and geography (pp. 211–226). Guilford Publications.*
