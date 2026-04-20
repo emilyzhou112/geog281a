@@ -175,7 +175,9 @@ nav:
       - Concepts of Scale: module3/scale1.md
       - The Openshaw Effect: module3/scale2.md
       - What about Scope?: module3/scale3.md
-  - Spatial Relationships: module3/spatial-relationships.md
+  - Spatial Relationships: 
+      - Topological Foundation: module3/spatial-relationships.md
+      - Boundary Conceptualization: module3/boundaries.md
   - Spatial Analysis:
       - Laws in Geography: module3/principles-laws.md
   - Uncertainty:
