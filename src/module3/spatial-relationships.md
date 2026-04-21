@@ -4,6 +4,19 @@ Spatial analysis involves a wide range of decisions. In the previous lesson, we 
 
 Like all spatial concepts introduced earlier in the course, spatial relationships must be represented within GISystems. In fact, their representation draws on many topics we have covered so far, including the underlying conceptions of space (Week 3) and the computational models used to encode geographic information (Week 4). Understanding how spatial relationship should be properly represented matters in our analysis. Almost any GIS query incorporate spatial relationships to define constraints on what is selected, analyzed, or displayed. Questions such as “What is adjacent to this feature?”, “What lies within this boundary?”, or “What overlaps with this region?” all depend on how spatial relationships are defined. The importance of spatial relationships also extends well beyond GIS. Any field that works with spatial data, such as surveying engineering, computer-aided design, robotics, or very large-scale integrated circuit design, relies on formal ways of describing how objects relate to one another in space.
 
+<video width="860" height="700" controls>
+  <source src="../../assets/sr.mp4" type="video/mp4">
+</video>
+
+__Figure 1__: Understanding spatial relationships is crucial when creating vector artworks in adobe illustrator.
+
+
+<video width="860" height="700" controls>
+  <source src="../../assets/sr2.mp4" type="video/mp4">
+</video>
+
+__Figure 2__: Spatial relationships are also fundamental in architectural design, where the arrangement of spaces and their connections determine the functionality and aesthetics of a building.
+
 In this lesson, we begin by examining how spatial relationships, particularly topological relationships, are encoded in conventional GISystems. We then consider the limitations of these approaches and explore alternative ways of representing spatial structure. Notably, some of these alternatives are themselves closely tied to scale and to how humans understand space across different levels of resolution.
 
 ## __Understanding Point-Set Topology__
@@ -99,7 +112,7 @@ For example, a relation represented as $(1,0,0,0)$ means that the boundary of $A
     <img src="../../assets/sr-topo.png" alt="mapscale" width="500" height="200">
 </div>
 
-__Figure 1__ illustrates the 16 possible binary topological spatial relations. Each small diagram represents one configuration, labeled $r_0$ through $r_{15}$, based on whether each of the four intersections is empty or non-empty. It shows that some relations represent objects that are completely separate (no intersections), some represent objects that touch at their boundaries, some represent containment (one object entirely inside another), and others represent partial overlap between interiors.
+__Figure 3__ illustrates the 16 possible binary topological spatial relations. Each small diagram represents one configuration, labeled $r_0$ through $r_{15}$, based on whether each of the four intersections is empty or non-empty. It shows that some relations represent objects that are completely separate (no intersections), some represent objects that touch at their boundaries, some represent containment (one object entirely inside another), and others represent partial overlap between interiors.
 
 However, it should be noted that when restricted to real geographic regions, only 9 of the 16 possible topological relations actually occur. These correspond to intuitive spatial relationships such as disjoint, touch, equal, inside, contains, overlap, and cover / covered by. The key idea is that while all 16 relations are logically possible in abstract topology, some are geometrically impossible and assume that boundaries can interact with interiors in ways that contradict how regions behave in continuous space.
 
@@ -118,7 +131,7 @@ We can also imagine $B$ as a filled circle, and suppose a point on the edge of $
     <img src="../../assets/sr-topo9.png" alt="mapscale" width="500" height="400">
 </div>
 
-__Figure 2__: The 9-intersection model of topological relations between two polygons
+__Figure 4__: The 9-intersection model of topological relations between two polygons
 
 This contradiction eventually eliminates several of the 16 possible configurations. Only 9 topological spatial relations remain valid for real spatial regions. These form the basis of standard models such as the 9-intersection model used in GIS.
 
@@ -165,7 +178,7 @@ If more complex geometries are considered, such as regions with holes or multipl
   </a>
 </div>
 
-__Figure 3__ illustrate these relationships for simple geometric features. Left: 12 prototype topological relations between simple regions. RIght: the 31 DE-9IM relations between a simple line and a simple region.
+__Figure 5__ illustrate these relationships for simple geometric features. Left: 12 prototype topological relations between simple regions. RIght: the 31 DE-9IM relations between a simple line and a simple region.
 
 All of these representations allow us to describe spatial relationships with a high degree of precision. Rather than simply stating that two objects are “near” or “far,” we can specify exactly how they relate to each other in terms of their interiors, boundaries, and exteriors. This supports consistent analysis and computation in GIS. Neverthless, one thing that we always need to be mindful of during analysis is that these representations are abstractions: they depend on how space is conceptualized, how objects are defined, and how geometry is modeled in the first place. They require careful interpretation when applied to real-world geographic phenomena.
 
