@@ -73,3 +73,9 @@ Following this, several practical steps can help advance the science of scaling 
 - __First__, researchers should set scope based on the phenomenon being studied, rather than relying solely on available data.
 - __Second__, studies should report both grain and extent quantitatively so that scope can be calculated and compared across studies.
 - __Third__, researchers should undertake comparisons and replications based on scope. Replications sit at the core of the scientific method, yet geography faces particular challenges due to spatial context and analytical choices. By comparing studies conducted at similar scopes, we can better assess whether findings are robust, comparable, and generalizable.
+
+---
+
+Reference:
+
+*Frazier, A. E. (2023). Scope and its role in advancing a science of scaling in landscape ecology. Landscape Ecology, 38(3), 637-643.*

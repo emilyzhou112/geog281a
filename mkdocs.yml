@@ -173,6 +173,7 @@ nav:
       - Maps as Systems of Inference: module3/maps2.md
   - Scale:
       - Concepts of Scale: module3/scale1.md
+      - Scale in GIScience and Cartography: module3/scale1-5.md
       - The Openshaw Effect: module3/scale2.md
       - What about Scope?: module3/scale3.md
   - Spatial Relationships: 

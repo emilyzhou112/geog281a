@@ -157,3 +157,11 @@ Geographic analysis involves many such decisions, with scale being only one of t
 If scale alone can produce such large variations in results, it follows that other analytical choices may have similarly significant effects.
 If that is true, when we conduct analyses we are often working within a large “decision space,” where different combinations of choices can lead to different outcomes. __Whether we fully understand, explore, and report this range of possible outcomes plays a critical role in the validity of our conclusions.__
 This reality highlights the importance of conducting sensitivity analyses and being mindful of the implications of the decisions we make throughout the research process.
+
+---
+
+Reference:
+
+*O’Sullivan, D. (2024). Lines and Areas. In Computing geographically: Bridging GIScience and geography (pp. 131–138). Guilford Publications.*
+
+*Openshaw, S. and P. J. Taylor, 1979. A Million or so Correlation Coefficients: Three Experiments on the Modifiable Areal Unit Problem. In N. Wrigley, ed. Statistical Applications in the Spatial Sciences, 127–144. London: Pion.*
