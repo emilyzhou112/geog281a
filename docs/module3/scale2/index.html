@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://github.com/emilyzhou112/geog281a/module3/scale2/">
       
       
-        <link rel="prev" href="../scale1/">
+        <link rel="prev" href="../scale1-5/">
       
       
         <link rel="next" href="../scale3/">
@@ -885,6 +885,8 @@
       
         
       
+        
+      
     
     
     
@@ -940,6 +942,34 @@
     
   
     Concepts of Scale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale1-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scale in GIScience and Cartography
   
 
     
@@ -1553,41 +1583,88 @@
 
 
 <h1 id="the-openshaw-effect"><strong>The Openshaw Effect</strong></h1>
-<p>Understanding the influence of scale in actual geographical research is as important as understanding the concept of scale itself. To demonstrate this, we draw on an experiment conducted by Openshaw et al. in the 1970s that explores the modifiable areal unit problem (MAUP). </p>
+<p>Understanding the influence of scale in actual geographical research is as important as understanding the concept of scale itself.
+To demonstrate this point, we reviset perhaps the most famous experiment in GIScience - Openshaw et al. in (1979) examination of the modifiable areal unit problem (MAUP).</p>
 <h2 id="the-modifiable-areal-unit-problem"><strong>The Modifiable Areal Unit Problem</strong></h2>
-<p>What is an intuitive way to think about MAUP? Since the area over which data is collected is continuous, there are many different ways it can be partitioned into areal units for analysis. In fact, there are theoretically infinite ways to divide a study area, even though data are typically reported using only one particular set of units. These units can also be aggregated into larger units in many alternative ways. This is the modifiable areal unit problem, identified by Yule and Kendall (1950), who emphasized that results depend on the choice of spatial units.</p>
+<p>What is an intuitive way to think about MAUP?
+Data are typically collected over a continuous space<sup><a class="sidenote-ref" href="#sn-1">1</a></sup>, and there are consequently many different ways that space can be partitioned into areal units for analysis.
+In fact, there are theoretically infinite ways to divide a study area.
+In most instances data are very often aggregated and reported using just one, or a small set, of units.
+However, these units can also be aggregated into larger units in many different ways.
+This ability to chose units<sup><a class="sidenote-ref" href="#sn-2">1</a></sup> is the center of the modifiable areal unit problem, identified by Yule and Kendall (1950), who emphasized that results depend on the choice of spatial units.</p>
+<div class="sidenote" id="sn-1">
+<strong>1.</strong>In Openshaw's experiment space is implicitly defined as absolute space.</div>
+
+<div class="sidenote" id="sn-2">
+<strong>2.</strong>More generally this is called a change of support problem. The units being ths support of the data.</div>
+
 <p>The MAUP consists of two interrelated problems:</p>
 <ul>
-<li><strong>Scale problem</strong>: results change when data are aggregated into larger spatial units</li>
-<li><strong>Aggregation problem</strong>: results change when the same number of units are grouped differently</li>
+<li><strong>The Scale problem</strong>: results change when data are aggregated into larger spatial units, which changes the number of units.</li>
+<li><strong>The Aggregation problem</strong>: results change when the same number of units are grouped differently.</li>
 </ul>
-<p>Although scale differences are the most obvious manifestation, the aggregation problem is equally important: even when the number of zones stays the same, different ways of grouping the base units can lead to different results.</p>
+<p>Although scale differences are the most obvious manifestation, the aggregation problem is equally important.
+Even when the number of zones stays the same, different ways of grouping the base units can lead to different results.</p>
 <p>We can also distinguish between two types of spatial arrangements:</p>
 <ul>
 <li><strong>Zoning systems</strong>: contiguous areas (what we typically use in spatial analysis)</li>
 <li><strong>Grouping systems</strong>: non-contiguous areas</li>
 </ul>
-<p>A zoning system can be seen as a special case of a grouping system with an added contiguity constraint. Since most spatial analyses rely on contiguous regions, we focus primarily on zoning systems, while using grouping systems for comparison.</p>
+<p>A zoning system can be seen as a special case of a grouping system with an added contiguity constraint.
+Since most spatial analyses rely on contiguous regions, we focus primarily on zoning systems, while using grouping systems for comparison.</p>
 <h2 id="openshaws-first-experiment"><strong>Openshaw’s First Experiment</strong></h2>
-<p>In the 1970s, Openshaw et al. conducted a series of experiments to illustrate the significance of MAUP. The first experiment examines how correlation coefficients change under different areal aggregations using data from Iowa, USA.</p>
-<p>The basic areal units are the ninety-nine counties of Iowa. For each unit, there are two measures, the dependent variable is the percentage vote for Republican candidates in the congressional election of 1968 and the independent variable is the percentage of population over sixty-years old recorded in the 1970 US census.  At the county level, the correlation between these variables is <strong>0. 3466</strong> over the set of ninety-nine counties. This value is specific to this particular set of spatial units.</p>
-<p>In the <strong>first part</strong> of this experiment, Openshaw aggregates the 99 counties into six larger units in different ways where differences between these results and the original county-level correlation reflect the scale problem and differences across the alternative six-zone aggregations reflect the aggregation problem  The key finding is that correlations vary substantially depending on how the aggregation is done. The “official” aggregation (congressional districts) produces a lower correlation than the county-level value, while other aggregations produce higher correlations. This leads to an important (and slightly uncomfortable) implication: <strong>If a researcher wants a higher correlation, they can often obtain one simply by choosing a different zoning system.</strong></p>
+<p>In the 1970s, Openshaw et al. conducted a series of experiments to illustrate the significance of the MAUP.
+The first experiment examines how correlation coefficients change under different areal aggregations using data from Iowa, USA.</p>
+<p>The basic areal units are the ninety-nine counties of Iowa.
+For each unit, there are two measures, the dependent variable is the percentage vote for Republican candidates in the congressional election of 1968 and the independent variable is the percentage of population over sixty-years old recorded in the 1970 US census.
+At the county level, the correlation between these variables is <strong>0. 3466</strong> over the set of ninety-nine counties.
+This value is specific to this particular set of spatial units.</p>
+<p>In the <strong>first part</strong> of this experiment, Openshaw aggregates the 99 counties into six larger units in different ways. 
+Differences between the correlations computed from these six unit sets and the results and the original county-level correlation illustrate the scale problem.
+Differences among the different six-zone aggregations reflect the aggregation problem.
+The key finding of the experiment is that the correlations vary substantially depending on how the aggregation is done (<strong>Table 1</strong>).
+The “official” aggregation (congressional districts) produces a lower correlation than the county-level value, while other aggregations produce higher correlations.
+This leads to an important (and slightly uncomfortable) implication: <strong>If a researcher wants a higher correlation, they can often obtain one simply by choosing a different zoning system.</strong></p>
 <p><a href="../../assets/scale51.png" class="zoomable">
   <img src="../../assets/scale51.png" style="width: 100%;">
 </a></p>
 <p><strong>Table 1</strong>: Some effects on the correlation coefficient of different areal arrangements
 of the lowa counties into six zones.</p>
-<p>In the <strong>second part</strong> of the experiment, Openshaw moves beyond a few selected aggregations and instead systematically explores the full range of possible outcomes. Using an automatic zoning algorithm, he generates many alternative ways of aggregating the Iowa counties into different numbers of zones or groups. This allows him to approximate the maximum and minimum possible correlation coefficients at each scale. The results show that at coarser scales, when counties are aggregated into a small number of zones, the correlation can vary across a very wide range, even spanning from strongly negative to strongly positive values. As the number of zones increases and the scale becomes finer, this range of possible correlations narrows.</p>
+<p>In the <strong>second part</strong> of the experiment, Openshaw moves beyond a few selected aggregations and instead systematically explores the full range of possible outcomes.
+Using an automatic zoning algorithm, he generates many alternative ways of aggregating the Iowa counties into different numbers of zones or groups.
+This approach allows him to approximate the maximum and minimum possible correlation coefficients at each scale.
+The results show that at coarser scales, when counties are aggregated into a small number of zones, the correlation can vary across a very wide range, even spanning from strongly negative to strongly positive values.
+As the number of zones increases and the scale becomes finer, and this range of possible correlations narrows (<strong>Table 2</strong>).</p>
 <p><a href="../../assets/scale52.png" class="zoomable">
   <img src="../../assets/scale52.png" style="width: 100%;">
 </a></p>
 <p><strong>Table 2</strong>: Maximum and minimum values of the correlation coefficient.</p>
-<p>At the same time, clear differences emerge between zoning systems (which enforce contiguity) and grouping systems (which do not). Zoning systems tend to produce distributions of correlation coefficients with less spread and less bias relative to the original county-level correlation. This pattern can be explained by the interaction between spatial autocorrelation in the data and the contiguity constraint imposed by zoning. Because nearby areas tend to be similar, grouping contiguous units preserves some of the underlying spatial structure, limiting how extreme the resulting correlations can become. Overall, this part of the experiment demonstrates that <strong>while aggregation can produce a wide range of results, the extent of this variability depends on both the scale of aggregation and the spatial structure imposed by the aggregation scheme</strong>. </p>
-<p>In the <strong>third part</strong> of the experiment, Openshaw shifts the focus from correlation coefficients to a more fundamental question: how aggregation changes the underlying variation in the data. When smaller spatial units are aggregated into larger ones, some of the original variability is inevitably lost. This can be understood by decomposing total variation into within-zone and between-zone components. As aggregation occurs, the variation within zones is averaged out and effectively disappears, leaving only the variation between zones. As a result, the total observable variation decreases as the level of aggregation increases. This loss of variation provides an important mechanism through which aggregation affects statistical relationships, including correlation coefficients.</p>
-<p>However, Openshaw goes further by showing that aggregation does not affect all variables equally. This leads to the concept of differential loss of variation, which refers to the fact that different variables may lose variation at different rates when aggregated. Because correlation depends on the relative variation of the variables involved, unequal losses of variation can lead to changes in correlation that are difficult to predict. For instance, if one variable loses more variation than another, the apparent strength of their relationship may increase or decrease depending on the direction of this imbalance. Importantly, the experiment shows that <strong>there is no consistent or systematic relationship between correlation coefficients and the loss of variation. Instead, the observed outcomes depend on a complex interaction between spatial structure, autocorrelation, and the way aggregation redistributes variation across variables.</strong> This helps explain why the results of earlier parts of the experiment appear so variable and reinforces the broader point that statistical relationships in spatial data are highly sensitive to how space is partitioned.</p>
+<p>At the same time, clear differences also emerge between zoning systems (which enforce contiguity) and grouping systems (which do not).
+Zoning systems tend to produce distributions of correlation coefficients with less spread and less bias relative to the original county-level correlation.
+This pattern can be explained by the interaction between spatial autocorrelation in the data and the contiguity constraint imposed by zoning.
+Because nearby areas tend to be similar, grouping contiguous units preserves some of the underlying spatial structure, limiting how extreme the resulting correlations can become.
+Overall, this part of the experiment demonstrates that <strong>while aggregation can produce a wide range of results, the extent of this variability depends on both the scale of aggregation and the spatial structure imposed by the aggregation scheme</strong>.</p>
+<p>In the <strong>third part</strong> of the experiment, Openshaw shifts the focus from correlation coefficients to a more fundamental question: how does aggregation change the variation observed in the data.
+When smaller spatial units are aggregated into larger ones, some of the original variability is inevitably lost.
+This can be understood by decomposing total variation into within-zone and between-zone components.
+As aggregation occurs, the variation within zones is averaged out and effectively disappears, leaving only the variation between zones.
+As a result, the total observable variation decreases as the level of aggregation increases.
+This loss of variation provides an important mechanism through which aggregation affects statistical relationships, including correlation coefficients.</p>
+<p>However, Openshaw goes further by showing that aggregation does not affect all variables equally.
+This leads to the concept of differential loss of variation, which refers to the fact that different variables may lose variation at different rates when aggregated.
+Because correlation depends on the relative variation of the variables involved, unequal losses of variation can lead to changes in correlation that are difficult to predict.
+For instance, if one variable loses variation more rapidly than another, the apparent strength of their relationship may increase or decrease depending on the direction of this imbalance.
+Importantly, the experiment shows that <strong>there is no consistent or systematic relationship between correlation coefficients and the loss of variation. Instead, the observed outcomes depend on a complex interaction between spatial structure, autocorrelation, and the way aggregation redistributes variation across variables.</strong>
+These results help explain why the correlation coefficients calculated earlier in the experiment are so variable.
+They also reinforce the broader point that statistical relationships in spatial data are highly sensitive to how space is partitioned.</p>
 <h2 id="reanalysis-of-openshaws-first-experiment"><strong>Reanalysis of Openshaw’s First Experiment</strong></h2>
-<p>Following the methodology described by Openshaw in the original chapter, we recreated the experiment in R. Due to data availability constraints, we are unable to reproduce Openshaw’s exact results. Instead of congressional election data, we use presidential election data, which yields a baseline correlation coefficient of approximately <strong>0.22</strong>. Using this as our starting point, we conducted 1000 simulations for both zoning and grouping systems and visualized the resulting loss of variation under different aggregation schemes. Despite differences in the data, the patterns we observe closely match Openshaw’s original findings.</p>
-<p>If you are interested in the details of Openshaw’s first experiment, including the implementation of the zoning algorithm, you can explore our R-based implementation. The GitHub repository containing all materials needed to reproduce the experiment can also be found <strong><a href="https://github.com/giscience-research/Learn-MAUP">here</a></strong>.</p>
+<p>Following the methodology described by Openshaw in the original chapter, we recreated the experiment in R.
+Due to data availability constraints, we are unable to reproduce Openshaw’s exact results.
+Instead of congressional election data, we use presidential election data, which yields a baseline correlation coefficient with the 1968 election results of approximately <strong>0.22</strong>.
+Using this as our starting point, we conducted 1000 simulations for both zoning and grouping systems and visualized the resulting loss of variation under different aggregation schemes.
+Despite differences in the data, the patterns we observe closely match Openshaw’s original findings.</p>
+<p>If you are interested in the details of Openshaw’s first experiment, including the implementation of the zoning algorithm, you can explore our R-based implementation.
+The GitHub repository containing all materials needed to reproduce the experiment can also be found <strong><a href="https://github.com/giscience-research/Learn-MAUP">here</a></strong>.</p>
 <p><a href="https://giscience-research.github.io/Learn-MAUP/" target="_blank">
  <strong>Click here to open in full page</strong>
 </a></p>
@@ -1598,24 +1675,45 @@ of the lowa counties into six zones.</p>
   style="border:0;">
 </iframe>
 </p>
-<p>Taken together, the first experiment demonstrates that statistical results in spatial analysis are highly sensitive to how data are aggregated. Even when using the same underlying data, simply changing the scale or the way spatial units are grouped can produce dramatically different correlation coefficients. At coarser scales, a wide range of outcomes is possible, while at finer scales results become more constrained, though not necessarily stable. Differences between zoning and grouping systems further highlight that spatial structure plays an important role in shaping these outcomes.</p>
-<p>At a deeper level, the experiment reveals that these variations are driven by the loss of variation that occurs during aggregation, and more importantly, by the unequal (differential) loss of variation across variables. Because this loss is neither consistent nor predictable, there is no systematic relationship between aggregation and correlation. </p>
+<p>Taken together, the first experiment demonstrates that statistical results in spatial analysis are highly sensitive to how data are aggregated.
+Even when using the same underlying data, simply changing the scale or the way spatial units are grouped can produce dramatically different correlation coefficients.
+At coarser scales, a wide range of outcomes is possible, while at finer scales results become more constrained, though not necessarily stable.
+Differences between zoning and grouping systems further highlight that spatial structure plays an important role in shaping these outcomes.</p>
+<p>At a deeper level, the experiment reveals that these variations are driven by the loss of variation that occurs during aggregation, and more importantly, by the unequal (differential) loss of variation across variables.
+Because this loss is neither consistent nor predictable, there is no systematic relationship between aggregation and correlation. </p>
 <h2 id="standard-and-non-standard-error"><strong>Standard and Non-Standard Error</strong></h2>
 <p>As a brief pivot, and also to situate our discussion of scale within the broader context of uncertainty quantification in GIScience, we now briefly turn to the idea of non-standard error.</p>
-<p>As researchers, we face at least two major sources of uncertainty when conducting geographic analyses. First, uncertainty arises from sampling. If we repeat the same analysis using different samples, we would observe variation in the results. This variability is known as <strong>standard error</strong>, and it is something we are generally familiar with.</p>
+<p>As researchers, we face at least two major sources of uncertainty when conducting statistical analyses of geographic phenomena.
+First, uncertainty arises from sampling.
+If we repeat the same analysis using different samples, we would observe variation in the results simply because we are drawing only a subset of possible observations of the phenomenon under study.
+This variability is known as <strong>standard error</strong>, and it is something we are generally familiar with.</p>
 <div align="center">
     <img src="../../assets/scale-se.gif" alt="mapscale" width="800" height="800">
 </div>
 
 <p><strong>Figure 1</strong>: Illustration of standard error.</p>
-<p>There is, however, a second type of uncertainty that arises not from the data, but from the decisions we make in designing and conducting our analyses. This is known as <strong>non-standard error</strong>. Non-standard error exists because there is rarely a single, agreed-upon way to conduct a geographic analysis. Instead, multiple reasonable analytical choices are often available, leading to a branching set of possible analytical paths. Once a particular path is selected, we obtain an estimate and a corresponding standard error. But if we hold the data fixed and instead vary these analytical choices, the resulting estimates may change. The variation across these alternative paths is what we refer to as non-standard error.</p>
+<p>There is, however, a second type of uncertainty that arises not from the data, but from the decisions we make in designing and conducting our analyses.
+This is known as <strong>non-standard error</strong>.
+Non-standard error exists because there is rarely a single, agreed-upon way to conduct a geographic analysis.
+Instead, multiple reasonable analytical choices are often available, leading to a branching set of possible analytical paths.
+Once a particular path is selected, we obtain an estimate and a corresponding standard error.
+But if we hold the data fixed and instead vary these analytical choices, the resulting estimates may change.
+The variation across these alternative paths is what we refer to as non-standard error.</p>
 <div align="center">
     <img src="../../assets/scale-nse.gif" alt="mapscale" width="800" height="800">
 </div>
 
 <p><strong>Figure 2</strong>: Illustration of non-standard error.</p>
-<p>Openshaw’s formulation of the modifiable areal unit problem can be understood as a localized and concrete example of non-standard error. To put it simply, their demonstration of how changes in the zoning system alone, which is one of many possible analytical decisions, can produce correlation coefficients ranging from −1 to +1, is a simulated measure of non-standard error.</p>
-<p>Geographic analysis involves many such decisions, with scale being only one of them. If scale alone can produce such large variations in results, it follows that other analytical choices may have similarly significant effects. This implies that we are often working within a large “decision space,” where different combinations of choices can lead to different outcomes. <strong>Whether we fully understand, explore, and report this range of possible outcomes plays a critical role in the validity of our conclusions.</strong> This, in turn, highlights the importance of conducting sensitivity analyses and being mindful of the implications of the decisions we make throughout the research process.</p>
+<p>Openshaw’s formulation of the modifiable areal unit problem can be understood as a localized and concrete example of non-standard error.
+To put it simply, Openshaw&rsquo;s demonstration of how changes in the zoning system alone, which is one of many possible analytical decisions, can produce correlation coefficients ranging from −1 to +1, is a simulated measure of non-standard error.</p>
+<p>Geographic analysis involves many such decisions, with scale being only one of them.
+If scale alone can produce such large variations in results, it follows that other analytical choices may have similarly significant effects.
+If that is true, when we conduct analyses we are often working within a large “decision space,” where different combinations of choices can lead to different outcomes. <strong>Whether we fully understand, explore, and report this range of possible outcomes plays a critical role in the validity of our conclusions.</strong>
+This reality highlights the importance of conducting sensitivity analyses and being mindful of the implications of the decisions we make throughout the research process.</p>
+<hr />
+<p>Reference:</p>
+<p><em>O’Sullivan, D. (2024). Lines and Areas. In Computing geographically: Bridging GIScience and geography (pp. 131–138). Guilford Publications.</em></p>
+<p><em>Openshaw, S. and P. J. Taylor, 1979. A Million or so Correlation Coefficients: Three Experiments on the Modifiable Areal Unit Problem. In N. Wrigley, ed. Statistical Applications in the Spatial Sciences, 127–144. London: Pion.</em></p>
 
 
 
@@ -1645,7 +1743,7 @@ of the lowa counties into six zones.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../scale1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Concepts of Scale">
+          <a href="../scale1-5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Scale in GIScience and Cartography">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1655,7 +1753,7 @@ of the lowa counties into six zones.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Concepts of Scale
+                Scale in GIScience and Cartography
               </div>
             </div>
           </a>
