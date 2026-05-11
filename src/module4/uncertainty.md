@@ -23,17 +23,30 @@ These forms of ignorance can affect both experts and non-experts. In principle, 
 
 But there is a more difficult category: __that which cannot be fully known__. Here, uncertainty is not simply the result of poor information. It may come from logical, mathematical, physical, linguistic, or conceptual limits. We can call this __intrinsic uncertainty__: uncertainty that is built into the nature of knowledge production rather than uncertainty that can be eliminated by collecting more data.
 
-### __Uncomputability and Undecidability__
+__Uncomputability and Undecidability__
 
 One example comes from mathematics and computer science. Gödel’s incompleteness theorem shows that within any sufficiently complex formal system, there will be statements that cannot be proven either true or false from within that system. Related ideas of uncomputability and undecidability show that some problems cannot be solved by a general algorithm. This matters for GIScience because GIS depends heavily on computation, algorithms, models, and formal representations. Even formal systems, which seem like the most certain kind of knowledge system, have limits.
 
-### __Chaos and Complexity__
+__Chaos and Complexity__
 
 In physics and environmental modeling, complex systems may be deterministic but still unpredictable in practice or even in principle over the long term. Chaos theory and complex nonlinear systems exemplify why the future may be unknowable, even if we understand some governing rules. This is important for geographic research because many geographic phenomena, such as urban growth, climate impacts, disease spread, flooding, migration, land-use change, are complex, nonlinear, and dynamic. Even when we understand some of the governing processes, the future may remain uncertain.
 
-### __Vagueness and Classification__
+__Vagueness and Classification__
 
 A third example comes from vagueness and classification. The __sorites paradox__ asks: if one grain of sand is not a heap, and adding one grain at a time never clearly creates a heap, when exactly does a heap begin? This may sound abstract, but it is directly relevant to GIScience. Many geographic categories work this way. How many trees make a forest? How many buildings make a town? Where exactly does an urban area end and a rural area begin? Where is the boundary between suitable and unsuitable, vulnerable and not vulnerable, high risk and low risk?
+
+
+<div class="image-row">
+  <a href="../../assets/U-forest-edge.jpg" class="zoomable">
+    <img src="../../assets/U-forest-edge.jpg">
+  </a>
+
+  <a href="../../assets/U-glacier-edge.jpg" class="zoomable">
+    <img src="../../assets/U-glacier-edge.jpg">
+  </a>
+</div>
+
+__Figure 1__: The sorites problem in geographic form. One tree is not a forest, and a dense stand of trees clearly is, but the transition between them is gradual. This makes “forest” a vague category. The same issue appears in the glacier image: clean ice may clearly be part of the glacier, and exposed rock may clearly be outside it, but the transition zone of snow, debris-covered ice, meltwater, and rock is much harder to classify. In both cases, GIS often has to draw a crisp boundary where the landscape itself offers a gradual continuum
 
 This connects back to our earlier discussions of representation and spatial relationships. Many GIS operations require discrete categories, crisp boundaries, and stable objects, but the world is often continuous, heterogeneous, and dynamic. When we classify places as forest/non-forest, urban/rural, vulnerable/not vulnerable, or suitable/not suitable, we impose sharp distinctions on phenomena that may not have sharp boundaries. 
 
@@ -53,6 +66,12 @@ The uncertainty here comes from trying to infer explanations, patterns, or model
 
 For example, a cluster of high asthma rates might be explained by air pollution, housing age, socioeconomic inequality, healthcare access, reporting differences, or some combination of these factors. The spatial pattern is real, but its meaning is not automatically given by the data. We still have to interpret it, and that interpretive step introduces uncertainty.
 
+<a href="../../assets/U-DataDriven.png" class="zoomable">
+  <img src="../../assets/U-DataDriven.png" style="width: 100%;">
+</a>
+
+__Figure 2__: These maps show a similar spatial concentration of heroin overdose alongside two different contextual variables: crime and complaints. The overlap suggests that the overdose pattern is meaningful, but it does not tell us which explanation is correct. A data-driven approach can reveal spatial associations, but the same pattern may support multiple interpretations, requiring additional theory, context, and evidence.
+
 ### __Method Driven Approach__
 
 In a method-driven approach, the method comes first. We begin with a standardized model or procedure, and that method determines what data are needed, what format they must take, and what kind of product can be generated.
@@ -64,6 +83,12 @@ Method → Data → Product
 This approach may seem more secure because it relies on an established procedure. But method-driven knowledge still contains uncertainty. A method imposes requirements on the data, and the quality of the final product depends partly on how well the available data meet those requirements. When data come from different sources, with different resolutions, dates, classification schemes, and reliability, even a standardized method can produce uncertain results.
 
 For example, a suitability model may require slope, land cover, distance to roads, and flood risk. Each layer may have different spatial resolution, temporal currency, classification uncertainty, and source reliability. The method may be clearly defined, but the result is not automatically certain because the input layers do not all carry the same quality or meaning.
+
+<a href="../../assets/U-MethodDriven.png" class="zoomable">
+  <img src="../../assets/U-MethodDriven.png" style="width: 100%;">
+</a>
+
+__Figure 3__: Indeed, a suitability model may provide a clear procedure for combining criteria, but the input layers rarely begin in the same form. In this example, EVSE accessibility, population density, age structure, parking access, emergency-service proximity, zoning, and EV ownership each come from different measurements, resolutions, classifications, and assumptions. To produce a single suitability surface, these layers must be standardized, rescaled, and aggregated to a common spatial unit. The uncertainty lies not only in each individual layer, but also in the process of making unlike data comparable.
 
 ### __Product Driven Approach__: 
 
@@ -93,19 +118,55 @@ __Maps Look too Certain__
 
 One important complication is that maps often look more certain than they really are. As we've learned, cartography has long presented the world as clean, ordered, and simplified: every feature appears in its proper place, every boundary looks crisp, and every category seems stable. This visual clarity gives maps authority, but it can also make uncertainty invisible. A map may look objective and precise, while behind it are choices about data sources, scale, classification, symbolization, generalization, and model assumptions. This connects directly back to our earlier discussions of representation: maps do not simply show the world; they actively construct a version of it.
 
+<div class="image-row">
+  <a href="../../assets/U-bs1.jpg" class="zoomable">
+    <img src="../../assets/U-bs1.jpg">
+  </a>
+
+  <a href="../../assets/U-bs2.jpg" class="zoomable">
+    <img src="../../assets/U-bs2.jpg">
+  </a>
+</div>
+
+__Figure 4__: These two maps represent similar questions about bus stop access in Cambridge and Somerville, but they construct that access in different ways. One emphasizes walking access areas and low-access residential parcels, while the other aggregates bus stop density by census tract and relates it to open green space. Both maps look finished and authoritative, yet each depends on choices about spatial units, classification, symbolization, aggregation, and what “access” is taken to mean.
+
 __Errors Cluster in Space__
 
 A second complication is spatial autocorrelation. Because nearby things tend to be more similar than distant things, nearby errors may also be similar. Spatial errors are often not randomly scattered across space. Instead, errors in nearby locations may be related because they come from the same instrument, data source, interpolation method, or classification process. A digital elevation model, for example, may contain errors of several meters. If every elevation error were independent from its neighbors, calculating slope from adjacent elevation values would be extremely unreliable. But because nearby elevation errors may be similar, relative differences over short distances can sometimes be more reliable than absolute elevation values. The key point is that spatial uncertainty has structure.
+
+<a href="../../assets/U-error.png" class="zoomable">
+  <img src="../../assets/U-error.png" style="width: 100%;">
+</a>
+
+__Figure 5__: This example comes from a hotspot prediction model for heroin overdose in Cincinnati. The model is broadly successful at identifying the general hotspot area, but the mapping error is not randomly scattered across the city. Instead, many of the problematic predictions appear near the actual hotspot boundary
 
 __Data Carry Histories__
 
 This makes __provenance__ especially important. To understand uncertainty, we need to know where a dataset came from, how it was produced, what instruments or sources were used, what errors may have been introduced, and whether multiple datasets share the same underlying sources. This matters when combining datasets. Two flood-risk datasets, for example, may appear to offer independent evidence, but if they both rely on the same elevation model, they may share the same underlying elevation uncertainties. Comparing them does not fully validate one against the other. Without provenance information, we may overestimate how independent or reliable our evidence really is.
 
+<div class="image-row">
+  <a href="../../assets/U-f1.png" class="zoomable">
+    <img src="../../assets/U-f1.png">
+  </a>
+
+  <a href="../../assets/U-f2.png" class="zoomable">
+    <img src="../../assets/U-f2.png">
+  </a>
+</div>
+
+__Figure 6__: This Vermont flood-risk example shows how different datasets can produce different versions of the same problem. FEMA flood zones and Vermont River Corridor flood zones define risk differently: one emphasizes inundation in low-lying areas, while the other captures river corridor processes such as erosion and channel movement. The mobile home data also carry different histories: ACS data require re-aggregation from areal units, while E911 point data represent locations more directly. The resulting risk map therefore depends not only on “where flooding occurs,” but on how flood risk and mobile home locations are defined, measured, and represented.
+
 __Models Propagate Uncertainty__
 
 Uncertainty does not stop with data. It also enters through models. Models contain uncertainty from their input data, but also from missing variables, uncertain parameters, calibration problems, and structural assumptions. A model output may look like a final answer, but it is actually the result of uncertain data passing through uncertain assumptions.
 
-This point is developed clearly in Longley et al.’s uncertainty framework. Figure X presents uncertainty as a sequence of filters between the real world and GIS-based knowledge. The first filter is __conception__: how we define the geographic phenomenon in the first place. Before mapping a forest, neighborhood, flood zone, or vulnerable population, we must decide what counts as that thing, where its boundaries are, and what unit of analysis is appropriate. The second filter is __measurement and representation__: how that concept is translated into data through instruments, classifications, spatial resolution, raster or vector models, and generalized boundaries. The third filter is __analysis__: how GIS operations such as overlay, buffering, interpolation, aggregation, and modeling further transform the data and propagate earlier uncertainties. The main lesson is that uncertainty is **cumulative**. A final GIS map or model output may look clean and precise, but it carries uncertainty from earlier stages of the workflow.
+<a href="../../assets/U-longley.png" class="zoomable">
+  <img src="../../assets/U-longley.png" style="width: 100%;">
+</a>
+
+__Figure 7__: Longley et al.’s uncertainty framework shows how uncertainty is cumulative across the workflow of geographic knowledge production.
+
+This point is developed clearly in Longley et al.’s uncertainty framework. Figure X presents uncertainty as a sequence of filters between the real world and GIS-based knowledge. The first filter is __conception__: how we define the geographic phenomenon in the first place. Before mapping a forest, neighborhood, flood zone, or vulnerable population, we must decide what counts as that thing, where its boundaries are, and what unit of analysis is appropriate. The second filter is __measurement and representation__: how that concept is translated into data through instruments, classifications, spatial resolution, raster or vector models, and generalized boundaries. The third filter is __analysis__: how GIS operations such as overlay, buffering, interpolation, aggregation, and modeling further transform the data and propagate earlier uncertainties. The main lesson is that uncertainty is cumulative. A final GIS map or model output may look clean and precise, but it carries uncertainty from earlier stages of the workflow.
 
 ## __New Directions of Uncertainty Research__
 

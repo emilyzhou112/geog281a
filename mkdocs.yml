@@ -179,11 +179,8 @@ nav:
   - Spatial Relationships: 
       - Topological Foundation: module3/spatial-relationships.md
       - Boundary Conceptualization: module3/boundaries.md
-  - Spatial Analysis:
-      - Laws in Geography: module3/principles-laws.md
   - Uncertainty:
       - An Uncertain World: module4/uncertainty.md
+  - Spatial Analysis:
+      - Laws in Geography: module3/principles-laws.md
   - GIScience and Society: module4/society.md
-  - Research Frontiers: conclusions.md
-  - ACTIVITIES:
-      - Week 1: activities/wk1.md
