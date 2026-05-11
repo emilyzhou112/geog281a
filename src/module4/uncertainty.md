@@ -90,7 +90,7 @@ For example, a suitability model may require slope, land cover, distance to road
 
 __Figure 3__: Indeed, a suitability model may provide a clear procedure for combining criteria, but the input layers rarely begin in the same form. In this example, EVSE accessibility, population density, age structure, parking access, emergency-service proximity, zoning, and EV ownership each come from different measurements, resolutions, classifications, and assumptions. To produce a single suitability surface, these layers must be standardized, rescaled, and aggregated to a common spatial unit. The uncertainty lies not only in each individual layer, but also in the process of making unlike data comparable.
 
-### __Product Driven Approach__: 
+### __Product Driven Approach__ 
 
 In a product-driven approach, the desired product comes first. We begin with a target output, such as a map, model, simulation, or decision-support product, and then select the methods and data needed to create it.
 
