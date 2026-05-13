@@ -361,3 +361,11 @@ __Figure 4__: Different ways of estimating internal uniformity and robustness to
 </div>
 
 __Figure 5__: Simplified relationship showing one estimated curve for internal uniformity and one for robustness to error. Internal uniformity declines as granularity increases, while robustness improves. Ramos’s method looks for a compromise between these two patterns: a grid size that is not so small that counts are unreliable, and not so large that meaningful crime clusters are concealed.
+
+---
+
+References:
+
+*Tate, E. (2013). Uncertainty analysis for a social vulnerability index. Annals of the Association of American Geographers, 103(3), 526–543.*
+
+*Ramos, R. G. (2025). Finding an adequate areal unit to map crime: A spatial data perspective. In M. Leitner (Ed.), New research in crime modeling and mapping using geospatial technologies (pp. 27–44). Springer Nature Switzerland.*
