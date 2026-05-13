@@ -8,7 +8,13 @@ n the first part of the lesson, we treated uncertainty as a broad condition of g
 
 This is the point of Fisher’s conceptual model of uncertainty in spatial data. The model begins with a deceptively simple question: is the geographic phenomenon we are trying to map clearly defined? More specifically, are both the __class of objects__ and the __individual objects__ clearly separable? For example, do we know what counts as a soil type, a forest, a neighborhood, or a flood zone? And can we clearly identify individual instances of those things on the ground? Below, we provide a brief deconstruction of this model.
 
-Figure 1
+<div style="text-align: center;">
+  <a href="../../assets/U-Fisher.png" class="zoomable">
+    <img src="../../assets/U-Fisher.png" style="width: 50%;">
+  </a>
+</div>
+
+__Figure 1__: Fisher’s conceptual model of uncertainty in spatial data
 
 ### __Error__
 
@@ -16,7 +22,13 @@ In Fisher’s diagram, a __well-defined geographic object__ is one whose class a
 
 When a geographic object is well defined, uncertainty can often be treated as __error__. Error assumes that there is a true value or true condition, and that our data deviate from it in some way. A location may be recorded slightly away from its true position. An elevation value may be measured too high or too low. A land-cover class may be assigned incorrectly. In these cases, uncertainty can often be described probabilistically because the object and the target value are clear.
 
-Table 1
+<div style="text-align: center;">
+  <a href="../../assets/U-ErrorType.png" class="zoomable">
+    <img src="../../assets/U-ErrorType.png" style="width: 50%;">
+  </a>
+</div>
+
+__Figure 2__: Common reasons of a database being error in GIS. 
 
 There are several ways to think about probability in this context.
 
@@ -32,7 +44,17 @@ In contrast, a __poorly defined geographic object__ is one whose class, boundary
 
 When either the class of object or the individual object is poorly defined, however, uncertainty becomes more complicated. The problem is no longer simply that we measured something incorrectly but that the thing itself is difficult to define or separate. This brings us the concept of __vagueness__.  Vagueness is different from error in that with error, the class is clear but the measurement may be wrong. For vagueness, the class itself has fuzzy edges.
 
-Figure: example of vagueness
+<div class="image-row">
+  <a href="../../assets/U-urban.jpg" class="zoomable">
+    <img src="../../assets/U-urban.jpg">
+  </a>
+
+  <a href="../../assets/U-treeline.jpg" class="zoomable">
+    <img src="../../assets/U-treeline.jpg">
+  </a>
+</div>
+
+__Figure 3__: When does urban become rural? The urban-rural boundary is often treated as a line in GIS, but on the ground it may appear as a gradual transition of density, land use, infrastructure, and activity. Similarly, snow cover and tree density often change gradually with elevation, yet GIS classifications may require a single boundary such as snow/no snow or forest/non-forest.
 
 It is helpful here to refer back to the classic sorites paradox: one grain of sand is not a heap, and adding one grain at a time does not clearly create a heap, but eventually we would all agree that there is a heap. The problem is that there is no obvious threshold and many geographic categories work in the same way.
 
@@ -46,7 +68,13 @@ Fisher identifies two forms of ambiguity: __discord__ and __non-specificity__. D
 
 Non-specificity occurs when assigning an object to a class at all is open to interpretation. This can happen when evidence is incomplete, categories overlap, or the classification scheme does not map neatly onto the phenomenon. For example, one agency’s definition of a flood zone, wetland, land-cover type, or soil class may not correspond directly to another agency’s definition. This does not necessarily mean one classification is wrong. It may mean that each classification was designed for a different purpose, scale, or institutional context.
 
-Figure: example of ambiguity, add in table 2
+<div style="text-align: center;">
+  <a href="../../assets/U-Soil.png" class="zoomable">
+    <img src="../../assets/U-Soil.png" style="width: 100%;">
+  </a>
+</div>
+
+__Figure 4__:  Drawing on Fisher's examples, classification depends on the scheme -  A soil profile may be assigned to different classes under different national or international classification systems. The problem is not simply error; each system may define soil categories differently
 
 The key lesson here is also that different uncertainties require different responses.
 
@@ -72,7 +100,13 @@ Unit of analysis: We have already encountered this issue in our lesson on scale.
 
 Vagueness and ambiguity in defining the problem: Uncertainty also enters when the phenomenon we want to study is vague or ambiguous, which is where Fisher’s typology becomes useful again. If we were to conduct the Openshaw analysis ourselves, these issues would appear immediately. We would have to decide what variables to compare, what spatial units to use, what scale of aggregation makes sense, and whether the boundaries we choose are meaningful for the process we are trying to understand. Are counties the right units? Are smaller zones more appropriate? Should zones be contiguous? Should they reflect administrative boundaries, functional relationships, or purely experimental groupings? Each decision shapes the analysis before the analysis technically begins.
 
-Include more Openshaw figures here
+<div style="text-align: center;">
+  <a href="../../assets/U-OS.png" class="zoomable">
+    <img src="../../assets/U-OS.png" style="width: 100%;">
+  </a>
+</div>
+
+__Figure 5:__ Recall the workflow we construct together about Openshaw's experiment. Some uncertainty comes from standard data issues, such as the voting data, census data, and county geometries used as inputs. But other uncertainty enters through researcher decisions: how neighbors are defined, how many zones are created, whether aggregation is spatially contiguous or non-spatial, and how many iterations are run.
 
 ### __Measurement and Representation__
 
@@ -84,7 +118,17 @@ The field view, by contrast, treats geographic variation as continuous across sp
 
 Neither raster nor vector representation solves uncertainty automatically. They simply organize it differently. A coastline, for example, might be represented as a crisp line, as a zone within which the true coastline may fall, or as a probability field showing the likelihood that each location is land. Each representation makes a different claim about what the coastline is and how its uncertainty should be understood.
 
-Figure: coastline example here
+<div class="image-row">
+  <a href="../../assets/U-coastline1.png" class="zoomable">
+    <img src="../../assets/U-coastline1.png">
+  </a>
+
+  <a href="../../assets/U-coastline2.png" class="zoomable">
+    <img src="../../assets/U-coastline2.png">
+  </a>
+</div>
+
+__Figure 6:__ Illustration of the coastline example described here.
 
 __Statistical Models of Uncertainty__: For nominal data, uncertainty often appears as misclassification. A parcel recorded as agriculture may actually be grassland. A land-cover class derived from aerial photography may differ from what is observed on the ground. A remotely sensed image may classify a pixel as forest when field observation suggests shrubland. One common way to assess this kind of uncertainty is through a confusion matrix. A confusion matrix compares the class recorded in the database with the class verified in the field. Correct classifications appear along the diagonal of the matrix, while off-diagonal entries show where one class has been confused with another. This allows us to see not only how much error exists, but which categories are most often mistaken for each other.
 
@@ -96,13 +140,27 @@ __Positional Error__: A particularly important form of measurement uncertainty i
 
 __Internal and external validation__: One way to assess uncertainty in analysis is through validation. We can think about this in two broad ways: internal validation and external validation. Internal validation uses the GIS workflow itself to test how sensitive results are to analytical choices. For example, in the Openshaw example, we might change the scale of aggregation, shift point locations within plausible error bounds, use alternative zoning systems, or simulate multiple possible versions of the input data. If the result remains similar across these variations, we may have more confidence in it. If the result changes substantially, then the analysis is sensitive to uncertainty in the workflow. External validation compares GIS results against other data sources or independent evidence. If a modeled flood-risk area corresponds with observed flood reports, insurance claims, or field observations, that gives us one kind of support. If a predicted hotspot corresponds with independent incident data, that can increase confidence in the result. However, external validation also has limits. The “independent” dataset may have its own uncertainty, or it may share lineage with the dataset being validated. So external validation helps assess plausibility, but it does not produce perfect certainty.
 
+| Type of validation        | Main question                                                     | Example                                                                                             |
+| ------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Internal validation  | Does the result change if we alter choices within the workflow?   | Openshaw: change scale, zoning, grouping, number of zones, or iterations                            |
+| Reproducibility check | Can we regenerate the same result from the same data and code?    | Rerun the same GIS analysis with the same workflow                                                  |
+| Robustness check     | Does the conclusion hold across reasonable alternative workflows? | Try different neighborhood definitions, model specifications, or aggregation units                  |
+| External validation*  | Does the result agree with independent evidence?                  | Compare flood-risk maps with observed flood reports, or predicted hotspots with later incident data |
+
 __Ecological Fallacy and MAUP__: A second analytical problem is the ecological fallacy. This occurs when we use aggregate data to make claims about individuals. For example, if we find that census tracts with higher unemployment also have higher rates of a particular demographic group, we cannot automatically conclude that individuals in that demographic group are more likely to be unemployed. The ecological fallacy is therefore a problem of interpretation. The data may be correctly measured at the aggregate level, and the map may be technically accurate, but the inference drawn from it may still be wrong. This is another way uncertainty enters analysis. Closely related to the ecological fallacy is the modifiable areal unit problem. This connects directly back to the Openshaw activity from the scale lesson. The underlying county-level data did not change, but the correlation between variables changed as the data were aggregated into different zoning systems and scales, which demonstrate that spatial analysis is also about the geography through which those variables are summarized.
 
 Griffith and colleagues extend this point to neighborhood analysis. Many studies treat census tracts or block groups as neighborhoods, assigning everyone within the same areal unit to the same social and physical environment. But people living in the same tract may experience very different neighborhoods depending on their exact location, mobility, social networks, and daily activity spaces. This creates neighborhood assignment error: the spatial unit used in the analysis may not match the lived geography of the process being studied.
 
 __Overlaying and Integrating Data from Different Sources__: A final analytical issue is the uncertainty created when GIS integrates data from multiple sources. GIS is powerful precisely because it allows us to overlay different layers, but each layer may have a different lineage, scale, classification system, positional accuracy, date of collection, and intended use. When these layers are overlaid, their uncertainties interact.This is why data integration requires attention to lineage and fitness for use. Where did each dataset come from? At what scale was it created? What was it designed to represent? How current is it? What categories does it use? Does it share a source with another layer? Are positional errors likely to align or conflict?
 
-Again, this point also connects to the Vermont flood-risk example. FEMA flood zones and Vermont River Corridor data do not simply provide two versions of the same boundary. They represent different conceptions of flood risk: inundation risk in one case, river corridor processes such as erosion and channel movement in the other. Similarly, ACS mobile-home data and E911 point data represent mobile home locations in different ways and at different levels of precision. When these datasets are combined, the result depends on how those different definitions, scales, and measurement histories are reconciled.
+
+<div style="text-align: center;">
+  <a href="../../assets/U-vt.png" class="zoomable">
+    <img src="../../assets/U-vt.png" style="width: 100%;">
+  </a>
+</div>
+
+__Figure 7__: Again, this point also connects to the Vermont flood-risk example. FEMA flood zones and Vermont River Corridor data do not simply provide two versions of the same boundary. They represent different conceptions of flood risk: inundation risk in one case, river corridor processes such as erosion and channel movement in the other. Similarly, ACS mobile-home data and E911 point data represent mobile home locations in different ways and at different levels of precision. When these datasets are combined, the result depends on how those different definitions, scales, and measurement histories are reconciled. Here is a clearer visualization of the problem with different river corridor datasets. 
 
 ## __Effects of Uncertainty__
 
@@ -121,8 +179,6 @@ For example, the Atlas of United States Mortality attempted to help readers inte
 Uncertainty also affects spatial pattern detection and spatial modeling. Spatial analysts often use tools such as spatial autocorrelation, hot spot detection, cold spot detection, clustering, and regression models to identify and explain spatial patterns. But many of these methods assume that the observed data are accurate enough to analyze directly.
 
 That assumption is not always safe. Sampling error, measurement error, locational error, and model specification error can all affect the values we map and model. If those errors are substantial, then they should be reflected in confidence intervals, cluster detection, spatial statistics, and model evaluation. Otherwise, we may treat uncertain patterns as if they were more stable or meaningful than they really are. The same issue applies to spatial models.
-
-Figure: neighborhood example
 
 ### __Spatial Metadata for Data Quality__
 

@@ -202,4 +202,4 @@ References:
 
 *Goodchild, M. F. (2020). How well do we really know the world? Uncertainty in GIScience. Journal of Spatial Information Science, 20, 97–102.*
 
-*Longley, P. A., M. F. Goodchild, D. J. Maguire, and D. W. Rhind. 2008. Geographical information systems and science 2nd ed. Chichester: Wiley. (only chapter 6: Uncertainty, pages 127-153)*
+*Longley, P. A., M. F. Goodchild, D. J. Maguire, and D. W. Rhind. 2008. Geographical information systems and science 2nd ed. Chichester: Wiley. (only chapter 6: Uncertainty, pages 127-153)* 
