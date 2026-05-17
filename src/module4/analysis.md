@@ -5,13 +5,18 @@ Having understood the concepts and components of uncertainty, to conclude the un
 
 ## __Uncertainty Analysis in Social Vulnerability Index__
 
-Tate's classic article in 2013 asks a very practical question: when we build a social vulnerability index, how reliable are the final rankings? Social vulnerability indexes are often used to identify priority areas for hazard mitigation, emergency planning, and resource allocation. But the final map depends on many researcher decisions: which indicators to include, what scale to analyze, how to transform variables, how to normalize them, how to weight them, and how to aggregate them. Tate’s argument is that each of these choices introduces uncertainty into the final index.
+Tate's classic article in 2013 asks a very practical question: when we build a social vulnerability index, how reliable are the final rankings?
+Social vulnerability indexes are often used to identify priority areas for hazard mitigation, emergency planning, and resource allocation.
+But the final map depends on many researcher decisions: which indicators to include, what scale to analyze, how to transform variables, how to normalize them, how to weight them, and how to aggregate them.
+Tate’s argument is that each of these choices introduces uncertainty into the final index.
 
 Specifically, Tate distinguishes two broad forms of uncertainty: 
 
-__Aleatoric uncertainty__ comes from inherent randomness or variability in the world. For example, the timing of a hazard event may vary in ways that cannot be fully controlled.
+__Aleatoric uncertainty__ comes from inherent randomness or variability in the world.
+For example, the timing of a hazard event may vary in ways that cannot be fully controlled.
 
-__Epistemic uncertainty__ comes from incomplete knowledge, modeling choices, or uncertainty in how a process should be represented. Tate emphasizes that social vulnerability indexes are especially full of epistemic uncertainty because each stage of index construction requires choices by the researcher.
+__Epistemic uncertainty__ comes from incomplete knowledge, modeling choices, or uncertainty in how a process should be represented.
+Tate emphasizes that social vulnerability indexes are especially full of epistemic uncertainty because each stage of index construction requires choices by the researcher.
 
 Tate presents social vulnerability index construction as a sequential process. The major stages include:
 
@@ -23,7 +28,8 @@ Tate presents social vulnerability index construction as a sequential process. T
 
 __Figure 1__: Index construction flowchart.
 
-A social vulnerability index combines multiple indicators into a single score or ranking. In simplified form:
+A social vulnerability index combines multiple indicators into a single score or ranking.
+In simplified form:
 
 $$  
 SVI_j = f(x_{1j}, x_{2j}, \ldots, x_{pj})  
@@ -46,7 +52,8 @@ where:
 - $Z_{ij}$ is the transformed and normalized value of indicator$i$ in unit $j$. 
 - $W_i$​ is the weight assigned to indicator $i$.
 
-Tate discusses that the same __vulnerability indicator__ can be represented in different ways. For example, an elderly population indicator could be represented as an absolute count:
+Tate discusses that the same __vulnerability indicator__ can be represented in different ways.
+For example, an elderly population indicator could be represented as an absolute count:
 
 $$
 x_{ij}^{count} = \text{number of elderly people in unit } j
@@ -72,7 +79,8 @@ $$
 
 __Figure 2__: Indicator Set.
 
-Because indicators are measured in different units, they must be __normalized__ before they can be combined. Tate discusses several common approaches.
+Because indicators are measured in different units, they must be __normalized__ before they can be combined.
+Tate discusses several common approaches.
 
 Min–max scaling:
 
@@ -92,9 +100,14 @@ $$
 z_{ij} = \frac{x_{ij} - \bar{x}_i}{s_i}  
 $$
 
-Each normalization method changes the distribution of indicator values and can therefore affect the final ranking. Tate emphasizes that these choices are not neutral technical details; they are part of the uncertainty of index construction.
+Each normalization method changes the distribution of indicator values and can therefore affect the final ranking.
+Tate emphasizes that these choices are not neutral technical details; they are part of the uncertainty of index construction.
 
-__Weighting__ is one of the most subjective parts of index construction. Weights can be equal, expert-derived, participatory, or statistically derived. Importantly, Tate notes that equal weighting is not the same as being unweighted. Equal weights are also a modeling choice. In addition, if several indicators are highly correlated, equal weighting can still create implicit double-counting of one vulnerability dimension.
+__Weighting__ is one of the most subjective parts of index construction.
+Weights can be equal, expert-derived, participatory, or statistically derived.
+Importantly, Tate notes that equal weighting is not the same as being unweighted.
+Equal weights are also a modeling choice.
+In addition, if several indicators are highly correlated, equal weighting can still create implicit double-counting of one vulnerability dimension.
 
 A simple weighted form is:
 
@@ -116,7 +129,9 @@ $$
 
 ### __Monte Carlo Uncertainty Analysis__
 
-The main method of the paper is Monte Carlo simulation. Instead of producing one index from one set of choices, Tate repeatedly builds the index using alternative reasonable choices at each stage. In each simulation run, one option is selected for each construction stage, the index is computed, and the vulnerability rank for each census tract is saved. 
+The main method of the paper is Monte Carlo simulation.
+Instead of producing one index from one set of choices, Tate repeatedly builds the index using alternative reasonable choices at each stage.
+In each simulation run, one option is selected for each construction stage, the index is computed, and the vulnerability rank for each census tract is saved.
 
 The logic can be written as:
 
@@ -153,7 +168,8 @@ __Figure 3__: Uncertainty analysis statistics.
 
 Tate uses the simulated rank distributions to assess three things: uncertainty magnitude, bias, and precision
 
-For __uncertainty magnitude__, Tate uses a 90 percent confidence interval for each tract’s rank. This can be written as:
+For __uncertainty magnitude__, Tate uses a 90 percent confidence interval for each tract’s rank.
+This can be written as:
 
 $$  
 CI_{90,j} = \left[ Q_{0.05}(R_j), Q_{0.95}(R_j) \right]  
