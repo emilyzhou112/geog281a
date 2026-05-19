@@ -29,7 +29,7 @@ We will then turn to the distinctive complications of uncertainty in GIScience.
 Finally, we will shift to a structured deconstruction of types of uncertainty<sup><a class="sidenote-ref" href="#sn-2">2</a></sup> and examine how uncertainty can be identified, organized, and quantified in practice.
 
 <div class="sidenote" id="sn-2">
-<strong>2.</strong> There are many frameworks and taxonomies of uncertainty and bias. One useful aspatial framework is the [Catalogue of Bias](https://catalogofbias.org/), which outline different threats to validity within primarily causal analyses. </div>
+<strong>2.</strong> There are many frameworks and taxonomies of uncertainty and bias. One useful aspatial framework is the <a href="https://catalogofbias.org/">Catalogue of Bias</a>, which outline different threats to validity within primarily causal analyses. </div>
 
 ## __Uncertainty and Knowledge Production__
 
